@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { PhoneCall, Mail } from 'lucide-react'
 import SectionHeader from './SectionHeader'
 
 export default function Contact() {
@@ -88,37 +89,50 @@ export default function Contact() {
               <p className="fs-5 mt-2 mb-0">
                 SKB Montessori Training Institute
                 <br />
-                Tamil Nadu, India
+                4/379, Parvathi Nagar, Saravana Bawa Nagar, Old Perungalathur, Chennai - 600063 Tamil Nadu, India
               </p>
             </div>
 
             <div>
-              <p className="eyebrow">Phone</p>
+
+              <p className="eyebrow">
+                Phone
+              </p>
 
               <a
                 href="tel:+919597686903"
-                className="d-block fs-5 text-decoration-none"
+                className="d-flex align-items-center gap-2 fs-5 text-decoration-none mb-2"
               >
-                📞 +91 95976 86903
+                <PhoneCall size={18} className="text-terracotta" />
+
+                +91 95976 86903
               </a>
 
               <a
                 href="tel:+919841152894"
-                className="d-block fs-5 text-decoration-none"
+                className="d-flex align-items-center gap-2 fs-5 text-decoration-none"
               >
-                📞 +91 98411 52894
-              </a>
-            </div>
+                <PhoneCall size={18} className="text-terracotta" />
 
+                +91 98411 52894
+              </a>
+
+            </div>
             <div>
-              <p className="eyebrow">Email</p>
+
+              <p className="eyebrow">
+                Email
+              </p>
 
               <a
                 href="mailto:skbtraininginstitute@gmail.com"
-                className="fs-5 text-decoration-none"
+                className="d-flex align-items-center gap-2 fs-5 text-decoration-none"
               >
-                ✉ skbtraininginstitute@gmail.com
+                <Mail size={18} className="text-terracotta" />
+
+                skbtraininginstitute@gmail.com
               </a>
+
             </div>
 
             <div>
@@ -152,9 +166,8 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`form-control form-control-lg ${
-                      errors.name ? 'is-invalid' : ''
-                    }`}
+                    className={`form-control form-control-lg ${errors.name ? 'is-invalid' : ''
+                      }`}
                     placeholder="Your name"
                   />
 
@@ -178,9 +191,8 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className={`form-control form-control-lg ${
-                      errors.phone ? 'is-invalid' : ''
-                    }`}
+                    className={`form-control form-control-lg ${errors.phone ? 'is-invalid' : ''
+                      }`}
                     placeholder="+91 ..."
                   />
 
@@ -206,9 +218,8 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`form-control form-control-lg ${
-                    errors.email ? 'is-invalid' : ''
-                  }`}
+                  className={`form-control form-control-lg ${errors.email ? 'is-invalid' : ''
+                    }`}
                   placeholder="you@example.com"
                 />
 
@@ -231,9 +242,8 @@ export default function Contact() {
                   name="program"
                   value={formData.program}
                   onChange={handleChange}
-                  className={`form-select form-select-lg ${
-                    errors.program ? 'is-invalid' : ''
-                  }`}
+                  className={`form-select form-select-lg ${errors.program ? 'is-invalid' : ''
+                    }`}
                 >
                   <option value="">
                     Select Program
@@ -272,9 +282,8 @@ export default function Contact() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className={`form-control ${
-                    errors.message ? 'is-invalid' : ''
-                  }`}
+                  className={`form-control ${errors.message ? 'is-invalid' : ''
+                    }`}
                   placeholder="Tell us about your goals…"
                 ></textarea>
 
