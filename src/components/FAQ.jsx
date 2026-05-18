@@ -9,7 +9,7 @@ export default function FAQ() {
       <section className="section">
         <div className="container">
           <SectionHeader eyebrow="FAQ" title="Frequently asked questions." />
-          <div style={{ maxWidth: 780 }} className="border-top border-bottom">
+          <div style={{ maxWidth: 1300 }} className="border-top border-bottom">
             {faqs.map(([q, a], i) => (
               <div className="divider-line" key={i}>
                 <button className="faq-btn" onClick={() => setOpen(open === i ? -1 : i)}>
