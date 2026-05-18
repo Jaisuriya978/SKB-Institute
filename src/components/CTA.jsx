@@ -1,4 +1,4 @@
-import portraitImg from '../assets/image3.png'
+import portraitImg from '../assets/Image4.jpg'
 
 export default function CTA() {
   return (
