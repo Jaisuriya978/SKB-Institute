@@ -7,7 +7,7 @@ import Features from './components/Features'
 import Benefits from './components/Benefits'
 import Process from './components/Process'
 import Testimonials from './components/Testimonials'
-import Gallery from './components/Gallery'
+import Gallery from './components/Image'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Contact from './components/Contact'
@@ -25,8 +25,9 @@ export default function App() {
       <Features />
       <Benefits />
       <Process />
+      <Image />
       <Testimonials />
-      <Gallery />
+
       <FAQ />
       <CTA />
       <Contact />
