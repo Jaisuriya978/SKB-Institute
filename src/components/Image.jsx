@@ -23,7 +23,7 @@ import ConvocationImg7 from '../assets/Image20.JPG'
 
 import SectionHeader from './SectionHeader'
 
-export default function Gallery() {
+export default function Image() {
 
   const sliderRef = useRef(null)
 
