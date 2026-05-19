@@ -71,7 +71,7 @@ export default function About() {
                                         </li>
 
                                         <li>
-                                            Develop confident, compassionate, and creative teachers
+                                            Develop confident, compassionate, and creativity
                                         </li>
 
                                         <li>
@@ -79,7 +79,7 @@ export default function About() {
                                         </li>
 
                                         <li>
-                                            Inspire future educators to positively impact young minds
+                                            Inspire future educators to positively impact minds
                                         </li>
 
                                         <li>

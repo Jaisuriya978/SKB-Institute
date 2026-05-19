@@ -149,6 +149,7 @@ export default function Testimonials() {
       width: 100%;
       display: block;
       object-fit: cover;
+      object-position: top;
       transition: transform 0.4s ease;
     }
 
