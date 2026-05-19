@@ -54,19 +54,19 @@ export default function Image() {
   const loopImages = [...imgs, ...imgs]
 
   useEffect(() => {
-
     const slider = sliderRef.current
 
     if (!slider) return
 
     let animationFrame
-    let scrollSpeed = 0.7 // lower = smoother
+    const scrollSpeed = 0.7
 
     const autoScroll = () => {
+      slider.scrollLeft += scrollSpeed
+
+      // Smooth infinite loop
       if (slider.scrollLeft >= slider.scrollWidth / 2) {
-        slider.scrollLeft = 0
-      } else {
-        slider.scrollLeft += scrollSpeed
+        slider.scrollLeft -= slider.scrollWidth / 2
       }
 
       animationFrame = requestAnimationFrame(autoScroll)
@@ -76,7 +76,6 @@ export default function Image() {
 
     return () => cancelAnimationFrame(animationFrame)
   }, [])
-
   return (
     <section className="section bg-cream overflow-hidden py-5">
       <div className="container">
@@ -99,15 +98,17 @@ export default function Image() {
           style={{
             overflowX: 'hidden',
             scrollBehavior: 'auto',
-          
+            whiteSpace: 'nowrap',
           }}
         >
           {loopImages.map((img, index) => (
             <div
               key={index}
               className="flex-shrink-0"
-              style={{ width: '520px' }}
-
+              style={{
+                width: '520px',
+                transform: 'translateZ(0)',
+              }}
             >
               <div className="overflow-hidden rounded-4 shadow-sm">
                 <img
