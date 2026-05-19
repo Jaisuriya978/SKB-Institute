@@ -94,3 +94,34 @@ h1, h2, h3, h4, h5, .font-serif {
   height: 50px;
   object-fit: contain;
 }
+
+.process-card {
+  transition: 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.process-card:hover {
+  transform: translateY(-8px);
+}
+
+.process-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(176, 217, 230, 0.1);
+  color: var(--terracotta);
+}
+
+.rule {
+  width: 60px;
+  height: 2px;
+  background: var(--terracotta);
+}
+
+.text-muted-soft {
+  color: #6c757d;
+}
+
+#about p {
+  text-align: justify;
+}
