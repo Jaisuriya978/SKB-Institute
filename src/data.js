@@ -65,12 +65,7 @@ export const steps = [
   ["Become a Qualified Educator", "Complete certification and start your teaching career."],
 ];
 
-export const reviews = [
-  "SKB gave me practical teaching confidence and excellent faculty support throughout the course.",
-  "The internship experience helped me understand real classroom teaching methods.",
-  "Flexible classes and supportive mentors made learning comfortable and effective.",
-  "I improved my communication and teaching skills through SKB's professional training.",
-];
+
 
 export const faqs = [
   ["Who can join these courses?", "Anyone interested in teaching, childcare, Montessori education, or special education can apply."],
