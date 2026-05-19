@@ -1,4 +1,4 @@
-import classroomImg from '../assets/image4.png'
+import classroomImg from '../assets/Image8.jpg'
 import SectionHeader from './SectionHeader'
 
 import {
@@ -88,7 +88,7 @@ export default function Features() {
               loading="lazy"
               className="rounded-4 border w-100"
               style={{
-                height: 460,
+                height: 450,
                 objectFit: 'cover'
               }}
             />
@@ -116,7 +116,7 @@ export default function Features() {
                       <div className="flex-shrink-0">
 
                         <Icon
-                          size={42}
+                          size={40}
                           className="text-terracotta"
                         />
 
