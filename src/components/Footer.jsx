@@ -9,27 +9,27 @@ import {
 const socialLinks = [
     {
         name: "Instagram",
-        icon: <FaInstagram size={26} />,
+        icon: <FaInstagram size={22} />,
         link: "https://www.instagram.com/skbtraininginstitute/",
     },
     {
         name: "Facebook",
-        icon: <FaFacebookF size={26} />,
+        icon: <FaFacebookF size={22} />,
         link: "https://www.facebook.com/skbtraininginstitute/",
     },
     {
         name: "YouTube",
-        icon: <FaYoutube size={26} />,
+        icon: <FaYoutube size={22} />,
         link: "https://www.youtube.com/@skbtraininginstitute",
     },
     {
         name: "WhatsApp",
-        icon: <FaWhatsapp size={26} />,
+        icon: <FaWhatsapp size={22} />,
         link: "https://wa.me/919597686903",
     },
     {
         name: "LinkedIn",
-        icon: <FaLinkedinIn size={26} />,
+        icon: <FaLinkedinIn size={22} />,
         link: "https://www.linkedin.com/in/skbtraininginstitute/",
     },
 ];
@@ -83,14 +83,22 @@ export default function Footer() {
                                     href={link.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="btn btn-sm rounded-pill px-3 border border-light border-opacity-25 text-white shadow-sm transition"
+                                    className="btn btn-sm rounded-pill px-3 border border-light border-opacity-25 text-white"
+                                    style={{
+                                        transition: "all 0.3s ease",
+                                        backgroundColor: "transparent",
+                                    }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.classList.remove("bg-transparent");
-                                        e.currentTarget.classList.add("bg-dark", "text-dark");
+                                        e.currentTarget.style.transform = "translateY(-5px) scale(1.08)";
+                                        e.currentTarget.style.backgroundColor = "#3c61c8";
+                                        e.currentTarget.style.color = "#000";
+                                        e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.15)";
                                     }}
                                     onMouseLeave={(e) => {
-                                        e.currentTarget.classList.remove("bg-light", "text-dark");
-                                        e.currentTarget.classList.add("bg-transparent");
+                                        e.currentTarget.style.transform = "translateY(0) scale(1)";
+                                        e.currentTarget.style.backgroundColor = "transparent";
+                                        e.currentTarget.style.color = "#fff";
+                                        e.currentTarget.style.boxShadow = "none";
                                     }}
                                 >
                                     {link.icon}
