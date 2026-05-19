@@ -139,7 +139,7 @@ export default function Contact() {
               <p className="eyebrow">Availability</p>
 
               <p className="fs-5 mt-2 mb-0">
-                Monday – Saturday · 9:00 AM – 6:00 PM
+                Monday – Saturday · 9:00 AM – 5:00 PM
               </p>
             </div>
 

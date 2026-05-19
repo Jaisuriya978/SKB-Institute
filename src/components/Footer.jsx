@@ -9,27 +9,27 @@ import {
 const socialLinks = [
     {
         name: "Instagram",
-        icon: <FaInstagram size={22} />,
+        icon: <FaInstagram size={26} />,
         link: "https://www.instagram.com/skbtraininginstitute/",
     },
     {
         name: "Facebook",
-        icon: <FaFacebookF size={22} />,
+        icon: <FaFacebookF size={26} />,
         link: "https://www.facebook.com/skbtraininginstitute/",
     },
     {
         name: "YouTube",
-        icon: <FaYoutube size={22} />,
+        icon: <FaYoutube size={26} />,
         link: "https://www.youtube.com/@skbtraininginstitute",
     },
     {
         name: "WhatsApp",
-        icon: <FaWhatsapp size={22} />,
+        icon: <FaWhatsapp size={26} />,
         link: "https://wa.me/919597686903",
     },
     {
         name: "LinkedIn",
-        icon: <FaLinkedinIn size={22} />,
+        icon: <FaLinkedinIn size={26} />,
         link: "https://www.linkedin.com/in/skbtraininginstitute/",
     },
 ];
@@ -83,8 +83,15 @@ export default function Footer() {
                                     href={link.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="btn btn-sm rounded-pill px-3"
-                                    style={{ border: '1px solid rgba(255,255,255,.3)', color: '#fff' }}
+                                    className="btn btn-sm rounded-pill px-3 border border-light border-opacity-25 text-white shadow-sm transition"
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.classList.remove("bg-transparent");
+                                        e.currentTarget.classList.add("bg-dark", "text-dark");
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.classList.remove("bg-light", "text-dark");
+                                        e.currentTarget.classList.add("bg-transparent");
+                                    }}
                                 >
                                     {link.icon}
                                 </a>
