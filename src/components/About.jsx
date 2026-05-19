@@ -1,4 +1,4 @@
-import materialsImg from '../assets/image6.jpg'
+import materialsImg from '../assets/Image6.jpg'
 import SectionHeader from './SectionHeader'
 
 export default function About() {
@@ -48,7 +48,7 @@ export default function About() {
                             alt="Montessori materials"
                             loading="lazy"
                             className="rounded-4 border w-100 mb-4"
-                            style={{ height: 380, objectFit: 'cover' }}
+                            style={{ height: 300, objectFit: 'cover' }}
                         />
 
                         <div className="row g-3">

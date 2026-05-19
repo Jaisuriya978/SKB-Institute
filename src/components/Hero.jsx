@@ -29,7 +29,7 @@ export default function Hero() {
                 </ul>
               </div>
               <div className="col-lg-5 position-relative">
-                <img src={heroImg} alt="Montessori teacher with children" className="img-fluid rounded-4 border" style={{ height: 460, objectFit: 'cover', width: '100%' }} />
+                <img src={heroImg} alt="Montessori teacher with children" className="img-fluid rounded-4 border" style={{ height: 300, objectFit: 'cover', width: '100%' }} />
     
               </div>
             </div>

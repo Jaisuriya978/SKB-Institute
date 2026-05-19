@@ -20,7 +20,7 @@ export default function CTA() {
                </div>
              </div>
              <div className="col-lg-5">
-               <img src={portraitImg} alt="SKB student" loading="lazy" className="rounded-4 w-100" style={{ height: 460, objectFit: 'cover' }} />
+               <img src={portraitImg} alt="SKB student" loading="lazy" className="rounded-4 w-100" style={{ height: 350, objectFit: 'cover' }} />
              </div>
            </div>
          </div>

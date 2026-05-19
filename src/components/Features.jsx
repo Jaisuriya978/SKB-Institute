@@ -88,7 +88,7 @@ export default function Features() {
               loading="lazy"
               className="rounded-4 border w-100"
               style={{
-                height: 450,
+                height: 600,
                 objectFit: 'cover'
               }}
             />
@@ -116,7 +116,7 @@ export default function Features() {
                       <div className="flex-shrink-0">
 
                         <Icon
-                          size={40}
+                          size={46}
                           className="text-terracotta"
                         />
 
