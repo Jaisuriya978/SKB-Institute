@@ -13,25 +13,25 @@ export default function Testimonials() {
     {
       video: testimonialVideo,
       name: 'Mythili',
-      Degree: 'Advanced Diploma in Montessori Training and Childcare',
+      Degree: 'Advanced Diploma in Montessori Education',
       quote: 'The hands-on training and mentorship helped me transition seamlessly into my professional career.',
     },
     {
       video: testimonialVideo2,
       name: 'Rukmani',
-      Degree: 'Advanced Diploma in Montessori Education and Childcare',
+      Degree: 'Advanced Diploma in Montessori Education',
       quote: 'An incredible learning environment. The real-time practical sessions completely changed my approach.',
     },
     {
       video: testimonialVideo1,
       name: 'Divya',
-      Degree: 'Advanced Diploma in Montessori Education and Childcare',
+      Degree: 'Advanced Diploma in Montessori Education',
       quote: 'The curriculum is highly industry-focused. Placement support guided me through every interview step.',
     },
     {
       video: testimonialVideo3,
       name: 'Aysha',
-      Degree: 'Advanced Montessori Childcare Education Trainee',
+      Degree: 'Advanced Diploma in Montessori Education',
       quote: 'Beyond just technical skills, the confidence and communication training I received here was priceless.',
     },
   ]
@@ -68,23 +68,50 @@ export default function Testimonials() {
             {[...testimonials, ...testimonials].map((item, index) => (
               <div key={index} className="durable-card">
                 {/* Video Block */}
-                <div className="durable-video-wrapper">
+                <div
+                  className="durable-video-wrapper"
+                  onMouseEnter={() => {
+                    const video = videoRefs.current[index]
+
+                    handlePlay(index)
+
+                    if (video) {
+                      video.play()
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    const video = videoRefs.current[index]
+
+                    if (video) {
+                      video.pause()
+                      video.currentTime = 0
+                    }
+                  }}
+                >
+
                   <video
                     ref={(el) => (videoRefs.current[index] = el)}
-                    controls
+                    
                     loop
                     playsInline
                     preload="metadata"
-                    onPlay={() => handlePlay(index)}
-                    className="w-100 h-100"
+                    className="w-100 h-100 durable-video"
                   >
                     <source src={item.video} type="video/mp4" />
                   </video>
+
+                  {/* Premium Overlay */}
+                  {/* <div className="video-overlay">
+                    <div className="play-button">
+                      <i className="bi bi-play-fill"></i>
+                    </div>
+                  </div>*/}
+
                 </div>
 
                 {/* Content Block */}
-                <div className="p-4 bg-white d-flex flex-column justify-content-between card-content-height">
-                  <p className="durable-quote">"{item.quote}"</p>
+                <div className="p-4 bg-white d-flex flex-column justify-content-between"> 
+                  {/* <p className="durable-quote">"{item.quote}"</p> */}
 
                   <div className="d-flex align-items-center gap-3 mt-4">
                     <div className="durable-avatar">
@@ -137,72 +164,159 @@ export default function Testimonials() {
 
     /* Card Style */
     .durable-card {
-      flex: 0 0 350px;
-      background: #fff;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid rgba(0,0,0,0.06);
-    }
+  flex: 0 0 350px;
+  background: rgba(255,255,255,0.8);
 
-    .durable-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
-    }
+  backdrop-filter: blur(12px);
 
-    .durable-video-wrapper {
-      background: #000;
-      height: 420px;
-      overflow: hidden;
-    }
+  border-radius: 24px;
+  overflow: hidden;
 
-    .durable-video-wrapper video {
-      object-fit: cover;
-      object-position: top;
-    }
+  border: 1px solid rgba(255,255,255,0.4);
 
-    .card-content-height {
-      min-height: 160px;
-    }
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
 
-    .durable-quote {
-      font-size: 14px;
-      line-height: 1.6;
-      color: #4a4a4a;
-      margin-bottom: 0;
-      font-style: italic;
-    }
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 
-    .degree-text {
-      font-size: 11px;
-      line-height: 1.3;
-      margin-top: 2px;
-    }
+  position: relative;
+}
 
-    .durable-avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: #5c61c8;
-      color: white;
-      display: flex;
-      flex-shrink: 0;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 15px;
-    }
+.durable-card:hover {
+  transform: translateY(-12px);
 
-    @media (max-width: 576px) {
-      .durable-card {
-        flex: 0 0 290px;
-      }
+  box-shadow:
+    0 24px 50px rgba(0,0,0,0.12);
+}
 
-      .durable-video-wrapper {
-        height: 360px;
-      }
-    }
+.durable-video-wrapper {
+  background: #000;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+}
+
+.durable-video {
+  object-fit: cover;
+  object-position: top;
+
+  transition: transform 0.7s ease;
+}
+
+.durable-card:hover .durable-video {
+  transform: scale(1.06);
+}
+
+/* Overlay */
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.05)
+    );
+
+  transition: opacity 0.4s ease;
+}
+
+.durable-card:hover .video-overlay {
+  opacity: 0;
+}
+
+/* Play Button */
+
+.play-button {
+  width: 78px;
+  height: 78px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.18);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.35);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 34px;
+
+  transition: transform 0.4s ease;
+}
+
+.durable-card:hover .play-button {
+  transform: scale(1.1);
+}
+
+/* Content */
+
+.card-content-height {
+  min-height: 190px;
+}
+
+.durable-quote {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #4a4a4a;
+  font-style: italic;
+}
+
+.degree-text {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.durable-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5c61c8,
+      #7a7fff
+    );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 16px;
+
+  flex-shrink: 0;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+  .durable-card {
+    flex: 0 0 290px;
+  }
+
+  .durable-video-wrapper {
+    height: 360px;
+  }
+
+}
   `}
       </style>
     </section>

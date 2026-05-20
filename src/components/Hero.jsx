@@ -3,7 +3,7 @@ import { stats } from '../data'
 
 export default function Hero() {
   return (
-    <section id="top" className="overflow-hidden bg-light py-3">
+    <section id="top" className="overflow-hidden bg-light py-1">
       <div className="container py-5 py-md-6">
         <div className="row g-5 align-items-end">
           <div className="col-lg-7">
@@ -30,14 +30,34 @@ export default function Hero() {
                 Download Brochure
               </a>
             </div>
-            <ul className="list-unstyled row row-cols-2 row-cols-sm-3 mt-4 gy-2 small">
-              {["Experienced Faculty", "Online & Offline Classes", "Internship Opportunities", "Career Guidance Support", "Recognized Diploma Programs"].map(h => (
-                <li key={h} className="col"><span className="text-terracotta me-2">✓</span>{h}</li>
+            <ul className="list-unstyled row row-cols-2 row-cols-md-2 row-cols-lg-3 mt-4 gy-3 gx-3 small">
+              {[
+                "Experienced Faculty",
+                "Online & Offline Classes",
+                "Internship Opportunities",
+                "Career Guidance Support",
+                "Recognized Diploma Programs"
+              ].map((h) => (
+                <li
+                  key={h}
+                  className="col d-flex align-items-start"
+                >
+                  <span
+                    className="text-terracotta me-2 flex-shrink-0"
+                    style={{ lineHeight: "1.5" }}
+                  >
+                    ✓
+                  </span>
+
+                  <span className="lh-base">
+                    {h}
+                  </span>
+                </li>
               ))}
             </ul>
           </div>
           <div className="col-lg-5 position-relative">
-            <img src={heroImg} alt="Montessori teacher with children" className="img-fluid rounded-4 border" style={{ height: 300, objectFit: 'cover', width: '100%' }} />
+            <img src={heroImg} alt="Montessori teacher with children" className="img-fluid rounded-4 border" style={{ height: 320, objectFit: 'cover', width: '100%' }} />
 
           </div>
         </div>
