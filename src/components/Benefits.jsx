@@ -19,14 +19,14 @@ const trainingBenefits = [
   },
   {
     icon: <MonitorSmartphone size={42} />,
-    title: "Online & Offline Classes",
+    title: "Online and Offline Classes",
     description:
       "Flexible learning options to fit your schedule and learning comfort.",
     color: "#1565C0",
   },
   {
     icon: <Target size={42} />,
-    title: "100% Job Guidance",
+    title: "100% Career Guidance Support",
     description:
       "Career guidance and placement support for a bright teaching future.",
     color: "#1565C0",
@@ -40,9 +40,9 @@ const trainingBenefits = [
   },
   {
     icon: <BadgeCheck size={42} />,
-    title: "Recognized Diplomas",
+    title: "Recognized Certifications",
     description:
-      "Career-focused diploma programs with wide career opportunities.",
+      "Career-focused certification programs with wide career opportunities.",
     color: "#1565C0",
   },
 ];
@@ -54,53 +54,72 @@ export default function TrainingBenefits() {
 
         {/* Heading */}
         <div className="text-center mb-5">
-          
+
           <h2 className="display-5 fw-bold mt-3">
             Benefits of Training With SKB
           </h2>
 
           <p className="text-muted mt-3 mx-auto" style={{ maxWidth: "900px" }}>
-            Empowering future educators through professional training,
-            flexible learning, internship opportunities, and career guidance.
+            Empowering future educators through professional training, 
+            flexible learning, internship opportunities, and support for career guidance.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="row g-4">
+        <div className="row row-cols-1 row-cols-md-2 row-cols-xl-5 g-4">
 
           {trainingBenefits.map((benefit, index) => (
-            <div key={index} className="col-lg col-md-6">
+            <div key={index} className="col">
 
               <div
-                className="h-100 p-4 text-center rounded-4 shadow-sm bg-white"
+                className="h-100 bg-white rounded-4 shadow-sm border overflow-hidden"
                 style={{
-                  borderTop: `5px solid ${benefit.color}`,
                   transition: "0.3s ease",
+                  borderTop: `4px solid ${benefit.color}`,
                 }}
               >
 
-                <div
-                  className="mx-auto mb-4 d-flex align-items-center justify-content-center rounded-circle"
-                  style={{
-                    width: "90px",
-                    height: "90px",
-                    backgroundColor: `${benefit.color}15`,
-                    color: benefit.color,
-                  }}
-                >
-                  {benefit.icon}
+                <div className="p-4 d-flex flex-column h-100">
+
+                  {/* Icon */}
+                  <div
+                    className="d-flex align-items-center justify-content-center rounded-circle mb-3"
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      backgroundColor: `${benefit.color}12`,
+                      color: benefit.color,
+                      marginLeft: "50px",
+                    }}
+                  >
+                    {benefit.icon}
+                  </div>
+
+                  {/* Title */}
+                  <h5
+                    className="fw-bold mb-3"
+                    style={{
+                      color: benefit.color,
+                      minHeight: "58px",
+                      lineHeight: "1.35",
+                      letterSpacing: "-0.3px",
+                    }}
+                  >
+                    {benefit.title}
+                  </h5>
+
+                  {/* Description */}
+                  <p
+                    className="text-muted mb-0 text-start"
+                    style={{
+                      lineHeight: "-1.8",
+                      fontSize: "15px",
+                    }}
+                  >
+                    {benefit.description}
+                  </p>
+
                 </div>
-
-                <h5
-                  className="fw-bold mb-3"
-                  style={{ color: benefit.color }}
-                >
-                  {benefit.title}
-                </h5>
-
-                <p className="text-muted mb-0">
-                  {benefit.description}
-                </p>
 
               </div>
 
