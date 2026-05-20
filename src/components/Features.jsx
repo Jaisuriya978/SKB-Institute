@@ -68,7 +68,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="section bg-cream">
+    <section className="bg-light py-5">
 
       <div className="container">
 

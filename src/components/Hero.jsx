@@ -3,7 +3,7 @@ import { stats } from '../data'
 
 export default function Hero() {
   return (
-    <section id="top" className="overflow-hidden">
+    <section id="top" className="overflow-hidden bg-light py-3">
       <div className="container py-5 py-md-6">
         <div className="row g-5 align-items-end">
           <div className="col-lg-7">

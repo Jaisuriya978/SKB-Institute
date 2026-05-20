@@ -2,7 +2,7 @@ import portraitImg from '../assets/Image4.jpg'
 
 export default function CTA() {
   return (
-   <section id="apply" className="section bg-ink">
+   <section id="apply" className="py-4 bg-ink">
          <div className="container">
            <div className="row g-5 align-items-center">
              <div className="col-lg-7">

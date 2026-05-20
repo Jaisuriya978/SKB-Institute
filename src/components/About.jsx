@@ -3,7 +3,7 @@ import SectionHeader from './SectionHeader'
 
 export default function About() {
     return (
-        <section id="about" className="section">
+        <section id="about" className="py-5 bg-light">
             <div className="container">
                 <SectionHeader eyebrow="About SKB" title={<>SKB Montessori <span className="italic text-terracotta">Training Institute</span></>} />
                 <div className="row g-5">

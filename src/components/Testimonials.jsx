@@ -46,7 +46,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="section bg-cream py-5 overflow-hidden">
+    <section className="section bg-light py-5 overflow-hidden">
       <div className="container">
 
         <SectionHeader

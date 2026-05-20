@@ -3,7 +3,7 @@ import { courses } from '../data'
 
 export default function Courses() {
   return (
-    <section id="courses" className="section bg-sand-deep">
+    <section id="courses" className="py-4 bg-light">
           <div className="container">
             <SectionHeader eyebrow="Courses Offered" title={<>Programs designed for <span className="italic text-terracotta">real classrooms</span>.</>}
               intro="Three career-focused diploma tracks built around child-centered learning, international standards, and inclusive teaching." />

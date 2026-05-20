@@ -1,7 +1,7 @@
 export default function Newsletter() {
   const submit = e => { e.preventDefault(); alert('Subscribed!') }
   return (
-    <section className="section bg-sand-deep">
+    <section className="section bg-light py-5">
       <div className="container">
         <div className="row g-4 align-items-center">
           <div className="col-lg-7">

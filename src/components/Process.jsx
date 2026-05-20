@@ -2,26 +2,33 @@ import SectionHeader from './SectionHeader'
 import { steps } from '../data'
 
 import {
-  UserPlus,
-  BookOpen,
-  MonitorPlay,
-  Award,
-  GraduationCap,
-} from 'lucide-react'
+  FaUserPlus,
+  FaDesktop,
+  FaBookOpen,
+  FaPlayCircle,
+  FaChalkboardTeacher,
+  FaClipboardCheck,
+  FaGraduationCap,
+  FaCheckCircle,
+} from "react-icons/fa";
+
 
 export default function Process() {
 
   // Icons for each step
   const icons = [
-    <UserPlus size={34} />,
-    <BookOpen size={34} />,
-    <MonitorPlay size={34} />,
-    <Award size={34} />,
-    <GraduationCap size={34} />,
-  ]
+  <FaUserPlus size={34} />,
+  <FaDesktop size={34} />,
+  <FaBookOpen size={34} />,
+  <FaPlayCircle size={34} />,
+  <FaChalkboardTeacher size={34} />,
+  <FaClipboardCheck size={34} />,
+  <FaGraduationCap size={34} />,
+  <FaCheckCircle size={34} />,
+];
 
   return (
-    <section id="process" className="section bg-sand-deep py-5">
+    <section id="process" className="bg-light py-4">
       <div className="container">
 
         <SectionHeader

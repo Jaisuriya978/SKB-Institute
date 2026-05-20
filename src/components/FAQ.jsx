@@ -6,7 +6,7 @@ export default function FAQ() {
 
   const [open, setOpen] = useState(0)
     return (
-      <section className="section">
+      <section className="py-5 bg-light" id="faq">
         <div className="container">
           <SectionHeader eyebrow="FAQ" title="Frequently asked questions." />
           <div style={{ maxWidth: 1300 }} className="border-top border-bottom">

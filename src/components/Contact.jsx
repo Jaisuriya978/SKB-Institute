@@ -75,7 +75,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="py-5 bg-light">
       <div className="container">
         <SectionHeader eyebrow="Contact" title="Talk to us." />
 

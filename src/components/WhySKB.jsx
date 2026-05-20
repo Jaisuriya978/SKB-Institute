@@ -71,7 +71,7 @@ const whyItems = [
 
 export default function WhySKB() {
   return (
-    <section id="why" className="section">
+    <section id="why" className="py-4 bg-light">
 
       <div className="container">
 

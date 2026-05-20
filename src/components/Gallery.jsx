@@ -77,7 +77,7 @@ export default function Image() {
     return () => cancelAnimationFrame(animationFrame)
   }, [])
   return (
-    <section className="section bg-cream overflow-hidden py-5">
+    <section className="section bg-light overflow-hidden py-5">
       <div className="container">
 
         {/* Header */}
