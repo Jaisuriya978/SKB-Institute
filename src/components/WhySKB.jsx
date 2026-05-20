@@ -91,7 +91,7 @@ export default function WhySKB() {
           }
         />
 
-        <div className="row g-3">
+        <div className="row g-4">
 
           {whyItems.map((item, i) => {
 
@@ -103,30 +103,66 @@ export default function WhySKB() {
                 key={item.title}
               >
 
-                <div className="card-soft h-100">
+                <div
+                  className="card-soft h-100 bg-white rounded-4 border p-4"
+                  style={{
+                    transition: "0.3s ease",
+                  }}
+                >
 
-                  <div className="d-flex align-items-center justify-content-between">
+                  {/* Top Section */}
+                  <div className="d-flex align-items-start justify-content-between mb-4">
 
-                    <div className="icon-wrap">
-
+                    <div
+                      className="d-flex align-items-center justify-content-center rounded-3"
+                      style={{
+                        width: "68px",
+                        height: "68px",
+                        background: "#eef4ff",
+                      }}
+                    >
                       <Icon
-                        size={38}
+                        size={34}
                         className="text-terracotta"
                       />
-
                     </div>
 
-                    <div className="font-serif fs-4 text-terracotta">
+                    <div
+                      className="fw-semibold text-terracotta"
+                      style={{
+                        fontSize: "2rem",
+                        lineHeight: "1",
+                        letterSpacing: "-1px",
+                      }}
+                    >
                       0{i + 1}
                     </div>
 
                   </div>
 
-                  <h4 className="font-serif h6 mt-3">
+                  {/* Title */}
+                  <h4
+                    className="fw-semibold mb-3"
+                    style={{
+                      fontSize: "1.35rem",
+                      lineHeight: "1.4",
+                      letterSpacing: "-0.4px",
+                    }}
+                  >
                     {item.title}
                   </h4>
 
-                  <p className="small text-muted-soft mt-2 mb-0">
+                  {/* Description */}
+                  <p
+                    className="mb-0 text-start"
+                    style={{
+                      fontSize: "15px",
+                      lineHeight: "1.8",
+                      letterSpacing: "0",
+                      wordSpacing: "-1px",
+                      color: "#6b7280",
+                    }}
+                  >
                     {item.description}
                   </p>
 
@@ -137,7 +173,7 @@ export default function WhySKB() {
           })}
 
         </div>
-
+        
       </div>
 
     </section>

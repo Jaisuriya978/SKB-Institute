@@ -32,32 +32,32 @@ export default function About() {
 
                         <div className="d-flex flex-column justify-content-center">
 
-                            <p className="text-muted lh-lg mb-4">
+                            <p className="text-muted lh-lg mb-3">
                                 SKB Montessori Training Institute is dedicated to empowering
                                 aspiring educators through professional teacher training
                                 programs that combine academic excellence with practical
                                 classroom experience.
                             </p>
 
-                            <p className="text-muted lh-lg mb-4">
+                            <p className="text-muted lh-lg mb-3">
                                 We focus on developing confident, compassionate, and skilled
                                 teachers through child-centered learning methods, classroom
                                 management strategies, and practical teaching exposure.
                             </p>
 
-                            <p className="text-muted lh-lg mb-4">
+                            <p className="text-muted lh-lg mb-3">
                                 Our programs are designed for students, women, fresh
                                 graduates, homemakers, and passionate individuals seeking
                                 successful careers in education and childcare.
                             </p>
 
-                            <p className="text-muted lh-lg mb-4">
+                            <p className="text-muted lh-lg mb-3">
                                 Through internships, mentorship, and interactive learning,
                                 students gain real-world teaching confidence and professional
                                 communication skills.
                             </p>
 
-                            <p className="fw-semibold lh-lg mb-0">
+                            <p className="fw-semibold lh-lg mb-1">
                                 Whether you are beginning your teaching journey or upgrading
                                 your professional skills, SKB provides the right platform to
                                 grow with confidence.

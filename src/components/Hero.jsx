@@ -10,7 +10,7 @@ export default function Hero() {
             <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle mb-4">
               🎓 Admissions Open 2026
             </span>
-            <h1 className="font-serif display-3 lh-1">
+            <h1 className="font-serif display-4 lh-1">
               Shape young minds. <span className="italic text-terracotta">Build a successful teaching career.</span>
             </h1>
             <p className="mt-4 fs-5 text-muted-soft">

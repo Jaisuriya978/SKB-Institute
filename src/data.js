@@ -26,8 +26,8 @@ export const courses = [
 ];
 
 export const stats = [
-  ["500+", "Students Trained"],
-  ["100+", "Internship Opportunities"],
+  ["300+", "Students Trained"],
+  ["100%", "Internship Opportunities"],
   ["100%", "Student Satisfaction"],
   ["10+", "Expert Faculty Members"],
 ];

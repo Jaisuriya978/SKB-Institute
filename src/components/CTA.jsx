@@ -19,10 +19,35 @@ export default function CTA() {
             <p className="mt-4 fs-5" style={{ color: 'rgba(255,255,255,.75)' }}>
               Become a confident educator with professional training, practical skills, and career guidance from SKB Montessori Training Institute.
             </p>
-            <div className="mt-4 d-flex flex-wrap gap-2">
-              <a href="#contact" className="btn btn-primary">Enroll Today</a>
-              <a href="#contact" className="btn btn-outline-light rounded-pill px-4">Talk to Our Team</a>
-              <a href="#contact" className="btn btn-light rounded-pill px-4">Apply Now</a>
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 mt-4">
+
+              <div className="col">
+                <a
+                  href="#contact"
+                  className="btn btn-primary rounded-pill w-100 py-3 fw-semibold"
+                >
+                  Enroll Today
+                </a>
+              </div>
+
+              <div className="col">
+                <a
+                  href="#contact"
+                  className="btn btn-outline-light rounded-pill w-100 py-3 fw-semibold"
+                >
+                  Talk to Our Team
+                </a>
+              </div>
+
+              <div className="col">
+                <a
+                  href="#contact"
+                  className="btn btn-light rounded-pill w-100 py-3 fw-semibold"
+                >
+                  Apply Now
+                </a>
+              </div>
+
             </div>
           </div>
           <div className="col-lg-5">

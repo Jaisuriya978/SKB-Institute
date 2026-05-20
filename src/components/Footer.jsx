@@ -76,34 +76,48 @@ export default function Footer() {
                     <div className="col-md-4">
                         <p className="eyebrow">Follow us</p>
                         <p className="mt-3" style={{ color: 'rgba(255,255,255,.85)' }}>Follow us for updates, admissions, workshops, and student success stories.</p>
-                        <div className="d-flex flex-wrap gap-2 mt-3">
+                        <div className="row row-cols-3 row-cols-sm-5 g-3 mt-4">
+
                             {socialLinks.map((link) => (
-                                <a
-                                    key={link.name}
-                                    href={link.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn btn-sm rounded-pill px-3 border border-light border-opacity-25 text-white"
-                                    style={{
-                                        transition: "all 0.3s ease",
-                                        backgroundColor: "transparent",
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = "translateY(-5px) scale(1.08)";
-                                        e.currentTarget.style.backgroundColor = "#3c61c8";
-                                        e.currentTarget.style.color = "#000";
-                                        e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.15)";
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = "translateY(0) scale(1)";
-                                        e.currentTarget.style.backgroundColor = "transparent";
-                                        e.currentTarget.style.color = "#fff";
-                                        e.currentTarget.style.boxShadow = "none";
-                                    }}
-                                >
-                                    {link.icon}
-                                </a>
+                                <div key={link.name} className="col">
+
+                                    <a
+                                        href={link.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-decoration-none"
+                                    >
+
+                                        <div
+                                            className="d-flex align-items-center justify-content-center rounded-pill border border-light border-opacity-25 mx-auto"
+                                            style={{
+                                                width: "100%",
+                                                height: "52px",
+                                                maxWidth: "72px",
+                                                color: "#fff",
+                                                transition: "all 0.3s ease",
+                                                backgroundColor: "transparent",
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.currentTarget.style.transform = "translateY(-4px)";
+                                                e.currentTarget.style.backgroundColor = "#3c61c8";
+                                                e.currentTarget.style.boxShadow =
+                                                    "0 10px 24px rgba(0,0,0,0.18)";
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.currentTarget.style.transform = "translateY(0)";
+                                                e.currentTarget.style.backgroundColor = "transparent";
+                                                e.currentTarget.style.boxShadow = "none";
+                                            }}
+                                        >
+                                            {link.icon}
+                                        </div>
+
+                                    </a>
+
+                                </div>
                             ))}
+
                         </div>
                     </div>
                 </div>

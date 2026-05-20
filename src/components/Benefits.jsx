@@ -60,7 +60,7 @@ export default function TrainingBenefits() {
           </h2>
 
           <p className="text-muted mt-3 mx-auto" style={{ maxWidth: "900px" }}>
-            Empowering future educators through professional training, 
+            Empowering future educators through professional training,
             flexible learning, internship opportunities, and support for career guidance.
           </p>
         </div>
@@ -83,13 +83,14 @@ export default function TrainingBenefits() {
 
                   {/* Icon */}
                   <div
-                    className="d-flex align-items-center justify-content-center rounded-circle mb-3"
+                    className="d-flex align-items-center justify-content-center rounded-circle flex-shrink-0 mx-auto mb-3"
                     style={{
-                      width: "80px",
-                      height: "80px",
+                      width: "72px",
+                      height: "72px",
+                      minWidth: "72px",
+                      minHeight: "72px",
                       backgroundColor: `${benefit.color}12`,
                       color: benefit.color,
-                      marginLeft: "50px",
                     }}
                   >
                     {benefit.icon}
@@ -99,8 +100,7 @@ export default function TrainingBenefits() {
                   <h5
                     className="fw-bold mb-3"
                     style={{
-                      color: benefit.color,
-                      minHeight: "58px",
+                      minHeight: "56px",
                       lineHeight: "1.35",
                       letterSpacing: "-0.3px",
                     }}
@@ -112,8 +112,9 @@ export default function TrainingBenefits() {
                   <p
                     className="text-muted mb-0 text-start"
                     style={{
-                      lineHeight: "-1.8",
-                      fontSize: "15px",
+                      lineHeight: "1.75",
+                      fontSize: "14px",
+                      wordSpacing: "-1px",
                     }}
                   >
                     {benefit.description}
