@@ -64,16 +64,44 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="container"><div className="rule"></div></div>
+      {/* <div className="container"><div className="rule"></div></div> */}
       <div className="container py-4">
-        <div className="row text-center text-md-start g-4">
+
+        <div className="row row-cols-2 row-cols-md-4 g-4">
+
           {stats.map(([n, l]) => (
-            <div className="col-6 col-md-3" key={l}>
-              <div className="font-serif display-6 text-terracotta">{n}</div>
-              <div className="small text-muted-soft">{l}</div>
+            <div className="col" key={l}>
+
+              <div className="bg-white rounded-4 shadow-sm border p-4 h-100 text-center">
+
+                <div
+                  className="fw-bold text-terracotta mb-2"
+                  style={{
+                    fontSize: "clamp(2.2rem, 3vw, 4rem)",
+                    lineHeight: "-1",
+                    letterSpacing: "-1px",
+                  }}
+                >
+                  {n}
+                </div>
+
+                <div
+                  className="text-muted fw-medium"
+                  style={{
+                    fontSize: "15px",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  {l}
+                </div>
+
+              </div>
+
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   )
