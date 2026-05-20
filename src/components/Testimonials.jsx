@@ -13,7 +13,7 @@ export default function Testimonials() {
     {
       video: testimonialVideo,
       name: 'Mythili',
-      Degree: 'Advanced Diploma in Montessori Training',
+      Degree: 'Advanced Diploma in Montessori Training and Childcare',
       quote: 'The hands-on training and mentorship helped me transition seamlessly into my professional career.',
     },
     {
@@ -48,14 +48,14 @@ export default function Testimonials() {
   return (
     <section className="section bg-cream py-5 overflow-hidden">
       <div className="container">
-        
+
         <SectionHeader
           eyebrow="Testimonials"
           title={
             <>
-              After Training from our{' '}
+              Discover what our{' '}
               <span className="italic text-terracotta">
-                graduates Talks about their experience
+                graduates say about their SKB training journey
               </span>
             </>
           }
@@ -64,7 +64,8 @@ export default function Testimonials() {
         {/* Premium Durable Card Track Layout */}
         <div className="testimonial-track-container">
           <div className="testimonial-track">
-            {testimonials.map((item, index) => (
+
+            {[...testimonials, ...testimonials].map((item, index) => (
               <div key={index} className="durable-card">
                 {/* Video Block */}
                 <div className="durable-video-wrapper">
@@ -84,7 +85,7 @@ export default function Testimonials() {
                 {/* Content Block */}
                 <div className="p-4 bg-white d-flex flex-column justify-content-between card-content-height">
                   <p className="durable-quote">"{item.quote}"</p>
-                  
+
                   <div className="d-flex align-items-center gap-3 mt-4">
                     <div className="durable-avatar">
                       {item.name.charAt(0)}
@@ -103,104 +104,106 @@ export default function Testimonials() {
       </div>
 
       {/* Clean Straight Horizontal CSS */}
+      {/* Premium Auto Carousel CSS */}
       <style>
         {`
-          .testimonial-track-container {
-            padding: 30px 0;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-          }
+    .testimonial-track-container {
+      overflow: hidden;
+      position: relative;
+      padding: 30px 0;
+    }
 
-          /* Hide scrollbar for standard browsers but keep functionality */
-          .testimonial-track-container::-webkit-scrollbar {
-            display: none;
-          }
-          .testimonial-track-container {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-          }
+    /* Auto moving row */
+    .testimonial-track {
+      display: flex;
+      gap: 24px;
+      width: max-content;
+      animation: scrollTestimonials 28s linear infinite;
+    }
 
-          /* Explicit horizontal row layout without wrapping */
-          .testimonial-track {
-            display: flex;
-            gap: 24px;
-            flex-wrap: nowrap;
-            padding-left: 4px;
-            padding-right: 4px;
-          }
+    /* Pause when user hovers */
+    .testimonial-track:hover {
+      animation-play-state: paused;
+    }
 
-          /* Base Card Style - Clean and Completely Straightened */
-          .durable-card {
-            flex: 0 0 350px; /* Fixed width to maintain crisp layout shape horizontally */
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.06);
-          }
+    @keyframes scrollTestimonials {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-50%));
+      }
+    }
 
-          /* Clean non-tilted elevation on hover */
-          .durable-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
-          }
+    /* Card Style */
+    .durable-card {
+      flex: 0 0 350px;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
 
-          .durable-video-wrapper {
-            background: #000;
-            height: 420px;
-            overflow: hidden;
-          }
+    .durable-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    }
 
-          .durable-video-wrapper video {
-            object-fit: cover;
-            object-position: top;
-          }
+    .durable-video-wrapper {
+      background: #000;
+      height: 420px;
+      overflow: hidden;
+    }
 
-          .card-content-height {
-            min-height: 160px;
-          }
+    .durable-video-wrapper video {
+      object-fit: cover;
+      object-position: top;
+    }
 
-          .durable-quote {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #4a4a4a;
-            margin-bottom: 0;
-            font-style: italic;
-          }
+    .card-content-height {
+      min-height: 160px;
+    }
 
-          .degree-text {
-            font-size: 11px;
-            line-height: 1.3;
-            margin-top: 2px;
-          }
+    .durable-quote {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #4a4a4a;
+      margin-bottom: 0;
+      font-style: italic;
+    }
 
-          .durable-avatar {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: #5c61c8; 
-            color: white;
-            display: flex;
-            flex-shrink: 0;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 15px;
-          }
+    .degree-text {
+      font-size: 11px;
+      line-height: 1.3;
+      margin-top: 2px;
+    }
 
-          /* Responsiveness for Mobile Devices */
-          @media (max-width: 576px) {
-            .durable-card {
-              flex: 0 0 290px; /* Marginally narrower on compact screens */
-            }
+    .durable-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #5c61c8;
+      color: white;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+    }
 
-            .durable-video-wrapper {
-              height: 360px;
-            }
-          }
-        `}
+    @media (max-width: 576px) {
+      .durable-card {
+        flex: 0 0 290px;
+      }
+
+      .durable-video-wrapper {
+        height: 360px;
+      }
+    }
+  `}
       </style>
     </section>
   )
