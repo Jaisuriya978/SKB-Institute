@@ -8,7 +8,7 @@ const navLinks = [
 
 export default function Nav() {
   return (
-    <nav className="navbar navbar-expand-md sticky-top bg-sand border-bottom" style={{ backdropFilter: 'blur(8px)' }}>
+    <nav className="navbar navbar-expand-md sticky-top bg-light border-bottom" style={{ backdropFilter: 'blur(8px)' }}>
       <div className="container">
         <a className="navbar-brand d-flex align-items-center gap-2" href="#top">
           <img

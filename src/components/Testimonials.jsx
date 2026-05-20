@@ -50,10 +50,14 @@ export default function Testimonials() {
       <div className="container">
 
         <SectionHeader
-          eyebrow="Testimonials"
+          eyebrow={
+            <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle">
+              Testimonials
+            </span>
+          }
           title={
             <>
-              Discover what our{' '}
+              Discover what our{" "}
               <span className="italic text-terracotta">
                 graduates say about their SKB training journey
               </span>
@@ -91,7 +95,7 @@ export default function Testimonials() {
 
                   <video
                     ref={(el) => (videoRefs.current[index] = el)}
-                    
+
                     loop
                     playsInline
                     preload="metadata"
@@ -110,7 +114,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Content Block */}
-                <div className="p-4 bg-white d-flex flex-column justify-content-between"> 
+                <div className="p-4 bg-white d-flex flex-column justify-content-between">
                   {/* <p className="durable-quote">"{item.quote}"</p> */}
 
                   <div className="d-flex align-items-center gap-3 mt-4">

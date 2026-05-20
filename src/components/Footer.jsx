@@ -53,7 +53,7 @@ export default function Footer() {
                             alt="SKB Montessori Logo"
                             className="navbar-logo"
                         />
-                            <span className="font-serif fs-5">SKB <span className="text-muted-soft fs-6">Montessori Training Institute</span></span></div>
+                            <span className="font-serif fs-5">SKB <span className="text-light-soft fs-6">Montessori Training Institute</span></span></div>
                         <p className="font-serif fs-3 mt-4 mb-3">Dream it. Learn it. <span className="italic text-terracotta">Achieve it with SKB.</span></p>
                         <p style={{ color: 'rgba(255,255,255,.7)' }}>Your trusted growth partner in building a successful transformation journey toward becoming a qualified educator.</p>
                     </div>

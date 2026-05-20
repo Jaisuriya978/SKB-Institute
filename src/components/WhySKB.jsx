@@ -76,10 +76,14 @@ export default function WhySKB() {
       <div className="container">
 
         <SectionHeader
-          eyebrow="Why SKB"
+          eyebrow={
+            <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle">
+              Why SKB
+            </span>
+          }
           title={
             <>
-              Why students{' '}
+              Why students{" "}
               <span className="italic text-terracotta">
                 choose SKB
               </span>.

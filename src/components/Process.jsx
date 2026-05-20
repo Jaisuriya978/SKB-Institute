@@ -17,22 +17,26 @@ export default function Process() {
 
   // Icons for each step
   const icons = [
-  <FaUserPlus size={34} />,
-  <FaDesktop size={34} />,
-  <FaBookOpen size={34} />,
-  <FaPlayCircle size={34} />,
-  <FaChalkboardTeacher size={34} />,
-  <FaClipboardCheck size={34} />,
-  <FaGraduationCap size={34} />,
-  <FaCheckCircle size={34} />,
-];
+    <FaUserPlus size={34} />,
+    <FaDesktop size={34} />,
+    <FaBookOpen size={34} />,
+    <FaPlayCircle size={34} />,
+    <FaChalkboardTeacher size={34} />,
+    <FaClipboardCheck size={34} />,
+    <FaGraduationCap size={34} />,
+    <FaCheckCircle size={34} />,
+  ];
 
   return (
     <section id="process" className="bg-light py-4">
       <div className="container">
 
         <SectionHeader
-          eyebrow="Your Journey"
+          eyebrow={
+            <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle">
+              Your Journey
+            </span>
+          }
           title="Your learning journey at SKB."
         />
 
@@ -49,7 +53,7 @@ export default function Process() {
                   {icons[i]}
                 </div>
 
-              
+
 
                 {/* Line */}
                 <div className="rule my-3 mx-auto"></div>

@@ -84,7 +84,11 @@ export default function Image() {
         <div className="mb-4">
 
           <SectionHeader
-            eyebrow="SKB Moments"
+            eyebrow={
+              <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle">
+                SKB Moments
+              </span>
+            }
             title="Moments of achievement & awards."
             intro="Convocation and graduation moments that reflect the SKB experience."
           />

@@ -7,7 +7,9 @@ export default function Hero() {
       <div className="container py-5 py-md-6">
         <div className="row g-5 align-items-end">
           <div className="col-lg-7">
-            <span className="badge-pill mb-4">🎓 Admissions Open 2026</span>
+            <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle mb-4">
+              🎓 Admissions Open 2026
+            </span>
             <h1 className="font-serif display-3 lh-1">
               Shape young minds. <span className="italic text-terracotta">Build a successful teaching career.</span>
             </h1>

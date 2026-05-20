@@ -77,7 +77,14 @@ export default function Contact() {
   return (
     <section id="contact" className="py-5 bg-light">
       <div className="container">
-        <SectionHeader eyebrow="Contact" title="Talk to us." />
+        <SectionHeader
+          eyebrow={
+            <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle">
+              Contact
+            </span>
+          }
+          title="Talk to us."
+        />
 
         <div className="row g-5">
 

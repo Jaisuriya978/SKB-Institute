@@ -73,9 +73,13 @@ export default function Features() {
       <div className="container">
 
         <SectionHeader
-          eyebrow="What makes SKB different"
-          title="A teacher-first training experience."
-        />
+  eyebrow={
+    <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle">
+      What makes SKB different
+    </span>
+  }
+  title="A teacher-first training experience."
+/>
 
         <div className="row g-5 align-items-center">
 

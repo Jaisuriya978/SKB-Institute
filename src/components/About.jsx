@@ -4,120 +4,184 @@ import SectionHeader from './SectionHeader'
 export default function About() {
     return (
         <section id="about" className="py-5 bg-light">
+
             <div className="container">
-                <SectionHeader eyebrow="About SKB" title={<>SKB Montessori <span className="italic text-terracotta">Training Institute</span></>} />
-                <div className="row g-5">
-                    <div className="col-lg-7">
-                        <div className="d-flex flex-column gap-3 fs-6">
 
-                            <p>
-                                SKB Montessori Training Institute is dedicated to empowering aspiring educators through professional teacher training programs that combine academic excellence with practical classroom experience. Our institute focuses on developing confident, compassionate, and skilled teachers who can create meaningful learning environments for children.
+                <SectionHeader
+                    eyebrow={
+                        <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle">
+                            About SKB
+                        </span>
+                    }
+                    className="mb-5"
+                    title={
+                        <>
+                            SKB Montessori{" "}
+                            <span className="italic text-terracotta">
+                                Training Institute
+                            </span>
+                        </>
+                    }
+                />
+
+                {/* TOP SECTION */}
+                <div className="row align-items-stretch g-5">
+
+                    {/* LEFT CONTENT */}
+                    <div className="col-lg-7 d-flex">
+
+                        <div className="d-flex flex-column justify-content-center">
+
+                            <p className="text-muted lh-lg mb-4">
+                                SKB Montessori Training Institute is dedicated to empowering
+                                aspiring educators through professional teacher training
+                                programs that combine academic excellence with practical
+                                classroom experience.
                             </p>
 
-                            <p>
-                                We believe teaching is one of the most powerful professions in shaping the future generation. At SKB, students are trained using child-centered learning approaches, modern teaching methodologies, classroom management strategies, and activity-based education practices that prepare them for real-world teaching environments.
+                            <p className="text-muted lh-lg mb-4">
+                                We focus on developing confident, compassionate, and skilled
+                                teachers through child-centered learning methods, classroom
+                                management strategies, and practical teaching exposure.
                             </p>
 
-                            <p>
-                                Our programs are specially designed for students, women, fresh graduates, homemakers, and individuals who are passionate about building successful careers in education and childcare. With flexible online and offline learning options, students can comfortably balance their personal and professional commitments while upgrading their skills.
+                            <p className="text-muted lh-lg mb-4">
+                                Our programs are designed for students, women, fresh
+                                graduates, homemakers, and passionate individuals seeking
+                                successful careers in education and childcare.
                             </p>
 
-                            <p>
-                                SKB provides a supportive and interactive learning atmosphere where students receive guidance from experienced faculty members, participate in practical training sessions, and gain exposure through internship opportunities. We focus not only on theoretical learning but also on helping students develop communication skills, creativity, leadership qualities, and teaching confidence.
+                            <p className="text-muted lh-lg mb-4">
+                                Through internships, mentorship, and interactive learning,
+                                students gain real-world teaching confidence and professional
+                                communication skills.
                             </p>
 
-                            <p>
-                                Through our Montessori, International Teachers’ Training, and Special Education programs, students gain the knowledge and practical experience required to work in preschools, Montessori schools, international schools, tuition centers, childcare centers, and educational institutions across India.
-                            </p>
-
-                            <p>
-                                Our mission is to make quality teacher education accessible, career-oriented, and empowering for every learner. We continuously strive to create future educators who can inspire children, encourage creativity, and contribute positively to society through education.
-                            </p>
-
-                            <p className="fw-semibold">
-                                Whether you are beginning your journey in teaching or looking to enhance your professional skills, SKB Training Institute provides the right platform, mentorship, and opportunities to help you achieve your career goals with confidence.
+                            <p className="fw-semibold lh-lg mb-0">
+                                Whether you are beginning your teaching journey or upgrading
+                                your professional skills, SKB provides the right platform to
+                                grow with confidence.
                             </p>
 
                         </div>
+
                     </div>
 
+                    {/* RIGHT IMAGE */}
                     <div className="col-lg-5">
 
                         <img
                             src={materialsImg}
                             alt="Montessori materials"
                             loading="lazy"
-                            className="rounded-4 border w-100 mb-4"
-                            style={{ height: 300, objectFit: 'cover' }}
+                            className="img-fluid w-100 h-100 rounded-5 shadow-sm border object-fit-cover"
                         />
 
-                        <div className="row g-3">
+                    </div>
 
-                            <div className="col-6">
-                                <div className="card-soft h-100">
+                </div>
 
-                                    <p className="eyebrow">
-                                        Our Vision
-                                    </p>
+                {/* VISION & MISSION */}
+                <div className="row g-4 mt-5">
 
-                                    <ul className="small mt-3 mb-0 ps-3 d-flex flex-column gap-2">
+                    {/* VISION */}
+                    <div className="col-md-6">
 
-                                        <li>
-                                            Empower aspiring educators with practical teaching skills
-                                        </li>
+                        <div className="bg-white rounded-5 shadow-sm border p-4 h-100">
 
-                                        <li>
-                                            Promote child-centered and inclusive education methods
-                                        </li>
+                            <span className="text-terracotta fw-bold small">
+                                OUR VISION
+                            </span>
 
-                                        <li>
-                                            Develop confident, compassionate, and creativity
-                                        </li>
+                            <h3 className="fw-bold mt-3 mb-3">
+                                Shaping Future Educators
+                            </h3>
 
-                                        <li>
-                                            Encourage lifelong learning and professional growth
-                                        </li>
+                            <p className="text-muted lh-lg mb-4">
+                                To become a leading Montessori training institute that
+                                develops compassionate, confident, and creative educators
+                                capable of transforming modern learning environments.
+                            </p>
 
-                                        <li>
-                                            Inspire future educators to positively impact minds
-                                        </li>
+                            <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
 
-                                        <li>
-                                            Build a trusted and career-focused training environment
-                                        </li>
+                                <li className="d-flex gap-2">
+                                    <span className="text-terracotta">✓</span>
+                                    Empower aspiring educators
+                                </li>
 
-                                    </ul>
+                                <li className="d-flex gap-2">
+                                    <span className="text-terracotta">✓</span>
+                                    Promote child-centered learning
+                                </li>
 
-                                </div>
-                            </div>
-                            <div className="col-6">
-                                <div className="card-soft h-100">
+                                <li className="d-flex gap-2">
+                                    <span className="text-terracotta">✓</span>
+                                    Encourage lifelong professional growth
+                                </li>
 
-                                    <p className="eyebrow">
-                                        Our Mission
-                                    </p>
+                                <li className="d-flex gap-2">
+                                    <span className="text-terracotta">✓</span>
+                                    Inspire creativity and leadership
+                                </li>
 
-                                    <ul className="small mt-2 mb-0 ps-3 d-flex flex-column gap-2">
-                                        <li>Provide industry-relevant teacher training programs</li>
-
-                                        <li>Develop practical classroom and communication skills</li>
-
-                                        <li>Offer internship opportunities and career guidance</li>
-
-                                        <li>Promote inclusive and child-centered education</li>
-
-                                        <li>Empower students through flexible learning methods</li>
-
-                                        <li>Build confident educators for modern classrooms</li>
-                                    </ul>
-
-                                </div>
-                            </div>
+                            </ul>
 
                         </div>
+
                     </div>
+
+                    {/* MISSION */}
+                    <div className="col-md-6">
+
+                        <div className="bg-white rounded-5 shadow-sm border p-4 h-100">
+
+                            <span className="text-terracotta fw-bold small">
+                                OUR MISSION
+                            </span>
+
+                            <h3 className="fw-bold mt-3 mb-3">
+                                Practical Learning & Career Growth
+                            </h3>
+
+                            <p className="text-muted lh-lg mb-4">
+                                Our mission is to provide industry-focused teacher training
+                                through practical learning, mentorship, internship exposure,
+                                and flexible education methods.
+                            </p>
+
+                            <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
+
+                                <li className="d-flex gap-2">
+                                    <span className="text-terracotta">✓</span>
+                                    Industry-relevant training programs
+                                </li>
+
+                                <li className="d-flex gap-2">
+                                    <span className="text-terracotta">✓</span>
+                                    Internship and career guidance
+                                </li>
+
+                                <li className="d-flex gap-2">
+                                    <span className="text-terracotta">✓</span>
+                                    Communication and classroom skills
+                                </li>
+
+                                <li className="d-flex gap-2">
+                                    <span className="text-terracotta">✓</span>
+                                    Flexible online & offline learning
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
     )
 }

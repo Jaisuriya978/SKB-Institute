@@ -49,7 +49,7 @@ const trainingBenefits = [
 
 export default function TrainingBenefits() {
   return (
-    <section className="py-5 bg-light">
+    <section className="py-4 bg-light">
       <div className="container">
 
         {/* Heading */}
@@ -59,7 +59,7 @@ export default function TrainingBenefits() {
             Benefits of Training With SKB
           </h2>
 
-          <p className="text-muted mt-3 mx-auto" style={{ maxWidth: "700px" }}>
+          <p className="text-muted mt-3 mx-auto" style={{ maxWidth: "900px" }}>
             Empowering future educators through professional training,
             flexible learning, internship opportunities, and career guidance.
           </p>
