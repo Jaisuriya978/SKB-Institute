@@ -14,7 +14,7 @@ export default function Newsletter() {
             </div>
             <h3 className="font-serif display-6 mt-2">Stay updated with <span className="italic text-terracotta">SKB</span>.</h3>
             <p className="text-muted-soft mt-2 mb-0" style={{ maxWidth: 540 }}>
-              Updates about admissions, workshops, new programs, and educational opportunities — delivered to your inbox.
+              Update about admissions, workshops, new programs, and educational opportunities for delivered to your inbox.
             </p>
           </div>
           <div className="col-lg-5">

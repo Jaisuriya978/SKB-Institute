@@ -2,7 +2,7 @@ export const courses = [
   {
     n: "01",
     title: "Advanced Diploma in Montessori and Child Care",
-    desc: "Early childhood education, Montessori philosophy, classroom management, and child psychology — practical knowledge to guide children through their foundational years.",
+    desc: "The Early childhood educations, Montessori philosophy, classroom management, and child psychology practical knowledge to guide children through their foundational years.",
     learn: ["Montessori teaching methods", "Child psychology and behavior", "Activity-based learning", "Classroom organization", "Child development stages", "Communication skills for educators", "Creative learning techniques"],
     careers: ["Montessori Teacher", "Child Care Educator", "Kindergarten Teacher", "Preschool Coordinator", "Early Childhood Educator", "Child Development Specialist", "Montessori Assistant"],
     benefits: ["Practical classroom exposure", "Hands-on learning activities", "Professional teaching guidance", "Internship support", "Career-focused curriculum", "Flexible learning options", "Affordable fee structure"],
@@ -10,7 +10,7 @@ export const courses = [
   {
     n: "02",
     title: "PG Diploma in International Teachers' Training",
-    desc: "International-standard teaching methodologies and modern classroom practices required in today's leading educational institutions.",
+    desc: "International standard teaching methodologies and modern classroom practices required in today's leading educational institutions.",
     learn: ["Modern teaching strategies", "Digital classroom management", "Presentation and communication skills", "International teaching practices", "Student engagement methods", "Leadership in education", "Curriculum development basics"],
     careers: ["International School Teacher", "Academic Trainer", "Subject Educator", "Educational Coordinator", "Online Educator", "Curriculum Developer", "Educational Consultant"],
     benefits: ["Career-focused curriculum", "Industry-ready skills", "Professional mentoring", "Flexible learning modes", "Internship opportunities", "Real classroom exposure", "Supportive learning environment"],
@@ -89,13 +89,13 @@ export const steps = [
   ],
 
   [
-    "Get Certified",
-    "Receive industry-recognized certification from SKB after successfully completing the course requirements and evaluation process."
+    "Get Certification",
+    "Receive the industry recognized certification from SKB after successfully completing the course requirements and evaluation process."
   ],
 
   [
-    "Become a Qualified Educator",
-    "Begin your professional journey as a trained Montessori educator with the skills, confidence, and certification needed to work in reputed institutions."
+    "Qualified Educator",
+    "Begin your professional journey as a trained Montessori Education Trainer with the skills, confidence, and certification needed to work in reputed institutions."
   ],
 ];
 

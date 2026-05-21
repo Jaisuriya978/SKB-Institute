@@ -1,34 +1,194 @@
 import SectionHeader from './SectionHeader'
 import { steps } from '../data'
 
-import {
-  FaUserPlus,
-  FaDesktop,
-  FaBookOpen,
-  FaPlayCircle,
-  FaChalkboardTeacher,
-  FaClipboardCheck,
-  FaGraduationCap,
-  FaCheckCircle,
-} from "react-icons/fa";
-
+import userGif from '../assets/id.gif'
+import desktopGif from '../assets/selective.gif'
+import bookGif from '../assets/enroll.gif'
+import playGif from '../assets/learning.gif'
+import teacherGif from '../assets/training.gif'
+import clipboardGif from '../assets/complete.gif'
+import graduationGif from '../assets/certificate.gif'
+import checkGif from '../assets/graduate.gif'
 
 export default function Process() {
 
-  // Icons for each step
+  // Flaticon GIFs
   const icons = [
-    <FaUserPlus size={34} />,
-    <FaDesktop size={34} />,
-    <FaBookOpen size={34} />,
-    <FaPlayCircle size={34} />,
-    <FaChalkboardTeacher size={34} />,
-    <FaClipboardCheck size={34} />,
-    <FaGraduationCap size={34} />,
-    <FaCheckCircle size={34} />,
-  ];
+    {
+      icon: userGif,
+      animation: 'float-icon',
+    },
+
+    {
+      icon: desktopGif,
+      animation: 'float-icon',
+    },
+
+    {
+      icon: bookGif,
+      animation: 'float-icon',
+    },
+
+    {
+      icon: playGif,
+      animation: 'float-icon',
+    },
+
+    {
+      icon: teacherGif,
+      animation: 'float-reverse-icon',
+    },
+
+    {
+      icon: clipboardGif,
+      animation: 'float-reverse-icon',
+    },
+
+    {
+      icon: graduationGif,
+      animation: 'float-icon',
+    },
+
+    {
+      icon: checkGif,
+      animation: 'float-icon',
+    },
+  ]
 
   return (
-    <section id="process" className="bg-light py-4">
+    <section
+      id="process"
+      className="bg-light py-5"
+    >
+
+      {/* Animations */}
+      <style>{`
+        @keyframes float {
+          0%,100% {
+            transform: translateY(0px);
+          }
+
+          50% {
+            transform: translateY(-6px);
+          }
+        }
+
+        @keyframes floatReverse {
+          0%,100% {
+            transform: translateY(0px);
+          }
+
+          50% {
+            transform: translateY(6px);
+          }
+        }
+
+        @keyframes pulse {
+          0%,100% {
+            transform: scale(1);
+          }
+
+          50% {
+            transform: scale(1.08);
+          }
+        }
+
+        @keyframes rotateSoft {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          50% {
+            transform: rotate(8deg);
+          }
+
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+
+        @keyframes rotateReverse {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          50% {
+            transform: rotate(-8deg);
+          }
+
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+
+        @keyframes swing {
+          0%,100% {
+            transform: rotate(0deg);
+          }
+
+          25% {
+            transform: rotate(6deg);
+          }
+
+          75% {
+            transform: rotate(-6deg);
+          }
+        }
+
+        .float-icon {
+          animation: float 2.5s ease-in-out infinite;
+        }
+
+        .float-reverse-icon {
+          animation: floatReverse 2.5s ease-in-out infinite;
+        }
+
+        .pulse-icon {
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        .rotate-icon {
+          animation: rotateSoft 3s ease-in-out infinite;
+        }
+
+        .rotate-reverse-icon {
+          animation: rotateReverse 3s ease-in-out infinite;
+        }
+
+        .swing-icon {
+          animation: swing 2.5s ease-in-out infinite;
+          transform-origin: top center;
+        }
+
+        .process-card {
+          transition: all 0.3s ease;
+        }
+
+        .process-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+        }
+
+        .process-icon {
+          width: 82px;
+          height: 82px;
+          border-radius: 50%;
+          background: rgba(21, 101, 192, 0.08);
+        }
+
+        .rule {
+          width: 48px;
+          height: 2px;
+          background: rgba(21, 101, 192, 0.2);
+        }
+
+        .gif-icon {
+          width: 58px;
+          height: 52px;
+          object-fit: contain;
+        }
+      `}</style>
+
       <div className="container">
 
         <SectionHeader
@@ -44,16 +204,26 @@ export default function Process() {
 
           {steps.map(([t, d], i) => (
 
-            <li className="col-lg-3 col-md-6" key={t}>
+            <li
+              className="col-lg-3 col-md-6"
+              key={t}
+            >
 
-              <div className="process-card h-100 p-4 rounded-4 shadow-sm bg-white text-center">
+              <div className="process-card h-100 p-4 rounded-4 shadow-sm bg-white text-center border">
 
-                {/* Icon */}
-                <div className="process-icon mx-auto mb-3 d-flex align-items-center justify-content-center" >
-                  {icons[i]}
+                {/* Animated Flaticon */}
+                <div
+                  className={`process-icon mx-auto mb-3 d-flex align-items-center justify-content-center ${icons[i].animation}`}
+                >
+
+                  <img
+                    src={icons[i].icon}
+                    alt={t}
+                    className="gif-icon"
+                    loading="lazy"
+                  />
+
                 </div>
-
-
 
                 {/* Line */}
                 <div className="rule my-3 mx-auto"></div>
@@ -64,7 +234,7 @@ export default function Process() {
                 </h4>
 
                 {/* Description */}
-                <p className="small text-muted-soft mt-3 mb-0">
+                <p className="small text-muted mt-3 mb-0 lh-lg">
                   {d}
                 </p>
 
@@ -75,7 +245,9 @@ export default function Process() {
           ))}
 
         </ol>
+
       </div>
+
     </section>
   )
 }
