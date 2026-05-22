@@ -4,7 +4,6 @@ import About from './components/About'
 import Courses from './components/Courses'
 import WhySKB from './components/WhySKB'
 import Features from './components/Features'
-import Benefits from './components/Benefits'
 import Process from './components/Process'
 import Testimonials from './components/Testimonials'
 import Gallery from './components/Gallery'
@@ -23,7 +22,6 @@ export default function App() {
       <Courses />
       <WhySKB />
       <Features />
-      <Benefits />
       <Process />
       <Gallery />
       <Testimonials />

@@ -1,6 +1,14 @@
 import { useState } from 'react'
-import { PhoneCall, Mail } from 'lucide-react'
+import { PhoneCall, Mail, MapPin, Clock3 } from 'lucide-react'
 import SectionHeader from './SectionHeader'
+import certifiedGif from '../assets/certificate.gif'
+import placementGif from '../assets/job-offer.gif'
+import facultyGif from '../assets/teacher.gif'
+
+import locationGif from '../assets/address.gif'
+import phoneGif from '../assets/phone.gif'
+import mailGif from '../assets/mail.gif'
+import timeGif from '../assets/time.gif'
 
 export default function Contact() {
 
@@ -90,226 +98,228 @@ export default function Contact() {
 
           <div className="col-lg-5 d-flex flex-column gap-4">
 
+            {/* Address */}
             <div>
-              <p className="eyebrow">Address</p>
 
-              <p className="fs-5 mt-2 mb-0">
-                SKB Montessori Training Institute
-                <br />
-                4/379, Parvathi Nagar, Saravana Bawa Nagar, Old Perungalathur, Chennai - 600063 Tamil Nadu, India
-              </p>
+              {/*<p className="eyebrow">
+                Address
+              </p>*/}
+
+              <div className="d-flex align-items-start gap-3 mt-3">
+
+                <img
+                  src={locationGif}
+                  alt="Address"
+                  style={{
+                    width: "42px",
+                    height: "42px",
+                    objectFit: "contain",
+                  }}
+                />
+
+                <p
+                  className="fs-5 mb-0"
+                  style={{
+                    maxWidth: "420px",
+                    lineHeight: "1.8",
+                  }}
+                >
+                  No. 4/379, Saravanabhava Nagar,
+                  <br />
+                  Near Parvathy Nagar bus stop,
+                  <br />
+                  Old Perungalathur, Chennai - 600063
+                </p>
+
+              </div>
+
             </div>
 
+            {/* Phone */}
             <div>
 
-              <p className="eyebrow">
+              {/*<p className="eyebrow">
                 Phone
-              </p>
+              </p>*/}
 
-              <a
-                href="tel:+919597686903"
-                className="d-flex align-items-center gap-2 fs-5 text-decoration-none mb-2"
-              >
-                <PhoneCall size={18} className="text-terracotta" />
+              <div className="mt-3 d-flex flex-column gap-3">
 
-                +91 95976 86903
-              </a>
+                <a
+                  href="tel:+919597686903"
+                  className="d-flex align-items-center gap-3 fs-5 text-decoration-none"
+                >
 
-              <a
-                href="tel:+919841152894"
-                className="d-flex align-items-center gap-2 fs-5 text-decoration-none"
-              >
-                <PhoneCall size={18} className="text-terracotta" />
+                  <img
+                    src={phoneGif}
+                    alt="Phone"
+                    style={{
+                      width: "42px",
+                      height: "42px",
+                      objectFit: "contain",
+                    }}
+                  />
 
-                +91 98411 52894
-              </a>
+                  +91 95976 86903
+
+                </a>
+              </div>
 
             </div>
+
+            {/* Email */}
             <div>
 
-              <p className="eyebrow">
+              {/*<p className="eyebrow">
                 Email
-              </p>
+              </p>*/}
 
               <a
                 href="mailto:skbtraininginstitute@gmail.com"
-                className="d-flex align-items-center gap-2 fs-5 text-decoration-none"
+                className="d-flex align-items-center gap-3 fs-5 text-decoration-none mt-3"
               >
-                <Mail size={18} className="text-terracotta" />
+
+                <img
+                  src={mailGif}
+                  alt="Email"
+                  style={{
+                    width: "42px",
+                    height: "42px",
+                    objectFit: "contain",
+                  }}
+                />
 
                 skbtraininginstitute@gmail.com
+
               </a>
 
             </div>
 
+            {/* Availability */}
             <div>
-              <p className="eyebrow">Availability</p>
 
-              <p className="fs-5 mt-2 mb-0">
-                Monday – Saturday · 9:00 AM – 5:00 PM
-              </p>
+              {/*<p className="eyebrow">
+                Availability
+              </p>*/}
+
+              <div className="d-flex align-items-center gap-3 mt-3">
+
+                <img
+                  src={timeGif}
+                  alt="Availability"
+                  style={{
+                    width: "42px",
+                    height: "42px",
+                    objectFit: "contain",
+                  }}
+                />
+
+                <p className="fs-5 mb-0">
+                  Monday – Saturday · 9:00 AM – 5:00 PM
+                </p>
+
+              </div>
+
+            </div>
+
+
+
+            {/* Badges */}
+            <div className="d-flex gap-3 flex-wrap">
+
+              {/* Certified */}
+              <div className="badge rounded-4 bg-light-subtle text-terracotta px-3 py-3 d-flex flex-column align-items-center gap-2">
+
+                <img
+                  src={certifiedGif}
+                  alt="Certified Training"
+                  style={{
+                    width: "90px",
+                    height: "90px",
+                    objectFit: "contain",
+                  }}
+                />
+
+                <span className="fw-semibold">
+                  Certified Training
+                </span>
+
+              </div>
+
+              {/* Placement */}
+              <div className="badge rounded-4 bg-light-subtle text-terracotta px-3 py-3 d-flex flex-column align-items-center gap-2">
+
+                <img
+                  src={placementGif}
+                  alt="Placement Support"
+                  style={{
+                    width: "90px",
+                    height: "90px",
+                    objectFit: "contain",
+                  }}
+                />
+
+                <span className="fw-semibold">
+                  Placement Support
+                </span>
+
+              </div>
+
+              {/* Faculty */}
+              <div className="badge rounded-4 bg-light-subtle text-terracotta px-3 py-3 d-flex flex-column align-items-center gap-2">
+
+                <img
+                  src={facultyGif}
+                  alt="Expert Faculty"
+                  style={{
+                    width: "90px",
+                    height: "90px",
+                    objectFit: "contain",
+                  }}
+                />
+
+                <span className="fw-semibold">
+                  Expert Faculty
+                </span>
+
+              </div>
+
             </div>
 
           </div>
 
           <div className="col-lg-7">
 
-            <form
-              onSubmit={submit}
-              className="bg-white border rounded-4 p-4 p-md-5 d-flex flex-column gap-3"
+            <div
+              className="bg-white rounded-5 shadow-sm p-3 p-lg-4 h-100"
+              style={{
+                border: "0px solid #ececec",
+              }}
             >
 
-              <div className="row g-3">
-
-                {/* Name */}
-                <div className="col-sm-6">
-
-                  <label className="eyebrow d-block mb-2">
-                    Full name
-                  </label>
-
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className={`form-control form-control-lg ${errors.name ? 'is-invalid' : ''
-                      }`}
-                    placeholder="Your name"
-                  />
-
-                  {errors.name && (
-                    <div className="invalid-feedback">
-                      {errors.name}
-                    </div>
-                  )}
-
-                </div>
-
-                {/* Phone */}
-                <div className="col-sm-6">
-
-                  <label className="eyebrow d-block mb-2">
-                    Phone
-                  </label>
-
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className={`form-control form-control-lg ${errors.phone ? 'is-invalid' : ''
-                      }`}
-                    placeholder="+91 ..."
-                  />
-
-                  {errors.phone && (
-                    <div className="invalid-feedback">
-                      {errors.phone}
-                    </div>
-                  )}
-
-                </div>
-
-              </div>
-
-              {/* Email */}
-              <div>
-
-                <label className="eyebrow d-block mb-2">
-                  Email
-                </label>
-
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={`form-control form-control-lg ${errors.email ? 'is-invalid' : ''
-                    }`}
-                  placeholder="you@example.com"
-                />
-
-                {errors.email && (
-                  <div className="invalid-feedback">
-                    {errors.email}
-                  </div>
-                )}
-
-              </div>
-
-              {/* Program */}
-              <div>
-
-                <label className="eyebrow d-block mb-2">
-                  Program of interest
-                </label>
-
-                <select
-                  name="program"
-                  value={formData.program}
-                  onChange={handleChange}
-                  className={`form-select form-select-lg ${errors.program ? 'is-invalid' : ''
-                    }`}
-                >
-                  <option value="">
-                    Select Program
-                  </option>
-
-                  <option>
-                    Advanced Diploma in Montessori & Child Care
-                  </option>
-
-                  <option>
-                    PG Diploma in International Teachers' Training
-                  </option>
-
-                  <option>
-                    PG Diploma in Special Education
-                  </option>
-                </select>
-
-                {errors.program && (
-                  <div className="invalid-feedback">
-                    {errors.program}
-                  </div>
-                )}
-
-              </div>
-
-              {/* Message */}
-              <div>
-
-                <label className="eyebrow d-block mb-2">
-                  Message
-                </label>
-
-                <textarea
-                  rows="4"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className={`form-control ${errors.message ? 'is-invalid' : ''
-                    }`}
-                  placeholder="Tell us about your goals…"
-                ></textarea>
-
-                {errors.message && (
-                  <div className="invalid-feedback">
-                    {errors.message}
-                  </div>
-                )}
-
-              </div>
-
-              <button
-                type="submit"
-                className="btn btn-primary align-self-start"
+              <div
+                className="overflow-hidden rounded-5"
+                style={{
+                  height: "100%",
+                  minHeight: "420px",
+                }}
               >
-                Send enquiry
-              </button>
 
-            </form>
+                <iframe
+                  title="SKB Montessori Training Institute"
+                  src="https://www.google.com/maps?q=SKB+Montessori+Training+Institute+Chennai&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{
+                    border: 0,
+                  }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+
+              </div>
+
+            </div>
 
           </div>
 

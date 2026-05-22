@@ -1,9 +1,17 @@
-import materialsImg from '../assets/Image6.jpg'
+import aboutImg from '../assets/Image6.jpg'
+
+import visionGif from '../assets/vision.gif'
+import missionGif from '../assets/mission.gif'
+import mottoGif from '../assets/motto.gif'
+
 import SectionHeader from './SectionHeader'
 
 export default function About() {
     return (
-        <section id="about" className="py-5 bg-light">
+        <section
+            id="about"
+            className="py-5 bg-light overflow-hidden"
+        >
 
             <div className="container">
 
@@ -17,162 +25,235 @@ export default function About() {
                     title={
                         <>
                             SKB Montessori{" "}
-                            <span className="italic text-terracotta">
+                            <span className="text-terracotta">
                                 Training Institute
                             </span>
                         </>
                     }
                 />
 
-                {/* TOP SECTION */}
-                <div className="row align-items-stretch g-5">
+                <div className="row align-items-center g-5">
 
                     {/* LEFT CONTENT */}
-                    <div className="col-lg-7 d-flex">
-
-                        <div className="d-flex flex-column justify-content-center">
-
-                            <p className="text-muted lh-lg mb-3">
-                                SKB Montessori Training Institute is dedicated to empowering
-                                aspiring educators through professional teacher training
-                                programs that combine academic excellence with practical
-                                classroom experience.
-                            </p>
-
-                            <p className="text-muted lh-lg mb-3">
-                                We focus on developing confident, compassionate, and skilled
-                                teachers through child-centered learning methods, classroom
-                                management strategies, and practical teaching exposure.
-                            </p>
-
-                            <p className="text-muted lh-lg mb-3">
-                                Our programs are designed for students, women, fresh
-                                graduates, homemakers, and passionate individuals seeking
-                                successful careers in education and childcare.
-                            </p>
-
-                            <p className="text-muted lh-lg mb-3">
-                                Through internships, mentorship, and interactive learning,
-                                students gain real-world teaching confidence and professional
-                                communication skills.
-                            </p>
-
-                            <p className="fw-semibold lh-lg mb-1">
-                                Whether you are beginning your teaching journey or upgrading
-                                your professional skills, SKB provides the right platform to
-                                grow with confidence.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    {/* RIGHT IMAGE */}
                     <div className="col-lg-5">
 
-                        <img
-                            src={materialsImg}
-                            alt="Montessori materials"
-                            loading="lazy"
-                            className="img-fluid w-100 h-100 rounded-5 shadow-sm border object-fit-cover"
-                        />
+                        <div className="pe-lg-4">
 
-                    </div>
-
-                </div>
-
-                {/* VISION & MISSION */}
-                <div className="row g-4 mt-5">
-
-                    {/* VISION */}
-                    <div className="col-md-6">
-
-                        <div className="bg-white rounded-5 shadow-sm border p-4 h-100">
-
-                            <span className="text-terracotta fw-bold small">
-                                OUR VISION
-                            </span>
-
-                            <h3 className="fw-bold mt-3 mb-3">
-                                Shaping Future Educators
-                            </h3>
-
-                            <p className="text-muted lh-lg mb-4">
-                                To become a leading Montessori training institute that
-                                develops compassionate, confident, and creative educators
-                                capable of transforming modern learning environments.
+                            <p
+                                className="text-muted lh-lg mb-4"
+                                style={{
+                                    fontSize: '1.05rem',
+                                }}
+                            >
+                                SKB Montessori Training Institute is dedicated
+                                to empowering aspiring educators through
+                                professional teacher training programs focused
+                                on practical learning and child-centered education.
                             </p>
 
-                            <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
+                            <p
+                                className="text-muted lh-lg mb-4"
+                                style={{
+                                    fontSize: '1.05rem',
+                                }}
+                            >
+                                We help students, homemakers, fresh graduates,
+                                and passionate individuals build successful
+                                careers in teaching through modern classroom
+                                training and internship exposure.
+                            </p>
 
-                                <li className="d-flex gap-2">
-                                    <span className="text-terracotta">✓</span>
-                                    Empower aspiring educators
-                                </li>
+                          
 
-                                <li className="d-flex gap-2">
-                                    <span className="text-terracotta">✓</span>
-                                    Promote child-centered learning
-                                </li>
 
-                                <li className="d-flex gap-2">
-                                    <span className="text-terracotta">✓</span>
-                                    Encourage lifelong professional growth
-                                </li>
+                            {/* VISION / MISSION / MOTTO */}
+                            <div className="d-flex flex-column gap-3">
 
-                                <li className="d-flex gap-2">
-                                    <span className="text-terracotta">✓</span>
-                                    Inspire creativity and leadership
-                                </li>
+                                {/* Vision */}
+                                <div className="bg-white rounded-4 shadow-sm border p-3 d-flex align-items-start gap-3">
 
-                            </ul>
+                                    <div
+                                        className="rounded-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style={{
+                                            width: "65px",
+                                            height: "65px",
+                                            background: "#EEF6FF",
+                                        }}
+                                    >
+
+                                        <img
+                                            src={visionGif}
+                                            alt="Vision"
+                                            width={36}
+                                            height={36}
+                                            style={{
+                                                objectFit: "contain",
+                                            }}
+                                        />
+
+                                    </div>
+
+                                    <div>
+
+                                        <h5 className="fw-bold mb-1">
+                                            Vision
+                                        </h5>
+
+                                        <p
+                                            className="text-muted mb-0"
+                                            style={{
+                                                lineHeight: "1.7",
+                                                fontSize: "14px",
+                                            }}
+                                        >
+                                            Creating confident and compassionate future educators.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                {/* Mission */}
+                                <div className="bg-white rounded-4 shadow-sm border p-3 d-flex align-items-start gap-3">
+
+                                    <div
+                                        className="rounded-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style={{
+                                            width: "65px",
+                                            height: "65px",
+                                            background: "#FFF5EE",
+                                        }}
+                                    >
+
+                                        <img
+                                            src={missionGif}
+                                            alt="Mission"
+                                            width={36}
+                                            height={36}
+                                            style={{
+                                                objectFit: "contain",
+                                            }}
+                                        />
+
+                                    </div>
+
+                                    <div>
+
+                                        <h5 className="fw-bold mb-1">
+                                            Mission
+                                        </h5>
+
+                                        <p
+                                            className="text-muted mb-0"
+                                            style={{
+                                                lineHeight: "1.7",
+                                                fontSize: "14px",
+                                            }}
+                                        >
+                                            Practical learning with mentorship, internships, and career support.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                {/* Motto */}
+                                <div className="bg-white rounded-4 shadow-sm border p-3 d-flex align-items-start gap-3">
+
+                                    <div
+                                        className="rounded-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style={{
+                                            width: "65px",
+                                            height: "65px",
+                                            background: "#F5F3FF",
+                                        }}
+                                    >
+
+                                        <img
+                                            src={mottoGif}
+                                            alt="Motto"
+                                            width={36}
+                                            height={36}
+                                            style={{
+                                                objectFit: "contain",
+                                            }}
+                                        />
+
+                                    </div>
+
+                                    <div>
+
+                                        <h5 className="fw-bold mb-1">
+                                            Motto
+                                        </h5>
+
+                                        <p
+                                            className="text-muted mb-0"
+                                            style={{
+                                                lineHeight: "1.7",
+                                                fontSize: "14px",
+                                            }}
+                                        >
+                                            Determination, development, and dedication in education.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                    {/* MISSION */}
-                    <div className="col-md-6">
+                    {/* RIGHT SIDE */}
+                    <div className="col-lg-7">
 
-                        <div className="bg-white rounded-5 shadow-sm border p-4 h-100">
+                        <div className="position-relative">
 
-                            <span className="text-terracotta fw-bold small">
-                                OUR MISSION
-                            </span>
+                            {/* MAIN IMAGE */}
+                            <img
+                                src={aboutImg}
+                                alt="SKB Montessori Training Institute"
+                                className="img-fluid rounded-5 shadow-sm w-100"
+                                style={{
+                                    height: '520px',
+                                    objectFit: 'cover',
+                                    
+                                }}
+                            />
 
-                            <h3 className="fw-bold mt-3 mb-3">
-                                Practical Learning & Career Growth
-                            </h3>
 
-                            <p className="text-muted lh-lg mb-4">
-                                Our mission is to provide industry-focused teacher training
-                                through practical learning, mentorship, internship exposure,
-                                and flexible education methods.
-                            </p>
+                            {/* EXPERIENCE CARD */}
+                            <div
+                                className="position-absolute bottom-0 end-0 translate-middle-y"
+                                style={{
+                                    zIndex: 2,
+                                    marginBottom: '-105px'
+                                }}
+                            >
 
-                            <ul className="list-unstyled d-flex flex-column gap-3 mb-0">
+                                <div
+                                    className="bg-white shadow rounded-5 px-5 py-4 border text-center"
+                                >
 
-                                <li className="d-flex gap-2">
-                                    <span className="text-terracotta">✓</span>
-                                    Industry-relevant training programs
-                                </li>
+                                    <h2
+                                        className="fw-bold text-terracotta mb-1"
+                                        style={{
+                                            fontSize: '3rem',
+                                        }}
+                                    >
+                                        8+
+                                    </h2>
 
-                                <li className="d-flex gap-2">
-                                    <span className="text-terracotta">✓</span>
-                                    Internship and career guidance
-                                </li>
+                                    <p className="mb-0 fw-medium">
+                                        Years of Excellence
+                                    </p>
 
-                                <li className="d-flex gap-2">
-                                    <span className="text-terracotta">✓</span>
-                                    Communication and classroom skills
-                                </li>
+                                </div>
 
-                                <li className="d-flex gap-2">
-                                    <span className="text-terracotta">✓</span>
-                                    Flexible online & offline learning
-                                </li>
-
-                            </ul>
+                            </div>
 
                         </div>
 

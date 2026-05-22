@@ -1,95 +1,238 @@
 import heroImg from '../assets/Image5.JPG'
 import { stats } from '../data'
+import { FaCheckCircle } from "react-icons/fa"
 
 export default function Hero() {
+
+  const highlights = [
+    "Experienced Faculty",
+    "Online & Offline Classes",
+    "Internship Opportunities",
+    "Career Guidance Support",
+    "Recognized Diploma Programs"
+  ]
+
   return (
-    <section id="top" className="overflow-hidden bg-light py-1">
-      <div className="container py-5 py-md-6">
-        <div className="row g-5 align-items-end">
+    <section
+      id="top"
+      className="bg-light overflow-hidden py-5"
+      style={{
+        background:
+          "linear-gradient(180deg, #f8fbff 0%, #ffffff 100%)",
+      }}
+    >
+
+      <div className="container">
+
+        <div className="row align-items-center g-5">
+
+          {/* LEFT CONTENT */}
           <div className="col-lg-7">
-            <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle mb-4">
+
+            {/* BADGE */}
+            <span
+              className="badge rounded-pill px-4 py-3 fw-semibold border mb-4"
+              style={{
+                background: "#eef4ff",
+                color: "#3c61c8",
+                borderColor: "rgba(60,97,200,.15)",
+                fontSize: "14px",
+                letterSpacing: ".5px",
+              }}
+            >
               🎓 Admissions Open 2026
             </span>
-            <h1 className="font-serif display-4 lh-1">
-              Shape young minds. <span className="italic text-terracotta">Build a successful teaching career.</span>
+
+            {/* TITLE */}
+            <h1
+              className="fw-bold mb-4"
+              style={{
+                fontSize: "clamp(2.8rem, 3vw, 4.2rem)",
+                lineHeight: "1.08",
+                color: "#142033",
+              }}
+            >
+              Shape young minds.
+              <br />
+
+              <span
+                className="fst-italic fw-medium"
+                style={{
+                  color: "#3c61c8",
+                }}
+              >
+                Build a successful
+                <br />
+                teaching career.
+              </span>
+
             </h1>
-            <p className="mt-4 fs-5 text-muted-soft">
-              SKB Montessori Training Institute empowers aspiring educators with professional Montessori training,
-              childcare education, international teacher training, and special education programs designed for
+
+            {/* DESCRIPTION */}
+            <p
+              className="text-secondary mb-4"
+              style={{
+                fontSize: "1.08rem",
+                lineHeight: "1.9",
+                maxWidth: "90%",
+              }}
+            >
+              SKB Montessori Training Institute empowers aspiring
+              educators through professional Montessori training,
+              childcare education, international teacher training,
+              and special education programs designed for
               real-world teaching success.
             </p>
-            <p className="eyebrow mt-3">Learn • Grow • Empower</p>
-            <div className="hero-buttons mt-4">
-              <a href="#apply" className="btn btn-primary">
+
+            {/* TAG */}
+            <p
+              className="fw-semibold text-uppercase mb-4"
+              style={{
+                letterSpacing: "4px",
+                color: "#3c61c8",
+                fontSize: "13px",
+              }}
+            >
+              Learn • Grow • Empower
+            </p>
+
+            {/* BUTTONS */}
+            <div className="d-flex flex-wrap gap-3 mt-4">
+
+              <a
+                href="#apply"
+                className="btn rounded-pill px-4 py-3 fw-semibold shadow"
+                style={{
+                  background: "#3c61c8",
+                  color: "#fff",
+                  minWidth: "180px",
+                }}
+              >
                 Apply Now
               </a>
 
-              <a href="#courses" className="btn btn-outline-dark">
+              <a
+                href="#courses"
+                className="btn btn-light border rounded-pill px-4 py-3 fw-semibold"
+                style={{
+                  minWidth: "180px",
+                }}
+              >
                 Explore Courses
               </a>
 
-              <a href="#contact" className="btn btn-ghost">
+              <a
+                href="#contact"
+                className="btn btn-outline-secondary rounded-pill px-4 py-3 fw-semibold"
+                style={{
+                  minWidth: "210px",
+                }}
+              >
                 Download Brochure
               </a>
+
             </div>
-            <ul className="list-unstyled row row-cols-2 row-cols-md-2 row-cols-lg-3 mt-4 gy-3 gx-3 small">
-              {[
-                "Experienced Faculty",
-                "Online & Offline Classes",
-                "Internship Opportunities",
-                "Career Guidance Support",
-                "Recognized Diploma Programs"
-              ].map((h) => (
-                <li
-                  key={h}
-                  className="col d-flex align-items-start"
+
+            {/* FEATURES */}
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-3 mt-5">
+
+              {highlights.map((item) => (
+
+                <div
+                  key={item}
+                  className="col"
                 >
-                  <span
-                    className="text-terracotta me-2 flex-shrink-0"
-                    style={{ lineHeight: "1.5" }}
-                  >
-                    ✓
-                  </span>
 
-                  <span className="lh-base">
-                    {h}
-                  </span>
-                </li>
+                  <div className="d-flex align-items-start gap-2">
+
+                    <FaCheckCircle
+                      size={16}
+                      className="mt-1 text-terracotta flex-shrink-0"
+                    />
+
+                    <span className="fw-medium text-dark">
+                      {item}
+                    </span>
+
+                  </div>
+
+                </div>
+
               ))}
-            </ul>
-          </div>
-          <div className="col-lg-5 position-relative">
-            <img src={heroImg} alt="Montessori teacher with children" className="img-fluid rounded-4 border" style={{ height: 320, objectFit: 'cover', width: '100%' }} />
+
+            </div>
 
           </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="col-lg-5">
+
+            <div className="position-relative">
+
+              {/* MAIN IMAGE */}
+              <img
+                src={heroImg}
+                alt="Montessori Training"
+                className="img-fluid w-100 rounded-5 shadow-lg border border-4 border-white"
+                style={{
+                  width: "560px",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+
+          </div>
+
         </div>
+
       </div>
-      {/* <div className="container"><div className="rule"></div></div> */}
-      <div className="container py-4">
+
+      {/* STATS */}
+      <div className="container pt-5">
 
         <div className="row row-cols-2 row-cols-md-4 g-4">
 
           {stats.map(([n, l]) => (
-            <div className="col" key={l}>
 
-              <div className="bg-white rounded-4 shadow-sm border p-4 h-100 text-center">
+            <div
+              className="col"
+              key={l}
+            >
+
+              <div
+                className="bg-white rounded-5 border shadow-sm text-center h-100 p-4 transition"
+                style={{
+                  transition: "all .35s ease",
+                  cursor: "pointer",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-10px)"
+                  e.currentTarget.style.boxShadow =
+                    "0 20px 45px rgba(0,0,0,.08)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)"
+                  e.currentTarget.style.boxShadow =
+                    "0 .125rem .25rem rgba(0,0,0,.075)"
+                }}
+              >
 
                 <div
-                  className="fw-bold text-terracotta mb-2"
+                  className="fw-bold mb-2"
                   style={{
-                    fontSize: "clamp(2.2rem, 3vw, 4rem)",
-                    lineHeight: "-1",
-                    letterSpacing: "-1px",
+                    fontSize: "clamp(2.3rem, 5vw, 4rem)",
+                    color: "#3c61c8",
+                    lineHeight: "1",
+                    transition: ".3s ease",
                   }}
                 >
                   {n}
                 </div>
 
                 <div
-                  className="text-muted fw-medium"
+                  className="fw-medium text-secondary"
                   style={{
                     fontSize: "15px",
-                    lineHeight: "1.5",
                   }}
                 >
                   {l}
@@ -98,11 +241,13 @@ export default function Hero() {
               </div>
 
             </div>
+
           ))}
 
         </div>
 
       </div>
+
     </section>
   )
 }
