@@ -33,7 +33,7 @@ export default function CTA() {
               <div className="col">
                 <a
                   href="#contact"
-                  className="btn btn-outline-light rounded-pill w-100 py-3 fw-semibold"
+                  className="btn btn-primary rounded-pill w-100 py-3 fw-semibold"
                 >
                   Talk to Our Team
                 </a>
@@ -42,7 +42,7 @@ export default function CTA() {
               <div className="col">
                 <a
                   href="#contact"
-                  className="btn btn-light rounded-pill w-100 py-3 fw-semibold"
+                  className="btn btn-primary rounded-pill w-100 py-3 fw-semibold"
                 >
                   Apply Now
                 </a>

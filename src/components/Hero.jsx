@@ -1,6 +1,7 @@
 import heroImg from '../assets/Image5.JPG'
 import { stats } from '../data'
 import { FaCheckCircle } from "react-icons/fa"
+import RocketGif from '../assets/rocket.gif'
 
 export default function Hero() {
 
@@ -8,8 +9,8 @@ export default function Hero() {
     "Experienced Faculty",
     "Online & Offline Classes",
     "Internship Opportunities",
-    "Career Guidance Support",
-    "Recognized Diploma Programs"
+    "Career Guidance",
+    "Recognized Programs"
   ]
 
   return (
@@ -22,21 +23,21 @@ export default function Hero() {
       }}
     >
 
-      <div className="container">
+      <div className="container py-lg-5">
 
-        <div className="row align-items-center g-5">
+        <div className="row align-items-center gy-5 gx-lg-5">
 
           {/* LEFT CONTENT */}
-          <div className="col-lg-7">
+          <div className="col-12 col-lg-6 text-justify text-lg-start">
 
             {/* BADGE */}
             <span
-              className="badge rounded-pill px-4 py-3 fw-semibold border mb-4"
+              className="badge rounded-pill px-3 px-sm-4 py-2 py-sm-3 fw-semibold border mb-3 mb-md-4"
               style={{
                 background: "#eef4ff",
                 color: "#3c61c8",
                 borderColor: "rgba(60,97,200,.15)",
-                fontSize: "14px",
+                fontSize: "13px",
                 letterSpacing: ".5px",
               }}
             >
@@ -45,10 +46,10 @@ export default function Hero() {
 
             {/* TITLE */}
             <h1
-              className="fw-bold mb-4"
+              className="fw-bold mb-3 mb-md-4"
               style={{
-                fontSize: "clamp(2.8rem, 3vw, 4.2rem)",
-                lineHeight: "1.08",
+                fontSize: "clamp(2rem, 4vw, 4.2rem)",
+                lineHeight: "1.15",
                 color: "#142033",
               }}
             >
@@ -70,11 +71,11 @@ export default function Hero() {
 
             {/* DESCRIPTION */}
             <p
-              className="text-secondary mb-4"
+              className="text-secondary mb-4 mx-auto mx-lg-0"
               style={{
-                fontSize: "1.08rem",
-                lineHeight: "1.9",
-                maxWidth: "90%",
+                fontSize: "clamp(.95rem, 2vw, 1.08rem)",
+                lineHeight: "1.8",
+                maxWidth: "700px",
               }}
             >
               SKB Montessori Training Institute empowers aspiring
@@ -88,16 +89,16 @@ export default function Hero() {
             <p
               className="fw-semibold text-uppercase mb-4"
               style={{
-                letterSpacing: "4px",
+                letterSpacing: "3px",
                 color: "#3c61c8",
-                fontSize: "13px",
+                fontSize: "12px",
               }}
             >
               Learn • Grow • Empower
             </p>
 
             {/* BUTTONS */}
-            <div className="d-flex flex-wrap gap-3 mt-4">
+            <div className="d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-start gap-3 mt-4">
 
               <a
                 href="#apply"
@@ -116,6 +117,8 @@ export default function Hero() {
                 className="btn btn-light border rounded-pill px-4 py-3 fw-semibold"
                 style={{
                   minWidth: "180px",
+                   background: "#3c61c8",
+                  color: "#fff",
                 }}
               >
                 Explore Courses
@@ -123,9 +126,12 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="btn btn-outline-secondary rounded-pill px-4 py-3 fw-semibold"
+                className="btn rounded-pill px-4 py-3 fw-semibold"
                 style={{
-                  minWidth: "210px",
+                  minWidth: "180px",
+                   background: "#3c61c8",
+                  color: "#fff",
+
                 }}
               >
                 Download Brochure
@@ -133,24 +139,51 @@ export default function Hero() {
 
             </div>
 
+            
             {/* FEATURES */}
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-3 mt-5">
+            <div className="row g-3 g-md-4 mt-4 mt-lg-5">
 
               {highlights.map((item) => (
 
                 <div
                   key={item}
-                  className="col"
+                  className="col-6 col-md-6 col-lg-4"
                 >
 
-                  <div className="d-flex align-items-start gap-2">
+                  <div
+                    className="h-100 d-flex flex-column flex-sm-row align-items-start gap-2 gap-sm-3 p-3 rounded-4"
+                    style={{
+                      background: "#fff",
+                      border: "1px solid rgba(0,0,0,0.06)",
+                      transition: "0.3s ease",
+                      minHeight: "100%",
+                    }}
+                  >
 
-                    <FaCheckCircle
-                      size={16}
-                      className="mt-1 text-terracotta flex-shrink-0"
-                    />
+                    {/* ICON */}
+                    <div
+                      className="d-flex align-items-center justify-content-center flex-shrink-0 rounded-circle"
+                      style={{
+                        width: "36px",
+                        height: "36px",
+                        background: "rgba(60,97,200,0.08)",
+                      }}
+                    >
+                      <FaCheckCircle
+                        size={15}
+                        style={{ color: "#3c61c8" }}
+                      />
+                    </div>
 
-                    <span className="fw-medium text-dark">
+                    {/* TEXT */}
+                    <span
+                      className="fw-semibold"
+                      style={{
+                        color: "#1c2434",
+                        lineHeight: "1.5",
+                        fontSize: "0.9rem",
+                      }}
+                    >
                       {item}
                     </span>
 
@@ -165,20 +198,59 @@ export default function Hero() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="col-lg-5">
+          <div className="col-12 col-md-10 col-lg-6 mx-auto">
 
-            <div className="position-relative">
+            <div className="position-relative text-center">
 
               {/* MAIN IMAGE */}
               <img
                 src={heroImg}
                 alt="Montessori Training"
-                className="img-fluid w-100 rounded-5 shadow-lg border border-4 border-white"
+                className="img-fluid rounded-4 shadow-lg"
                 style={{
-                  width: "560px",
+                  width: "100%",
+                  maxWidth: "800px",
+                  height: "clamp(320px, 65vw, 550px)",
                   objectFit: "cover",
+                  objectPosition: "center",
                 }}
               />
+
+
+              {/* ROCKET ICON BELOW IMAGE */}
+              <div className="d-flex justify-content-center mt-3 mt-md-4">
+
+                {/* FLATICON ANIMATION */}
+                <img
+                  src={RocketGif}
+                  alt="Rocket Animation"
+                  className="img-fluid"
+                  style={{
+                    width: "clamp(120px, 18vw, 220px)",
+                    height: "auto",
+                    objectFit: "contain",
+                    animation: "bounce 2s infinite",
+                    marginTop: "10px",
+                  }}
+                />
+
+                {/* INLINE STYLE ANIMATION */}
+                <style>
+                  {`
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+
+        50% {
+          transform: translateY(-14px);
+        }
+      }
+    `}
+                </style>
+
+              </div>
+
             </div>
 
           </div>
@@ -188,9 +260,9 @@ export default function Hero() {
       </div>
 
       {/* STATS */}
-      <div className="container pt-5">
+      <div className="container pt-3">
 
-        <div className="row row-cols-2 row-cols-md-4 g-4">
+        <div className="row row-cols-1 row-cols-md-4 g-4">
 
           {stats.map(([n, l]) => (
 
