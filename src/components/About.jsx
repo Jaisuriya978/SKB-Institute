@@ -63,7 +63,7 @@ export default function About() {
                                 training and internship exposure.
                             </p>
 
-                          
+
 
 
                             {/* VISION / MISSION / MOTTO */}
@@ -216,11 +216,13 @@ export default function About() {
                             <img
                                 src={aboutImg}
                                 alt="SKB Montessori Training Institute"
-                                className="img-fluid rounded-5 shadow-sm w-100"
+                                className="img-fluid w-100 rounded-4 rounded-lg-5 shadow-sm"
                                 style={{
-                                    height: '520px',
-                                    objectFit: 'cover',
-                                    
+                                    width: "100%",
+                                    height: "clamp(280px, 50vw, 520px)",
+                                    objectFit: "cover",
+                                    objectPosition: "center",
+                                    borderRadius: "24px",
                                 }}
                             />
 
@@ -235,7 +237,7 @@ export default function About() {
                             >
 
                                 <div
-                                    className="bg-white shadow rounded-5 px-5 py-4 border text-center"
+                                    className="bg-white shadow rounded-5 px-4 py-3 border text-center"
                                 >
 
                                     <h2

@@ -124,11 +124,11 @@ export default function Contact() {
                     lineHeight: "1.8",
                   }}
                 >
-                  No. 4/379, Saravanabhava Nagar,
+                  No.4/379, Saravanabhava Nagar,
                   <br />
                   Near Parvathy Nagar bus stop,
                   <br />
-                  Old Perungalathur, Chennai - 600063
+                  Old Perungalathur, Chennai-63
                 </p>
 
               </div>
@@ -214,7 +214,7 @@ export default function Contact() {
                 />
 
                 <p className="fs-5 mb-0">
-                  Monday – Saturday · 9:00 AM – 5:00 PM
+                  Monday to Saturday · 9:00 AM to 5:00 PM
                 </p>
 
               </div>
@@ -233,8 +233,8 @@ export default function Contact() {
                   src={certifiedGif}
                   alt="Certified Training"
                   style={{
-                    width: "80px",
-                    height: "90px",
+                    width: "70px",
+                    height: "70px",
                     objectFit: "contain",
                   }}
                 />
@@ -252,8 +252,8 @@ export default function Contact() {
                   src={placementGif}
                   alt="Placement Support"
                   style={{
-                    width: "80px",
-                    height: "90px",
+                    width: "70px",
+                    height: "70px",
                     objectFit: "contain",
                   }}
                 />
@@ -271,8 +271,8 @@ export default function Contact() {
                   src={facultyGif}
                   alt="Expert Faculty"
                   style={{
-                    width: "80px",
-                    height: "90px",
+                    width: "70px",
+                    height: "70px",
                     objectFit: "contain",
                   }}
                 />

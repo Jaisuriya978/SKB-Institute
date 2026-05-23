@@ -11,7 +11,7 @@ export const courses = [
     n: "02",
     title: "PG Diploma in International Teachers' Training",
     desc: "International standard teaching methodologies and modern classroom practices required in today's leading educational institutions.",
-    learn: ["Modern teaching strategies", "Digital classroom management", "Presentation and communication skills", "International teaching practices", "Student engagement methods", "Leadership in education", "Curriculum development basics"],
+    learn: ["Modern teaching strategies", "Digital classroom management", "Presentational skills", "International teaching practices", "Student engagement methods", "Leadership in education", "Curriculum development basics"],
     careers: ["International School Teacher", "Academic Trainer", "Subject Educator", "Educational Coordinator", "Online Educator", "Curriculum Developer", "Educational Consultant"],
     benefits: ["Career-focused curriculum", "Industry-ready skills", "Professional mentoring", "Flexible learning modes", "Internship opportunities", "Real classroom exposure", "Supportive learning environment"],
   },

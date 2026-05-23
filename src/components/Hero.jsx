@@ -10,7 +10,8 @@ export default function Hero() {
     "Online & Offline Classes",
     "Internship Opportunities",
     "Career Guidance",
-    "Recognized Programs"
+    "Recognized Programs",
+    "Hands on Training"
   ]
 
   return (
@@ -32,16 +33,21 @@ export default function Hero() {
 
             {/* BADGE */}
             <span
-              className="badge rounded-pill px-3 px-sm-4 py-2 py-sm-3 fw-semibold border mb-3 mb-md-4"
+              className="d-inline-flex align-items-center gap-2 px-4 px-sm-5 py-2 py-sm-3 fw-semibold rounded-pill shadow-sm mb-3 mb-md-4"
               style={{
-                background: "#eef4ff",
+                background: "linear-gradient(135deg, #eef4ff, #f8fbff)",
                 color: "#3c61c8",
-                borderColor: "rgba(60,97,200,.15)",
-                fontSize: "13px",
-                letterSpacing: ".5px",
+                border: "1px solid rgba(60,97,200,0.18)",
+                boxShadow: "0 8px 24px rgba(60,97,200,0.08)",
+                fontSize: "clamp(12px, 1.5vw, 14px)",
+                letterSpacing: ".6px",
+                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
+
               }}
             >
               🎓 Admissions Open 2026
+
             </span>
 
             {/* TITLE */}
@@ -117,7 +123,7 @@ export default function Hero() {
                 className="btn btn-light border rounded-pill px-4 py-3 fw-semibold"
                 style={{
                   minWidth: "180px",
-                   background: "#3c61c8",
+                  background: "#3c61c8",
                   color: "#fff",
                 }}
               >
@@ -129,7 +135,7 @@ export default function Hero() {
                 className="btn rounded-pill px-4 py-3 fw-semibold"
                 style={{
                   minWidth: "180px",
-                   background: "#3c61c8",
+                  background: "#3c61c8",
                   color: "#fff",
 
                 }}
@@ -139,7 +145,7 @@ export default function Hero() {
 
             </div>
 
-            
+
             {/* FEATURES */}
             <div className="row g-3 g-md-4 mt-4 mt-lg-5">
 
@@ -209,7 +215,7 @@ export default function Hero() {
                 className="img-fluid rounded-4 shadow-lg"
                 style={{
                   width: "100%",
-                  maxWidth: "800px",
+                  maxWidth: "750px",
                   height: "clamp(320px, 65vw, 550px)",
                   objectFit: "cover",
                   objectPosition: "center",
@@ -231,6 +237,10 @@ export default function Hero() {
                     objectFit: "contain",
                     animation: "bounce 2s infinite",
                     marginTop: "10px",
+
+                    // REMOVE BACKGROUND EFFECT
+                    background: "transparent",
+                    mixBlendMode: "multiply",
                   }}
                 />
 
@@ -294,8 +304,9 @@ export default function Hero() {
                   style={{
                     fontSize: "clamp(2.3rem, 5vw, 4rem)",
                     color: "#3c61c8",
-                    lineHeight: "1",
+                    lineHeight: ".75",
                     transition: ".3s ease",
+
                   }}
                 >
                   {n}

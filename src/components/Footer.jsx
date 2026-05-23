@@ -54,8 +54,8 @@ export default function Footer() {
                             className="navbar-logo"
                         />
                             <span className="font-serif fs-5">SKB <span className="text-light-soft fs-6">Montessori Training Institute</span></span></div>
-                        <p className="font-serif fs-3 mt-4 mb-3"><span className="italic text-terracotta">Dream. Learn. Achieve.</span></p>
-                        <p style={{ color: 'rgba(255,255,255,.7)' }}>Your trusted growth partner in building a successful transformation journey toward becoming a qualified educator.</p>
+                        <p className="font-serif fs-2 mt-4 mb-3"><span className="italic text-terracotta" style={{gap: '2px'}}>Dream. Learn. Achieve.</span></p>
+                        <p style={{ color: 'rgba(255,255,255,.7)', maxWidth:'400px' }}>Your trusted growth partner in building a successful transformation journey toward becoming a qualified educator.</p>
                     </div>
                     <div className="col-md-3">
 
@@ -64,7 +64,7 @@ export default function Footer() {
                         </p>
 
                         <ul
-                            className="list-unstyled mt-4 d-grid gap-3"
+                            className="list-unstyled mt-4 d-grid gap-4"
                             style={{
                                 gridTemplateColumns:
                                     window.innerWidth < 576
@@ -84,7 +84,7 @@ export default function Footer() {
                                         className="text-decoration-none"
                                         style={{
                                             color: "rgba(255,255,255,.85)",
-                                            fontSize: "1rem",
+                                            fontSize: "1.125rem",
                                             transition: "all .3s ease",
                                             display: "inline-block",
                                         }}
