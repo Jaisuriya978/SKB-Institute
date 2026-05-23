@@ -12,12 +12,14 @@ import CTA from './components/CTA'
 import Contact from './components/Contact'
 import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
+import stats from './components/stats'
 
 export default function App() {
   return (
     <>
       <Nav />
       <Hero />
+      <stats/>
       <About />
       <Courses />
       <WhySKB />

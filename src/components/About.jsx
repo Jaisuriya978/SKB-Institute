@@ -232,7 +232,7 @@ export default function About() {
                                 className="position-absolute bottom-0 end-0 translate-middle-y"
                                 style={{
                                     zIndex: 2,
-                                    marginBottom: '-48px',
+                                    marginBottom: '-85px',
                                     marginRight:'80px'
                                 }}
                             >

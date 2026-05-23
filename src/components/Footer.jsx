@@ -4,206 +4,297 @@ import {
     FaYoutube,
     FaWhatsapp,
     FaLinkedinIn,
-} from "react-icons/fa";
+    FaMapMarkerAlt,
+    FaPhone,
+    FaEnvelope,
+} from "react-icons/fa"
 
 const socialLinks = [
-    {
-        name: "Instagram",
-        icon: <FaInstagram size={22} />,
-        link: "https://www.instagram.com/skbtraininginstitute/",
-    },
-    {
-        name: "Facebook",
-        icon: <FaFacebookF size={22} />,
-        link: "https://www.facebook.com/skbtraininginstitute/",
-    },
-    {
-        name: "YouTube",
-        icon: <FaYoutube size={22} />,
-        link: "https://www.youtube.com/@skbtraininginstitute",
-    },
-    {
-        name: "WhatsApp",
-        icon: <FaWhatsapp size={22} />,
-        link: "https://wa.me/919597686903",
-    },
-    {
-        name: "LinkedIn",
-        icon: <FaLinkedinIn size={22} />,
-        link: "https://www.linkedin.com/in/skbtraininginstitute/",
-    },
-];
+    { name: "Instagram", icon: <FaInstagram size={18} />, link: "https://www.instagram.com/skbtraininginstitute/", color: "#E1306C" },
+    { name: "Facebook",  icon: <FaFacebookF  size={18} />, link: "https://www.facebook.com/skbtraininginstitute/",  color: "#1877F2" },
+    { name: "YouTube",   icon: <FaYoutube    size={18} />, link: "https://www.youtube.com/@skbtraininginstitute",  color: "#FF0000" },
+    { name: "WhatsApp",  icon: <FaWhatsapp   size={18} />, link: "https://wa.me/919597686903",                    color: "#25D366" },
+    { name: "LinkedIn",  icon: <FaLinkedinIn size={18} />, link: "https://www.linkedin.com/in/skbtraininginstitute/", color: "#0A66C2" },
+]
 
-const links = [
-    { name: "Home", path: "#top" },
-    { name: "About", path: "#about" },
+const navLinks = [
+    { name: "Home",    path: "#top"     },
+    { name: "About",   path: "#about"   },
     { name: "Courses", path: "#courses" },
     { name: "Process", path: "#process" },
     { name: "Contact", path: "#contact" },
-];
+]
 
 export default function Footer() {
     return (
-        <footer className="bg-ink pt-5 pb-4">
+        <footer
+            style={{
+                background: "linear-gradient(180deg,#040a1c 0%,#030716 100%)",
+                borderTop: "1px solid rgba(255,255,255,0.07)",
+                padding: "72px 0 0",
+            }}
+        >
+            <style>{`
+                /* Eyebrow label */
+                .ft-eyebrow {
+                    font-size: .70rem;
+                    font-weight: 700;
+                    letter-spacing: .14em;
+                    text-transform: uppercase;
+                    color: #6b9fff;
+                    margin: 0 0 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                .ft-eyebrow::after {
+                    content: "";
+                    flex: 1;
+                    height: 1px;
+                    background: rgba(107,159,255,.22);
+                }
+
+                /* Nav links */
+                .ft-link {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: rgba(255,255,255,.65);
+                    font-size: .88rem;
+                    font-weight: 500;
+                    text-decoration: none;
+                    padding: 5px 0;
+                    transition: color .2s ease, gap .2s ease;
+                }
+                .ft-link::before {
+                    content: "";
+                    width: 5px; height: 5px;
+                    border-radius: 50%;
+                    background: #3c61c8;
+                    flex-shrink: 0;
+                    opacity: 0;
+                    transition: opacity .2s;
+                }
+                .ft-link:hover { color: #7eaaff; gap: 12px; }
+                .ft-link:hover::before { opacity: 1; }
+
+                /* Social buttons */
+                .ft-social {
+                    width: 42px; height: 42px;
+                    border-radius: 12px;
+                    border: 1px solid rgba(255,255,255,.10);
+                    background: rgba(255,255,255,.05);
+                    display: flex; align-items: center; justify-content: center;
+                    color: rgba(255,255,255,.70);
+                    text-decoration: none;
+                    transition: transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
+                }
+                .ft-social:hover {
+                    transform: translateY(-4px);
+                    border-color: rgba(255,255,255,.25);
+                    color: #fff;
+                }
+
+                /* Bottom bar */
+                .ft-bottom {
+                    margin-top: 56px;
+                    padding: 20px 0;
+                    border-top: 1px solid rgba(255,255,255,.07);
+                }
+
+                /* Tagline */
+                .ft-tagline {
+                    font-size: .88rem;
+                    font-style: italic;
+                    color: rgba(255,255,255,.38);
+                    margin: 0;
+                    letter-spacing: .01em;
+                }
+            `}</style>
+
             <div className="container">
                 <div className="row g-5">
-                    <div className="col-md-5">
-                        <div className="d-flex align-items-center gap-2"><img
-                            src="https://tse3.mm.bing.net/th/id/OIP.hu1XnFAnUBoNt83CF-RXgQAAAA?pid=Api&P=0&h=180"
-                            alt="SKB Montessori Logo"
-                            className="navbar-logo"
-                        />
-                            <span className="font-serif fs-5">SKB <span className="text-light-soft fs-6">Montessori Training Institute</span></span></div>
-                        <p className="font-serif fs-2 mt-4 mb-3"><span className="italic text-terracotta" style={{gap: '2px'}}>Dream. Learn. Achieve.</span></p>
-                        <p style={{ color: 'rgba(255,255,255,.7)', maxWidth:'400px' }}>Your trusted growth partner in building a successful transformation journey toward becoming a qualified educator.</p>
-                    </div>
-                    <div className="col-md-3">
 
-                        <p className="eyebrow text-center text-md-start">
-                            Quick Links
+                    {/* ── COL 1: BRAND ── */}
+                    <div className="col-lg-4 col-md-12">
+
+                        {/* Logo + name */}
+                        <div className="d-flex align-items-center gap-3 mb-4">
+                            <img
+                                src="https://tse3.mm.bing.net/th/id/OIP.hu1XnFAnUBoNt83CF-RXgQAAAA?pid=Api&P=0&h=180"
+                                alt="SKB Logo"
+                                style={{ width: "44px", height: "44px", objectFit: "contain", borderRadius: "10px" }}
+                            />
+                            <div>
+                                <p style={{ margin: 0, color: "#fff", fontWeight: 700, fontSize: ".95rem", lineHeight: 1.2 }}>SKB</p>
+                                <p style={{ margin: 0, color: "rgba(255,255,255,.50)", fontSize: ".76rem", fontWeight: 500, letterSpacing: ".02em" }}>Montessori Training Institute</p>
+                            </div>
+                        </div>
+
+                        {/* Tagline */}
+                        <p style={{
+                            fontSize: "1.35rem",
+                            fontStyle: "italic",
+                            fontWeight: 600,
+                            color: "#7eaaff",
+                            margin: "0 0 14px",
+                            letterSpacing: "-.01em",
+                            lineHeight: 1.3,
+                        }}>
+                            Dream. Learn. Achieve.
                         </p>
 
-                        <ul
-                            className="list-unstyled mt-4 d-grid gap-4"
-                            style={{
-                                gridTemplateColumns:
-                                    window.innerWidth < 576
-                                        ? "1fr"
-                                        : "repeat(2, 1fr)",
-                            }}
-                        >
+                        {/* Description */}
+                        <p style={{
+                            color: "rgba(255,255,255,.50)",
+                            fontSize: ".86rem",
+                            lineHeight: 1.75,
+                            maxWidth: "340px",
+                            margin: "0 0 28px",
+                        }}>
+                            Your trusted growth partner in building a successful transformation
+                            journey toward becoming a qualified educator.
+                        </p>
 
-                            {links.map((l) => (
-                                <li
-                                    key={l.name}
-                                    className="text-center text-md-start"
-                                >
-
-                                    <a
-                                        href={l.path}
-                                        className="text-decoration-none"
-                                        style={{
-                                            color: "rgba(255,255,255,.85)",
-                                            fontSize: "1.125rem",
-                                            transition: "all .3s ease",
-                                            display: "inline-block",
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.currentTarget.style.color = "#5a78ff";
-                                            e.currentTarget.style.transform =
-                                                "translateX(4px)";
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.currentTarget.style.color =
-                                                "rgba(255,255,255,.85)";
-                                            e.currentTarget.style.transform =
-                                                "translateX(0)";
-                                        }}
-                                    >
-                                        {l.name}
-                                    </a>
-
-                                </li>
-                            ))}
-
-                        </ul>
-
-                    </div>
-                    <div className="col-md-4">
-                        <p className="eyebrow">Follow us</p>
-                        <p className="mt-3" style={{ color: 'rgba(255,255,255,.85)' }}>Follow us for updates, admissions, workshops, and student success stories.</p>
-                        <div className="row row-cols-3 row-cols-sm-5 g-3 mt-4">
-
-                            {socialLinks.map((link) => (
-                                <div key={link.name} className="col">
-
-                                    <a
-                                        href={link.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-decoration-none"
-                                    >
-
-                                        <div
-                                            className="d-flex align-items-center justify-content-center rounded-pill border border-light border-opacity-25 mx-auto"
-                                            style={{
-                                                width: "100%",
-                                                height: "52px",
-                                                maxWidth: "72px",
-                                                color: "#fff",
-                                                transition: "all 0.3s ease",
-                                                backgroundColor: "transparent",
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.currentTarget.style.transform = "translateY(-4px)";
-                                                e.currentTarget.style.backgroundColor = "#3c61c8";
-                                                e.currentTarget.style.boxShadow =
-                                                    "0 10px 24px rgba(0,0,0,0.18)";
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.currentTarget.style.transform = "translateY(0)";
-                                                e.currentTarget.style.backgroundColor = "transparent";
-                                                e.currentTarget.style.boxShadow = "none";
-                                            }}
-                                        >
-                                            {link.icon}
-                                        </div>
-
-                                    </a>
-
+                        {/* Contact snippets */}
+                        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                            {[
+                                { Icon: FaPhone,           text: "+91 95976 86903"              },
+                                { Icon: FaEnvelope,        text: "skbmontessori@gmail.com"       },
+                                { Icon: FaMapMarkerAlt,    text: "Tamil Nadu, India"             },
+                            ].map(({ Icon, text }) => (
+                                <div key={text} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                                    <span style={{
+                                        width: "30px", height: "30px", borderRadius: "8px",
+                                        background: "rgba(60,97,200,.18)",
+                                        border: "1px solid rgba(96,140,255,.18)",
+                                        display: "flex", alignItems: "center", justifyContent: "center",
+                                        flexShrink: 0,
+                                    }}>
+                                        <Icon size={13} color="#7eaaff" />
+                                    </span>
+                                    <span style={{ color: "rgba(255,255,255,.55)", fontSize: ".82rem", fontWeight: 500 }}>{text}</span>
                                 </div>
                             ))}
-
                         </div>
-                    </div>
-                </div>
-                <div
-                    className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mt-5 pt-4 border-top small"
-                    style={{
-                        borderColor: "rgba(255,255,255,.15)",
-                        color: "rgba(255,255,255,.6)",
-                    }}
-                >
 
-                    <div className="text-center text-md-start">
-                        <p className="mb-1">
-                            © {new Date().getFullYear()} SKB Montessori Training Institute.
-                            All rights reserved.
+                    </div>
+
+                    {/* ── COL 2: QUICK LINKS ── */}
+                    <div className="col-lg-2 col-md-4 col-sm-6">
+                        <p className="ft-eyebrow">Quick Links</p>
+                        <ul className="list-unstyled m-0" style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+                            {navLinks.map((l) => (
+                                <li key={l.name}>
+                                    <a href={l.path} className="ft-link">{l.name}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* ── COL 3: PROGRAMS ── */}
+                    <div className="col-lg-2 col-md-4 col-sm-6">
+                        <p className="ft-eyebrow">Programs</p>
+                        <ul className="list-unstyled m-0" style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+                            {[
+                                "Montessori D.Ed",
+                                "Nursery Teacher Training",
+                                "Primary Teacher Training",
+                                "Online Courses",
+                                "Career Guidance",
+                            ].map((p) => (
+                                <li key={p}>
+                                    <a href="#courses" className="ft-link">{p}</a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* ── COL 4: FOLLOW US ── */}
+                    <div className="col-lg-4 col-md-4">
+                        <p className="ft-eyebrow">Follow Us</p>
+                        <p style={{ color: "rgba(255,255,255,.50)", fontSize: ".85rem", lineHeight: 1.70, margin: "0 0 22px" }}>
+                            Stay connected for admissions, workshops, and student success stories.
                         </p>
 
-                        <p
-                            className="mb-0"
+                        {/* Social icon grid */}
+                        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                            {socialLinks.map((s) => (
+                                <a
+                                    key={s.name}
+                                    href={s.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="ft-social"
+                                    title={s.name}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.background = s.color
+                                        e.currentTarget.style.borderColor = s.color
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.background = "rgba(255,255,255,.05)"
+                                        e.currentTarget.style.borderColor = "rgba(255,255,255,.10)"
+                                    }}
+                                >
+                                    {s.icon}
+                                </a>
+                            ))}
+                        </div>
+
+                        {/* Newsletter hint */}
+                        <div
                             style={{
-                                fontSize: "13px",
-                                color: "rgba(255,255,255,.45)",
+                                marginTop: "28px",
+                                padding: "18px 20px",
+                                borderRadius: "14px",
+                                background: "rgba(60,97,200,.12)",
+                                border: "1px solid rgba(96,140,255,.18)",
                             }}
                         >
-                            Website crafted by{" "}
-
+                            <p style={{ color: "#a8c4ff", fontSize: ".80rem", fontWeight: 700, margin: "0 0 4px", letterSpacing: ".04em", textTransform: "uppercase" }}>
+                                Admissions Open 2026
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,.50)", fontSize: ".80rem", margin: "0 0 12px", lineHeight: 1.6 }}>
+                                Limited seats available. Apply early to secure your spot.
+                            </p>
                             <a
-                                href="#"
+                                href="#contact"
                                 style={{
-                                    color: "#5a78ff",
+                                    display: "inline-flex", alignItems: "center", gap: "6px",
+                                    padding: "8px 18px", borderRadius: "8px",
+                                    background: "linear-gradient(135deg,#3c61c8,#2a4baa)",
+                                    color: "#fff", fontSize: ".80rem", fontWeight: 700,
                                     textDecoration: "none",
-                                    fontWeight: 500,
+                                    boxShadow: "0 4px 14px rgba(60,97,200,.40)",
+                                    transition: "transform .2s,box-shadow .2s",
                                 }}
+                                onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 20px rgba(60,97,200,.55)" }}
+                                onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 14px rgba(60,97,200,.40)" }}
                             >
-                                Seyon Tech Digital Media Solutions
+                                Enquire Now →
                             </a>
+                        </div>
 
-                        </p>
                     </div>
 
-                    <p
-                        className="mb-0 italic font-serif text-center text-md-end"
-                        style={{
-                            color: "rgba(255,255,255,.72)",
-                        }}
-                    >
-                        Empowering Educators. Enriching Lives.
-                    </p>
-
                 </div>
+
+                {/* ── BOTTOM BAR ── */}
+                <div className="ft-bottom">
+                    <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+
+                        <p style={{ margin: 0, color: "rgba(255,255,255,.40)", fontSize: ".80rem" }}>
+                            © {new Date().getFullYear()} SKB Montessori Training Institute. All rights reserved. &nbsp;·&nbsp; Website crafted by{" "}
+                            <a href="#" style={{ color: "#6b9fff", textDecoration: "none", fontWeight: 600 }}>
+                                Seyon Tech Digital Media Solutions
+                            </a>
+                        </p>
+
+                        <p className="ft-tagline">Empowering Educators. Enriching Lives.</p>
+
+                    </div>
+                </div>
+
             </div>
         </footer>
     )
