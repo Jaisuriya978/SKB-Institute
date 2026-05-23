@@ -54,24 +54,60 @@ export default function Footer() {
                             className="navbar-logo"
                         />
                             <span className="font-serif fs-5">SKB <span className="text-light-soft fs-6">Montessori Training Institute</span></span></div>
-                        <p className="font-serif fs-3 mt-4 mb-3">Dream it. Learn it. <span className="italic text-terracotta">Achieve it with SKB.</span></p>
+                        <p className="font-serif fs-3 mt-4 mb-3"><span className="italic text-terracotta">Dream. Learn. Achieve.</span></p>
                         <p style={{ color: 'rgba(255,255,255,.7)' }}>Your trusted growth partner in building a successful transformation journey toward becoming a qualified educator.</p>
                     </div>
                     <div className="col-md-3">
-                        <p className="eyebrow">Quick Links</p>
-                        <ul className="list-unstyled mt-3">
+
+                        <p className="eyebrow text-center text-md-start">
+                            Quick Links
+                        </p>
+
+                        <ul
+                            className="list-unstyled mt-4 d-grid gap-3"
+                            style={{
+                                gridTemplateColumns:
+                                    window.innerWidth < 576
+                                        ? "1fr"
+                                        : "repeat(2, 1fr)",
+                            }}
+                        >
+
                             {links.map((l) => (
-                                <li key={l.name} className="mb-2">
+                                <li
+                                    key={l.name}
+                                    className="text-center text-md-start"
+                                >
+
                                     <a
                                         href={l.path}
                                         className="text-decoration-none"
-                                        style={{ color: "rgba(255,255,255,.85)" }}
+                                        style={{
+                                            color: "rgba(255,255,255,.85)",
+                                            fontSize: "1rem",
+                                            transition: "all .3s ease",
+                                            display: "inline-block",
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.color = "#5a78ff";
+                                            e.currentTarget.style.transform =
+                                                "translateX(4px)";
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.color =
+                                                "rgba(255,255,255,.85)";
+                                            e.currentTarget.style.transform =
+                                                "translateX(0)";
+                                        }}
                                     >
                                         {l.name}
                                     </a>
+
                                 </li>
                             ))}
+
                         </ul>
+
                     </div>
                     <div className="col-md-4">
                         <p className="eyebrow">Follow us</p>
@@ -121,9 +157,52 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 mt-5 pt-4 border-top small" style={{ borderColor: 'rgba(255,255,255,.15) !important', color: 'rgba(255,255,255,.6)' }}>
-                    <p className="mb-0">© {new Date().getFullYear()} SKB Montessori Training Institute. All rights reserved.</p>
-                    <p className="mb-0 italic font-serif">Empowering Educators. Enriching Lives.</p>
+                <div
+                    className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 mt-5 pt-4 border-top small"
+                    style={{
+                        borderColor: "rgba(255,255,255,.15)",
+                        color: "rgba(255,255,255,.6)",
+                    }}
+                >
+
+                    <div className="text-center text-md-start">
+                        <p className="mb-1">
+                            © {new Date().getFullYear()} SKB Montessori Training Institute.
+                            All rights reserved.
+                        </p>
+
+                        <p
+                            className="mb-0"
+                            style={{
+                                fontSize: "13px",
+                                color: "rgba(255,255,255,.45)",
+                            }}
+                        >
+                            Website crafted by{" "}
+
+                            <a
+                                href="#"
+                                style={{
+                                    color: "#5a78ff",
+                                    textDecoration: "none",
+                                    fontWeight: 500,
+                                }}
+                            >
+                                Seyon Tech Digital Media Solutions
+                            </a>
+
+                        </p>
+                    </div>
+
+                    <p
+                        className="mb-0 italic font-serif text-center text-md-end"
+                        style={{
+                            color: "rgba(255,255,255,.72)",
+                        }}
+                    >
+                        Empowering Educators. Enriching Lives.
+                    </p>
+
                 </div>
             </div>
         </footer>

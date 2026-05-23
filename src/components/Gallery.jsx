@@ -89,7 +89,7 @@ export default function Image() {
                 SKB Moments
               </span>
             }
-            title="Moments of achievement & awards."
+            title="Moments of achievements"
             intro="Convocation and graduation moments that reflect the SKB experience."
           />
 

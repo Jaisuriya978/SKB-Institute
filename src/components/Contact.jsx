@@ -233,7 +233,7 @@ export default function Contact() {
                   src={certifiedGif}
                   alt="Certified Training"
                   style={{
-                    width: "90px",
+                    width: "80px",
                     height: "90px",
                     objectFit: "contain",
                   }}
@@ -252,7 +252,7 @@ export default function Contact() {
                   src={placementGif}
                   alt="Placement Support"
                   style={{
-                    width: "90px",
+                    width: "80px",
                     height: "90px",
                     objectFit: "contain",
                   }}
@@ -271,7 +271,7 @@ export default function Contact() {
                   src={facultyGif}
                   alt="Expert Faculty"
                   style={{
-                    width: "90px",
+                    width: "80px",
                     height: "90px",
                     objectFit: "contain",
                   }}
@@ -289,39 +289,31 @@ export default function Contact() {
 
           <div className="col-lg-7">
 
-            <div
-              className="bg-white rounded-5 shadow-sm p-3 p-lg-4 h-100"
-              style={{
-                border: "0px solid #ececec",
-              }}
-            >
+  <div
+    className="rounded-2 overflow-hidden h-100"
+    style={{
+      maxHeight: "520px",
+    }}
+  >
 
-              <div
-                className="overflow-hidden rounded-5"
-                style={{
-                  height: "100%",
-                  minHeight: "420px",
-                }}
-              >
+    <iframe
+      title="SKB Montessori Training Institute"
+      src="https://www.google.com/maps?q=SKB+Montessori+Training+Institute+Chennai&output=embed"
+      width="100%"
+      height="100%"
+      style={{
+        border: 0,
+        display: "block",
+        borderRadius: "32px",
+      }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
 
-                <iframe
-                  title="SKB Montessori Training Institute"
-                  src="https://www.google.com/maps?q=SKB+Montessori+Training+Institute+Chennai&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{
-                    border: 0,
-                  }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+  </div>
 
-              </div>
-
-            </div>
-
-          </div>
+</div>
 
         </div>
       </div>
