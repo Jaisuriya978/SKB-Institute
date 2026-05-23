@@ -292,7 +292,7 @@ export default function Contact() {
   <div
     className="rounded-2 overflow-hidden h-100"
     style={{
-      maxHeight: "520px",
+      minHeight: "520px",
     }}
   >
 
