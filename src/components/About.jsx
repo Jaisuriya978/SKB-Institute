@@ -232,18 +232,19 @@ export default function About() {
                                 className="position-absolute bottom-0 end-0 translate-middle-y"
                                 style={{
                                     zIndex: 2,
-                                    marginBottom: '-105px'
+                                    marginBottom: '-48px',
+                                    marginRight:'80px'
                                 }}
                             >
 
                                 <div
-                                    className="bg-white shadow rounded-5 px-4 py-3 border text-center"
+                                    className="bg-white shadow rounded-2 px-3 py-3 border text-center"
                                 >
 
                                     <h2
                                         className="fw-bold text-terracotta mb-1"
                                         style={{
-                                            fontSize: '3rem',
+                                            fontSize: '1.5rem',
                                         }}
                                     >
                                         8+

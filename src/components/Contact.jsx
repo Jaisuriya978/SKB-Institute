@@ -214,7 +214,9 @@ export default function Contact() {
                 />
 
                 <p className="fs-5 mb-0">
-                  Monday to Saturday · 9:00 AM to 5:00 PM
+                  Monday to Saturday 
+                  <br />
+                  9:00 AM to 5:00 PM
                 </p>
 
               </div>
@@ -223,67 +225,7 @@ export default function Contact() {
 
 
 
-            {/* Badges */}
-            <div className="d-flex gap-3 flex-wrap">
-
-              {/* Certified */}
-              <div className="badge rounded-4 bg-light-subtle text-terracotta px-3 py-3 d-flex flex-column align-items-center gap-2">
-
-                <img
-                  src={certifiedGif}
-                  alt="Certified Training"
-                  style={{
-                    width: "70px",
-                    height: "70px",
-                    objectFit: "contain",
-                  }}
-                />
-
-                <span className="fw-semibold">
-                  Certified Training
-                </span>
-
-              </div>
-
-              {/* Placement */}
-              <div className="badge rounded-4 bg-light-subtle text-terracotta px-3 py-3 d-flex flex-column align-items-center gap-2">
-
-                <img
-                  src={placementGif}
-                  alt="Placement Support"
-                  style={{
-                    width: "70px",
-                    height: "70px",
-                    objectFit: "contain",
-                  }}
-                />
-
-                <span className="fw-semibold">
-                  Placement Support
-                </span>
-
-              </div>
-
-              {/* Faculty */}
-              <div className="badge rounded-4 bg-light-subtle text-terracotta px-3 py-3 d-flex flex-column align-items-center gap-2">
-
-                <img
-                  src={facultyGif}
-                  alt="Expert Faculty"
-                  style={{
-                    width: "70px",
-                    height: "70px",
-                    objectFit: "contain",
-                  }}
-                />
-
-                <span className="fw-semibold">
-                  Expert Faculty
-                </span>
-
-              </div>
-
-            </div>
+            
 
           </div>
 
@@ -292,7 +234,7 @@ export default function Contact() {
   <div
     className="rounded-2 overflow-hidden h-100"
     style={{
-      minHeight: "520px",
+      minHeight: "420px",
     }}
   >
 
@@ -304,7 +246,7 @@ export default function Contact() {
       style={{
         border: 0,
         display: "block",
-        borderRadius: "32px",
+        borderRadius: "-2px",
       }}
       allowFullScreen=""
       loading="lazy"

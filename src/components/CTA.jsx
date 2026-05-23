@@ -24,25 +24,25 @@ export default function CTA() {
               <div className="col">
                 <a
                   href="#contact"
-                  className="btn btn-primary rounded-pill w-100 py-3 fw-semibold"
+                  className="btn btn-primary rounded-pill w-80 py-3 fw-semibold"
                 >
-                  Enroll Today
+                  Enroll Course Today
                 </a>
               </div>
 
               <div className="col">
                 <a
                   href="#contact"
-                  className="btn btn-primary rounded-pill w-100 py-3 fw-semibold"
+                  className="btn btn-primary rounded-pill w-80 py-3 fw-semibold"
                 >
-                  Talk to Our Team
+                  Talk to our Team
                 </a>
               </div>
 
               <div className="col">
                 <a
                   href="#contact"
-                  className="btn btn-primary rounded-pill w-100 py-3 fw-semibold"
+                  className="btn btn-primary rounded-pill w-80 py-3 fw-semibold"
                 >
                   Apply Now
                 </a>
