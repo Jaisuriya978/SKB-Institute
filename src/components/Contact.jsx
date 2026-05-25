@@ -38,7 +38,7 @@ const contactItems = [
       <a
         href="tel:+919597686903"
         className="fs-6 fs-md-5 text-decoration-none text-dark fw-medium"
-        style={{ lineHeight: 1.6 }}
+        style={{ lineHeight: 3.6 }}
       >
         +91 95976 86903
       </a>
@@ -52,7 +52,7 @@ const contactItems = [
       <a
         href="mailto:skbtraininginstitute@gmail.com"
         className="fs-6 fs-md-5 text-decoration-none text-dark fw-medium text-break"
-        style={{ lineHeight: 1.6 }}
+        style={{ lineHeight: 3.6 }}
       >
         skbtraininginstitute@gmail.com
       </a>

@@ -66,7 +66,7 @@ export default function About() {
                             <p
                                 className="text-muted lh-lg mb-4"
                                 style={{
-                                    fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)',
+                                    fontSize: 'clamp(0.95rem, 1.4vw, 1.05rem)',
                                 }}
                             >
                                 SKB Montessori Training Institute is dedicated
@@ -78,7 +78,7 @@ export default function About() {
                             <p
                                 className="text-muted lh-lg mb-4"
                                 style={{
-                                    fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)',
+                                    fontSize: 'clamp(0.95rem, 1.4vw, 1.05rem)',
                                 }}
                             >
                                 We help students, homemakers, fresh graduates,
