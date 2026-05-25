@@ -254,6 +254,45 @@ h5,
   text-align: justify;
 }
 
+/* Component-specific mobile polish */
+#top {
+  min-height: 100svh;
+}
+
+@media (max-width: 767.98px) {
+  #about .order-1 {
+    margin-bottom: 0.5rem;
+  }
+
+  #contact a:hover {
+    color: var(--terracotta) !important;
+  }
+
+  #why .col-sm-6 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  #courses article .col-12 + .col-12 {
+    border-top: 1px solid rgba(60, 97, 200, 0.08);
+  }
+
+  #stats .s-card {
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #top .h-pill {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  #about p {
+    text-align: left;
+  }
+}
+
 /* =========================================
    GLOBAL RESET
 ========================================= */

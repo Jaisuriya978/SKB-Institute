@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import {motion} from 'framer-motion'
 
 import {
   GraduationCapIcon,
@@ -16,64 +15,55 @@ const whyItems = [
   {
     title: 'Experienced Faculty',
     description:
-      'Learn from dedicated trainers with practical teaching experience and industry knowledge.',
+      'Learn from dedicated trainers who bring years of practical teaching experience and deep industry knowledge to every session.',
     Icon: GraduationCapIcon,
   },
-
   {
     title: 'Online & Offline Classes',
     description:
-      'Flexible learning options designed for students, working professionals, and homemakers.',
+      'Flexible learning options thoughtfully designed for students, working professionals, and homemakers to learn at their own pace.',
     Icon: LaptopIcon,
   },
-
   {
     title: 'Placement Guidance',
     description:
-      'Get career support and guidance for opportunities in schools and educational institutions.',
+      'Receive personalised career support and placement guidance for opportunities in reputed schools and educational institutions.',
     Icon: HandshakeAnimationIcon,
   },
-
   {
     title: 'Student-Friendly Learning',
     description:
-      'Interactive and supportive classroom environment focused on confidence building.',
+      'Enjoy an interactive and supportive classroom environment fully focused on building your confidence and communication skills.',
     Icon: UsersIcon,
   },
-
   {
     title: 'Flexible Timings',
     description:
-      'Weekend and weekday batches available for convenient learning schedules.',
+      'Choose from weekend and weekday batches designed to fit your schedule without disrupting your personal or work commitments.',
     Icon: ClockIcon,
   },
-
   {
     title: 'Recognized Programs',
     description:
-      'Career-oriented diploma programs with practical teaching methodologies.',
+      'Enrol in career-oriented diploma programs built around practical teaching methodologies and widely recognised by schools.',
     Icon: BadgeCheckIcon,
   },
-
   {
     title: 'Practical Training',
     description:
-      'Hands-on classroom activities and internship support for real teaching experience.',
+      'Gain real teaching experience through hands-on classroom activities, live practice sessions, and dedicated internship support.',
     Icon: BookOpenCheckIcon,
   },
-
   {
     title: 'Modern Teaching Methods',
     description:
-      'Learn child-centered and activity-based teaching techniques for modern classrooms.',
+      'Master child-centered and activity-based teaching techniques perfectly suited for engaging and modern classroom environments.',
     Icon: SchoolIcon,
   },
 ]
 
 function WhyCard({ item, index }) {
-
   const [hovered, setHovered] = useState(false)
-
   const Icon = item.Icon
 
   return (
@@ -82,66 +72,61 @@ function WhyCard({ item, index }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-
       <div
-        className="card-soft h-100 bg-white rounded-4 border p-4"
+        className="h-100 bg-white rounded-4 border p-4 p-md-4"
         style={{
-          transition: 'all 0.35s ease',
+          display: 'flex',
+          flexDirection: 'column',
+          transition: 'transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.12), box-shadow 0.35s ease, border-color 0.3s ease',
           boxShadow: hovered
-            ? '0 10px 35px rgba(0,0,0,0.08)'
-            : '0 2px 8px rgba(0,0,0,0.04)',
-          transform: hovered
-            ? 'translateY(-6px)'
-            : 'translateY(0)',
+            ? '0 14px 40px rgba(60,97,200,0.12)'
+            : '0 2px 10px rgba(0,0,0,0.04)',
+          transform: hovered ? 'translateY(-8px)' : 'translateY(0)',
+          borderColor: hovered ? 'rgba(60,97,200,0.18)' : 'rgba(0,0,0,0.08)',
         }}
       >
 
-        {/* Top */}
-        <div className="d-flex align-items-start justify-content-between mb-4">
-
-          {/* Animated Icon */}
+        {/* Top row — icon + number */}
+        <div className="d-flex align-items-start justify-content-between mb-3 mb-md-4">
           <div
             className="d-flex align-items-center justify-content-center rounded-4"
             style={{
-              width: '72px',
-              height: '72px',
-              background: hovered
-                ? '#e7f0ff'
-                : '#eef4ff',
-              transition: '0.3s ease',
+              width: 'clamp(56px, 12vw, 64px)',
+              height: 'clamp(56px, 12vw, 64px)',
+              flexShrink: 0,
+              background: hovered ? '#e7f0ff' : '#eef4ff',
+              transition: 'background 0.3s ease, transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.12)',
+              transform: hovered ? 'scale(1.04)' : 'scale(1)',
             }}
           >
-
-            <Icon
-              size={50}
-              className="text-terracotta"
-              animate={hovered}
-            />
-
+            <Icon size={44} className="text-terracotta" animate={hovered} />
           </div>
 
-          {/* Number */}
           <div
             className="fw-semibold text-terracotta"
             style={{
-              fontSize: '2rem',
+              fontSize: 'clamp(1.35rem, 3vw, 1.75rem)',
               lineHeight: 1,
-              opacity: hovered ? 1 : 0.45,
-              transition: '0.3s ease',
+              opacity: hovered ? 1 : 0.35,
+              transition: 'opacity 0.3s ease, transform 0.3s ease',
+              transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
             }}
           >
             0{index + 1}
           </div>
-
         </div>
 
         {/* Title */}
         <h4
-          className="fw-semibold mb-3"
+          className="fw-semibold mb-2"
           style={{
-            fontSize: '1.25rem',
-            lineHeight: '1.4',
-            letterSpacing: '-0.3px',
+            fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)',
+            lineHeight: 1.45,
+            letterSpacing: '-0.2px',
+            minHeight: 'clamp(2.6rem, 6vw, 2.8rem)',
+            display: 'flex',
+            alignItems: 'flex-start',
+            color: '#142033',
           }}
         >
           {item.title}
@@ -152,32 +137,26 @@ function WhyCard({ item, index }) {
           className="mb-0"
           style={{
             color: '#6b7280',
-            fontSize: '15px',
-            lineHeight: '1.8',
+            fontSize: 'clamp(13px, 1.5vw, 14px)',
+            lineHeight: 1.75,
+            textAlign: 'left',
+            flex: 1,
           }}
         >
           {item.description}
         </p>
 
       </div>
-
     </div>
   )
 }
 
 export default function WhySKB() {
-
   return (
-    <section
-      id="why"
-      className="py-5 bg-light"
-    >
-
+    <section id="why" className="py-5 bg-light">
       <div className="container">
 
-        {/* Section Heading */}
-        <div className="text-center mb-5">
-
+        <div className="text-center mb-4 mb-md-5 px-2">
           <span
             className="badge rounded-pill px-4 py-2 mb-3"
             style={{
@@ -190,35 +169,25 @@ export default function WhySKB() {
           </span>
 
           <h2
-            className="fw-bold"
+            className="fw-bold mb-0"
             style={{
-              fontSize: 'clamp(2rem,4vw,3rem)',
-              letterSpacing: '-1px',
+              fontSize: 'clamp(1.75rem, 4vw, 3rem)',
+              letterSpacing: '-0.5px',
+              lineHeight: 1.15,
             }}
           >
             Why students{' '}
-            <span className="text-terracotta fst-italic">
-              choose SKB
-            </span>
+            <span className="text-terracotta fst-italic">choose SKB</span>
           </h2>
-
         </div>
 
-        {/* Cards */}
-        <div className="row g-4">
-
+        <div className="row g-3 g-md-4">
           {whyItems.map((item, index) => (
-            <WhyCard
-              key={item.title}
-              item={item}
-              index={index}
-            />
+            <WhyCard key={item.title} item={item} index={index} />
           ))}
-
         </div>
 
       </div>
-
     </section>
   )
 }

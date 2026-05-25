@@ -50,6 +50,17 @@ export default function Courses() {
               className="bg-white rounded-4 rounded-lg-5 shadow-sm border overflow-hidden"
               style={{
                 borderColor: "rgba(0,0,0,0.05)",
+                transition: "transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px)"
+                e.currentTarget.style.boxShadow = "0 18px 48px rgba(60,97,200,0.12)"
+                e.currentTarget.style.borderColor = "rgba(60,97,200,0.15)"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)"
+                e.currentTarget.style.boxShadow = ""
+                e.currentTarget.style.borderColor = "rgba(0,0,0,0.05)"
               }}
             >
 
@@ -59,11 +70,21 @@ export default function Courses() {
                 <div className="col-12 col-lg-4">
 
                   <div
-                    className="h-100 p-4 p-md-5"
+                    className="h-100 p-4 p-md-5 position-relative"
                     style={{
                       background: "#fff",
                     }}
                   >
+
+                    {/* accent bar */}
+                    <div
+                      className="position-absolute top-0 start-0 d-none d-lg-block"
+                      style={{
+                        width: "4px",
+                        height: "100%",
+                        background: "linear-gradient(180deg, #3c61c8 0%, rgba(60,97,200,0.2) 100%)",
+                      }}
+                    />
 
                     {/* NUMBER */}
                     <div
@@ -72,6 +93,7 @@ export default function Courses() {
                         fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
                         color: "#3c61c8",
                         lineHeight: "1",
+                        opacity: 0.95,
                       }}
                     >
                       {c.n}
@@ -81,9 +103,10 @@ export default function Courses() {
                     <h3
                       className="mt-3 fw-bold"
                       style={{
-                        fontSize: "clamp(1.4rem, 2vw, 2rem)",
+                        fontSize: "clamp(1.25rem, 2.2vw, 2rem)",
                         color: "#142033",
-                        lineHeight: "1.3",
+                        lineHeight: "1.25",
+                        letterSpacing: "-0.3px",
                       }}
                     >
                       {c.title}
@@ -95,7 +118,7 @@ export default function Courses() {
                       style={{
                         color: "#6c757d",
                         lineHeight: "1.8",
-                        fontSize: "0.98rem",
+                        fontSize: "clamp(0.9rem, 1.5vw, 0.98rem)",
                       }}
                     >
                       {c.desc}
@@ -108,7 +131,17 @@ export default function Courses() {
                       style={{
                         background: "#3c61c8",
                         color: "#fff",
-                        fontSize: "0.92rem",
+                        fontSize: "clamp(0.85rem, 1.4vw, 0.92rem)",
+                        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                        boxShadow: "0 8px 22px rgba(60,97,200,0.35)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "translateY(-2px)"
+                        e.currentTarget.style.boxShadow = "0 12px 28px rgba(60,97,200,0.45)"
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "translateY(0)"
+                        e.currentTarget.style.boxShadow = "0 8px 22px rgba(60,97,200,0.35)"
                       }}
                     >
                       Enquire Now
@@ -121,9 +154,15 @@ export default function Courses() {
                 {/* RIGHT SIDE */}
                 <div className="col-12 col-lg-8">
 
-                  <div className="h-100 p-4 p-md-5">
+                  <div
+                    className="h-100 p-4 p-md-5"
+                    style={{
+                      background: "linear-gradient(135deg, #fafbfd 0%, #f5f8fc 100%)",
+                      borderTop: "1px solid rgba(60,97,200,0.06)",
+                    }}
+                  >
 
-                    <div className="row g-4">
+                    <div className="row g-4 g-md-4">
 
                       {[
                         ["What you'll learn", c.learn],
@@ -138,11 +177,13 @@ export default function Courses() {
 
                           {/* LABEL */}
                           <h6
-                            className="fw-bold mb-3"
+                            className="fw-bold mb-3 pb-2"
                             style={{
                               color: "#142033",
-                              fontSize: "0.95rem",
+                              fontSize: "clamp(0.88rem, 1.5vw, 0.95rem)",
                               letterSpacing: ".3px",
+                              borderBottom: "2px solid rgba(60,97,200,0.15)",
+                              display: "inline-block",
                             }}
                           >
                             {label}
@@ -172,8 +213,8 @@ export default function Courses() {
                                 <span
                                   style={{
                                     color: "#6c757d",
-                                    lineHeight: "1.6",
-                                    fontSize: "0.94rem",
+                                    lineHeight: "1.65",
+                                    fontSize: "clamp(0.88rem, 1.4vw, 0.94rem)",
                                   }}
                                 >
                                   {i}

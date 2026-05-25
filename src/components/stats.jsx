@@ -72,7 +72,7 @@ export default function Stats() {
       id="stats"
       ref={ref}
       className="position-relative overflow-hidden"
-      style={{ background: "#03071a", padding: "90px 0 100px" }}
+      style={{ background: "#03071a", padding: "clamp(64px, 10vw, 100px) 0" }}
     >
 
       {/* ── BACKGROUND GRID ── */}
@@ -90,7 +90,7 @@ export default function Stats() {
       <div
         className="position-absolute"
         style={{
-          width: "700px", height: "300px",
+          width: "min(700px, 90vw)", height: "min(300px, 40vh)",
           top: "50%", left: "50%",
           transform: "translate(-50%,-50%)",
           borderRadius: "50%",
@@ -106,20 +106,21 @@ export default function Stats() {
           padding:6px 20px;border-radius:999px;
           border:1px solid rgba(96,140,255,.30);
           background:rgba(60,97,200,.12);
-          color:#a0bcff;font-size:.78rem;font-weight:700;
+          color:#a0bcff;font-size:clamp(.72rem,1.2vw,.78rem);font-weight:700;
           letter-spacing:.10em;text-transform:uppercase;margin-bottom:14px;
         }
         .s-heading{
-          font-size:clamp(1.85rem,2.6vw,2.6rem);
-          font-weight:800;line-height:1.10;letter-spacing:-1px;
+          font-size:clamp(1.6rem,4.5vw,2.6rem);
+          font-weight:800;line-height:1.12;letter-spacing:-1px;
           background:linear-gradient(115deg,#fff 25%,#7eaaff 65%,#c2d6ff 100%);
           -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
           margin:0;
         }
         .s-sub{
           color:rgba(255,255,255,.45);
-          font-size:clamp(.86rem,1.1vw,.98rem);
-          line-height:1.75;max-width:460px;margin:0 auto;
+          font-size:clamp(.84rem,1.1vw,.98rem);
+          line-height:1.75;max-width:min(460px,92vw);margin:0 auto;
+          padding:0 12px;
         }
 
         /* Cards */
@@ -129,20 +130,21 @@ export default function Stats() {
         }
         .s-card{
           position:relative;overflow:hidden;
-          background:linear-gradient(145deg,rgba(255,255,255,.055) 0%,rgba(255,255,255,.025) 100%);
-          border:1px solid rgba(255,255,255,.09);
-          border-radius:22px;
-          padding:36px 20px 32px;
+          background:linear-gradient(155deg,rgba(255,255,255,.07) 0%,rgba(255,255,255,.02) 100%);
+          border:1px solid rgba(255,255,255,.10);
+          border-radius:clamp(16px,2vw,22px);
+          padding:clamp(24px,4vw,36px) clamp(14px,2vw,20px) clamp(22px,3.5vw,32px);
           text-align:center;
           backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
           opacity:0;animation:sCardIn .65s cubic-bezier(.22,.68,0,1.12) forwards;
           transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease;
           cursor:default;
+          height:100%;
         }
         .s-card:hover{
           transform:translateY(-8px);
-          border-color:rgba(96,140,255,.35);
-          box-shadow:0 20px 48px rgba(60,97,200,.20);
+          border-color:rgba(96,140,255,.38);
+          box-shadow:0 20px 48px rgba(60,97,200,.22);
         }
         .s-card:hover .s-glow{opacity:1;}
 
@@ -162,19 +164,23 @@ export default function Stats() {
 
         /* Icon */
         .s-icon-wrap{
-          width:52px;height:52px;border-radius:14px;
-          background:rgba(60,97,200,.20);
-          border:1px solid rgba(96,140,255,.22);
+          width:clamp(46px,8vw,52px);height:clamp(46px,8vw,52px);border-radius:14px;
+          background:rgba(60,97,200,.22);
+          border:1px solid rgba(96,140,255,.25);
           display:inline-flex;align-items:center;justify-content:center;
-          margin-bottom:18px;
-          transition:background .22s,border-color .22s;
+          margin-bottom:clamp(12px,2vw,18px);
+          transition:background .22s,border-color .22s,transform .22s ease;
         }
-        .s-card:hover .s-icon-wrap{background:rgba(60,97,200,.38);border-color:rgba(96,140,255,.45);}
-        .s-icon{font-size:1.3rem;color:#7eaaff;}
+        .s-card:hover .s-icon-wrap{
+          background:rgba(60,97,200,.38);
+          border-color:rgba(96,140,255,.45);
+          transform:scale(1.05);
+        }
+        .s-icon{font-size:clamp(1.1rem,2vw,1.3rem);color:#7eaaff;}
 
         /* Number */
         .s-num{
-          font-size:clamp(2.2rem,3vw,3rem);
+          font-size:clamp(1.75rem,5vw,3rem);
           font-weight:900;color:#ffffff;
           line-height:1;letter-spacing:-1.5px;
           margin-bottom:8px;
@@ -184,15 +190,16 @@ export default function Stats() {
 
         /* Label */
         .s-lbl{
-          color:rgba(255,255,255,.46);
-          font-size:.72rem;font-weight:600;
-          letter-spacing:.09em;text-transform:uppercase;
+          color:rgba(255,255,255,.48);
+          font-size:clamp(.65rem,1.2vw,.72rem);font-weight:600;
+          letter-spacing:.08em;text-transform:uppercase;
           line-height:1.45;
+          padding:0 4px;
         }
 
         /* Divider */
         .s-divider{
-          width:48px;height:2px;border-radius:2px;margin:0 auto 12px;
+          width:clamp(40px,8vw,48px);height:2px;border-radius:2px;margin:0 auto 14px;
           background:linear-gradient(90deg,#3c61c8,rgba(60,97,200,0));
         }
       `}</style>
@@ -200,7 +207,7 @@ export default function Stats() {
       <div className="container position-relative">
 
         {/* SECTION HEADER */}
-        <div className="text-center mb-5">
+       {/* <div className="text-center mb-4 mb-md-5 px-2">
           <div className="s-eyebrow">Our Impact in Numbers</div>
           <h2 className="s-heading mb-3">Why Students Choose SKB</h2>
           <div className="s-divider" />
@@ -208,10 +215,10 @@ export default function Stats() {
             Decades of commitment to quality education, measurable outcomes,
             and careers that last a lifetime.
           </p>
-        </div>
+        </div> */}
 
         {/* STAT CARDS GRID */}
-        <div className="row g-4 justify-content-center">
+        <div className="row g-3 g-md-4 justify-content-center">
           {stats.map(([n, l], i) => {
             const Icon = ICONS[i] || FaUserGraduate
             return (
