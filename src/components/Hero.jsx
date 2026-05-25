@@ -1,4 +1,4 @@
-import heroImg from '../assets/Image5.JPG'
+import heroImg from '../assets/image.png'
 import { stats } from '../data'
 import { FaCheckCircle, FaGraduationCap, FaArrowRight } from "react-icons/fa"
 import RocketGif from '../assets/rocket.gif'

@@ -223,13 +223,15 @@ export default function About() {
                             </div>
 
                             {/* MOBILE EXPERIENCE CARD — below image, no overlap */}
-                            <div className="d-sm-none mt-3">
+                            <div className="d-sm-none text-center">
                                 <div
                                     className="bg-white shadow-sm rounded-4 px-3 py-3 border text-center mx-auto"
                                     style={{
                                         maxWidth: '180px',
                                         borderColor: 'rgba(60,97,200,0.12)',
                                         borderTop: '3px solid rgba(60,97,200,0.5)',
+                                        position: 'relative',
+                                        marginTop: '-28px',
                                     }}
                                 >
                                     <h2
@@ -242,11 +244,10 @@ export default function About() {
                                         className="mb-0 fw-medium text-muted"
                                         style={{ fontSize: '0.85rem', lineHeight: 1.35 }}
                                     >
-                                        Years of Excellence
+                                        Years of the Excellences
                                     </p>
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
