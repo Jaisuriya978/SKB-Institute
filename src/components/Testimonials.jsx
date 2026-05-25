@@ -114,10 +114,16 @@ export default function Testimonials() {
                 </div>
 
                 {/* Content Block */}
-                <div className="p-4 bg-white d-flex flex-column justify-content-between">
-                  {/* <p className="durable-quote">"{item.quote}"</p> */}
+                <div className="p-3 bg-white d-flex flex-column justify-content-between">
+                  <p className="durable-quote">"{item.quote}"</p>
 
-                  <div className="d-flex align-items-center gap-3 mt-4">
+                  <div
+                    className="d-flex align-items-center gap-3"
+                    style={{
+                      borderTop: '1px solid rgba(0,0,0,0.07)',
+                      paddingTop: '12px',
+                    }}
+                  >
                     <div className="durable-avatar">
                       {item.name.charAt(0)}
                     </div>
@@ -272,8 +278,10 @@ export default function Testimonials() {
 }
 
 .durable-quote {
-  font-size: 15px;
-  line-height: 1.8;
+  margin: 0;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.7;
   color: #4a4a4a;
   font-style: italic;
 }

@@ -12,7 +12,7 @@ import CTA from './components/CTA'
 import Contact from './components/Contact'
 import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
-import Stats from './components/stats'
+import Stats from './components/Stats'
 
 export default function App() {
   return (

@@ -10,6 +10,29 @@ import {
 /* Map each stat to an icon — adjust order to match your data array */
 const ICONS = [FaUserGraduate, FaBriefcase, FaSmile, FaChalkboardTeacher]
 
+const ICON_COLORS = [
+  {
+    wrapBg: 'rgba(99,102,241,0.22)',
+    wrapBorder: 'rgba(99,102,241,0.30)',
+    iconColor: '#a5b4fc',
+  },
+  {
+    wrapBg: 'rgba(234,88,12,0.20)',
+    wrapBorder: 'rgba(234,88,12,0.28)',
+    iconColor: '#fb923c',
+  },
+  {
+    wrapBg: 'rgba(16,185,129,0.20)',
+    wrapBorder: 'rgba(16,185,129,0.28)',
+    iconColor: '#6ee7b7',
+  },
+  {
+    wrapBg: 'rgba(236,72,153,0.20)',
+    wrapBorder: 'rgba(236,72,153,0.28)',
+    iconColor: '#f9a8d4',
+  },
+]
+
 /* Animated counter hook */
 function useCounter(target, duration = 1800, active = false) {
   const [count, setCount] = useState(0)
@@ -30,7 +53,7 @@ function useCounter(target, duration = 1800, active = false) {
   return count
 }
 
-function StatCard({ num, label, Icon, index, active }) {
+function StatCard({ num, label, Icon, index, active, iconColor }) {
   const displayed = useCounter(num, 1600, active)
   return (
     <div className="s-card" style={{ animationDelay: `${index * 0.12}s` }}>
@@ -38,8 +61,14 @@ function StatCard({ num, label, Icon, index, active }) {
       <div className="s-shimmer" />
 
       {/* Icon circle */}
-      <div className="s-icon-wrap">
-        <Icon className="s-icon" />
+      <div
+        className="s-icon-wrap"
+        style={{
+          background: iconColor.wrapBg,
+          border: `1px solid ${iconColor.wrapBorder}`,
+        }}
+      >
+        <Icon className="s-icon" style={{ color: iconColor.iconColor }} />
       </div>
 
       {/* Number */}
@@ -165,18 +194,14 @@ export default function Stats() {
         /* Icon */
         .s-icon-wrap{
           width:clamp(46px,8vw,52px);height:clamp(46px,8vw,52px);border-radius:14px;
-          background:rgba(60,97,200,.22);
-          border:1px solid rgba(96,140,255,.25);
           display:inline-flex;align-items:center;justify-content:center;
           margin-bottom:clamp(12px,2vw,18px);
-          transition:background .22s,border-color .22s,transform .22s ease;
+          transition:transform .22s ease;
         }
         .s-card:hover .s-icon-wrap{
-          background:rgba(60,97,200,.38);
-          border-color:rgba(96,140,255,.45);
           transform:scale(1.05);
         }
-        .s-icon{font-size:clamp(1.1rem,2vw,1.3rem);color:#7eaaff;}
+        .s-icon{font-size:clamp(1.1rem,2vw,1.3rem);}
 
         /* Number */
         .s-num{
@@ -206,16 +231,7 @@ export default function Stats() {
 
       <div className="container position-relative">
 
-        {/* SECTION HEADER */}
-       {/* <div className="text-center mb-4 mb-md-5 px-2">
-          <div className="s-eyebrow">Our Impact in Numbers</div>
-          <h2 className="s-heading mb-3">Why Students Choose SKB</h2>
-          <div className="s-divider" />
-          <p className="s-sub">
-            Decades of commitment to quality education, measurable outcomes,
-            and careers that last a lifetime.
-          </p>
-        </div> */}
+    
 
         {/* STAT CARDS GRID */}
         <div className="row g-3 g-md-4 justify-content-center">
@@ -223,7 +239,14 @@ export default function Stats() {
             const Icon = ICONS[i] || FaUserGraduate
             return (
               <div key={l} className="col-6 col-md-3">
-                <StatCard num={n} label={l} Icon={Icon} index={i} active={active} />
+                <StatCard
+                  num={n}
+                  label={l}
+                  Icon={Icon}
+                  index={i}
+                  active={active}
+                  iconColor={ICON_COLORS[i] || ICON_COLORS[0]}
+                />
               </div>
             )
           })}

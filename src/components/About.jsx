@@ -225,20 +225,25 @@ export default function About() {
                             {/* MOBILE EXPERIENCE CARD — below image, no overlap */}
                             <div className="d-sm-none mt-3">
                                 <div
-                                    className="bg-white shadow-sm rounded-4 px-4 py-3 border d-flex align-items-center justify-content-between"
+                                    className="bg-white shadow-sm rounded-4 px-3 py-3 border text-center mx-auto"
                                     style={{
+                                        maxWidth: '180px',
                                         borderColor: 'rgba(60,97,200,0.12)',
+                                        borderTop: '3px solid rgba(60,97,200,0.5)',
                                     }}
                                 >
-                                    <p className="mb-0 fw-medium text-muted" style={{ fontSize: '0.9rem' }}>
-                                        Years of Excellence
-                                    </p>
                                     <h2
-                                        className="fw-bold text-terracotta mb-0"
-                                        style={{ fontSize: '1.75rem', lineHeight: 1 }}
+                                        className="fw-bold text-terracotta mb-1"
+                                        style={{ fontSize: '2.2rem', lineHeight: 1 }}
                                     >
                                         8+
                                     </h2>
+                                    <p
+                                        className="mb-0 fw-medium text-muted"
+                                        style={{ fontSize: '0.85rem', lineHeight: 1.35 }}
+                                    >
+                                        Years of Excellence
+                                    </p>
                                 </div>
                             </div>
 

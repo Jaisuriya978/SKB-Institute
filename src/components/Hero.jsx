@@ -104,10 +104,10 @@ export default function Hero() {
         style={{
           position: "absolute",
           width: "clamp(64px, 6vw, 92px)",
-          right: "4%", top: "12%", zIndex: 5,
+          right: "4%", top: "28%", zIndex: 5,
           animation: "rocketFloat 3.5s ease-in-out infinite",
           pointerEvents: "none",
-          mixBlendMode: "screen",
+          mixBlendMode: "multiply",
           filter: "drop-shadow(0 0 20px rgba(60,97,200,0.55))",
         }}
       />
@@ -266,7 +266,10 @@ export default function Hero() {
               launch confident, career-ready Montessori teachers.
             </p>
 
-            <div className="d-flex flex-wrap gap-2 mt-3 ha ha4">
+            <div
+              className="d-flex flex-wrap gap-2 mt-3 ha ha4"
+              style={{ maxWidth: "440px" }}
+            >
               {highlights.map((h) => (
                 <span key={h} className="h-pill">
                   <FaCheckCircle style={{ color: "#6b9fff", fontSize: ".68rem" }} />
@@ -289,23 +292,13 @@ export default function Hero() {
                 ★★★★★
               </span>
               <p className="h-trust mb-0">Trusted by 300+ students across Tamil Nadu</p>
+              
             </div>
 
           </div>
         </div>
 
-        {/* STATS ROW */}
-        {/*<div className="row g-2 g-sm-3 ha ha6" style={{ marginTop: "clamp(24px, 4vw, 40px)" }}>
-          {stats.map(([n, l]) => (
-            <div key={l} className="col-6 col-sm-3">
-              <div className="h-stat">
-                <div className="h-stat-num">{n}</div>
-                <div className="h-stat-lbl">{l}</div>
-              </div>
-            </div>
-          ))}
-        </div>*/}
-
+        
       </div>
     </section>
   )
