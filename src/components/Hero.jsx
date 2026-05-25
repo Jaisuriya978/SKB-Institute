@@ -96,7 +96,7 @@ export default function Hero() {
       />
 
       {/* ROCKET */}
-      <img
+      {/*<img
         src={RocketGif}
         alt="Rocket"
         className="d-none d-md-block"
@@ -109,7 +109,7 @@ export default function Hero() {
           mixBlendMode: "multiply",
           filter: "drop-shadow(0 0 20px rgba(60,97,200,0.55))",
         }}
-      />
+      />*/}
 
       {/* STYLES */}
       <style>{`
