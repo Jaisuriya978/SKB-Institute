@@ -70,7 +70,7 @@ export const steps = [
   
   [
     "Pay Enrollment Fee",
-    "Complete the enrollment process by paying the registration fee to confirm your admission and reserve your place in the upcoming training batch."
+    "Complete the enrollment process by paying the registration fee to confirm for your admission and reserve your place in the upcoming training batch."
   ],
 
   [

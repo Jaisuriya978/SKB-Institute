@@ -385,7 +385,6 @@ export default function Courses() {
           {/* HEADER WITH WATERMARK */}
           <div className="course-header-area">
             <span className="course-watermark" aria-hidden="true">{c.n}</span>
-            <div className="course-header-num">{c.n}</div>
             <h3 className="course-header-title">{c.title}</h3>
             <p className="course-desc">{c.desc}</p>
           </div>

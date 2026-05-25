@@ -10,7 +10,6 @@ export default function Hero() {
     "Online & Offline Classes",
     "Internship Opportunities",
     "Career Guidance",
-    "Recognized Programs",
     "Hands on Training",
   ]
 
@@ -287,18 +286,42 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="d-flex flex-wrap align-items-center gap-2 mt-3 ha ha6">
-              <span style={{ color: "#fbbf24", fontSize: "clamp(.78rem,.82vw,.82rem)", letterSpacing: "1px" }}>
-                ★★★★★
-              </span>
-              <p className="h-trust mb-0">Trusted by 300+ students across Tamil Nadu</p>
-              
+            <div className="d-flex flex-column gap-2 mt-3 ha ha6">
+
+              <div className="d-flex align-items-center gap-2">
+                <span style={{ color: "#fbbf24", fontSize: "clamp(.78rem,.82vw,.82rem)", letterSpacing: "1px" }}>
+                  ★★★★★
+                </span>
+                <p className="h-trust mb-0">Trusted by 300+ students across Tamil Nadu</p>
+              </div>
+
+              <div className="d-flex align-items-center gap-2">
+                <span style={{ color: "#fbbf24", fontSize: "clamp(.78rem,.82vw,.82rem)", letterSpacing: "1px" }}>
+                  ★★★★★
+                </span>
+                <p className="h-trust mb-0">100% Internship Opportunities</p>
+              </div>
+
+              <div className="d-flex align-items-center gap-2">
+                <span style={{ color: "#fbbf24", fontSize: "clamp(.78rem,.82vw,.82rem)", letterSpacing: "1px" }}>
+                  ★★★★★
+                </span>
+                <p className="h-trust mb-0">100% Student Satisfaction</p>
+              </div>
+
+              <div className="d-flex align-items-center gap-2">
+                <span style={{ color: "#fbbf24", fontSize: "clamp(.78rem,.82vw,.82rem)", letterSpacing: "1px" }}>
+                  ★★★★★
+                </span>
+                <p className="h-trust mb-0">10+ Expert Faculty Members</p>
+              </div>
+
             </div>
 
           </div>
         </div>
 
-        
+
       </div>
     </section>
   )

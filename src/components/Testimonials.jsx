@@ -71,6 +71,8 @@ export default function Testimonials() {
 
             {[...testimonials, ...testimonials].map((item, index) => (
               <div key={index} className="durable-card">
+                <div className="durable-shimmer" aria-hidden="true" />
+
                 {/* Video Block */}
                 <div
                   className="durable-video-wrapper"
@@ -115,15 +117,7 @@ export default function Testimonials() {
 
                 {/* Content Block */}
                 <div className="p-3 bg-white d-flex flex-column justify-content-between">
-                  <p className="durable-quote">"{item.quote}"</p>
-
-                  <div
-                    className="d-flex align-items-center gap-3"
-                    style={{
-                      borderTop: '1px solid rgba(0,0,0,0.07)',
-                      paddingTop: '12px',
-                    }}
-                  >
+                  <div className="d-flex align-items-center gap-3">
                     <div className="durable-avatar">
                       {item.name.charAt(0)}
                     </div>
@@ -148,6 +142,35 @@ export default function Testimonials() {
       overflow: hidden;
       position: relative;
       padding: 30px 0;
+    }
+
+    .testimonial-track-container::before,
+    .testimonial-track-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .testimonial-track-container::before {
+      left: 0;
+      background: linear-gradient(
+        to right,
+        none,
+        transparent 100%
+      );
+    }
+
+    .testimonial-track-container::after {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        none,
+        transparent 100%
+      );
     }
 
     /* Auto moving row */
@@ -189,13 +212,26 @@ export default function Testimonials() {
 
   transition:
     transform 0.4s ease,
-    box-shadow 0.4s ease;
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
 
   position: relative;
 }
 
+.durable-shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(60,97,200,0.7), transparent);
+  z-index: 3;
+  pointer-events: none;
+}
+
 .durable-card:hover {
   transform: translateY(-12px);
+  border-color: rgba(60,97,200,0.20);
 
   box-shadow:
     0 24px 50px rgba(0,0,0,0.12);
@@ -277,15 +313,6 @@ export default function Testimonials() {
   min-height: 190px;
 }
 
-.durable-quote {
-  margin: 0;
-  margin-top: 0;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #4a4a4a;
-  font-style: italic;
-}
-
 .degree-text {
   font-size: 11px;
   line-height: 1.4;
@@ -297,12 +324,7 @@ export default function Testimonials() {
 
   border-radius: 50%;
 
-  background:
-    linear-gradient(
-      135deg,
-      #5c61c8,
-      #7a7fff
-    );
+  background: linear-gradient(135deg, #3c61c8, #3c61c8);
 
   color: white;
 
