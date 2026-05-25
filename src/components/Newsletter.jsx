@@ -18,7 +18,7 @@ export default function Newsletter() {
             </p>
           </div>
           <div className="col-lg-5">
-            <form onSubmit={submit} className="d-flex flex-column flex-sm-row gap-2">
+            <form onSubmit={submit} className="d-flex flex-column flex-sm-row gap-4">
               <input type="email" required placeholder="your@email.com" className="form-control form-control-lg rounded-pill px-4" />
               <button type="submit" className="btn btn-primary">Subscribe</button>
             </form>
