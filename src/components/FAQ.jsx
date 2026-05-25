@@ -7,7 +7,7 @@ export default function FAQ() {
   const [open, setOpen] = useState(0)
 
   return (
-    <section className="py-5 bg-light" id="faq">
+    <section className="py-1 bg-light" id="faq">
       <div className="container">
 
         <SectionHeader

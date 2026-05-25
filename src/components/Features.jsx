@@ -68,7 +68,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-light py-5">
+    <section className="bg-light py-3">
 
       {/* Animations */}
       <style>{`
