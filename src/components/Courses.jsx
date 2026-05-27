@@ -312,7 +312,7 @@ export default function Courses() {
             </>
           }
 
-          intro="Three career-focused diploma tracks built around child-centered learning, international standards, and inclusive teaching."
+          intro="The Right Career focused diploma tracks built around child-centered learning, international standards, and inclusive teaching."
         />
 
         {/* TAB PILLS + NAV */}

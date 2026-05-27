@@ -127,7 +127,7 @@ export default function Footer() {
                             />
                             <div>
                                 <p style={{ margin: 0, color: "#fff", fontWeight: 700, fontSize: ".95rem", lineHeight: 1.2 }}>SKB</p>
-                                <p style={{ margin: 0, color: "rgba(255,255,255,.50)", fontSize: ".76rem", fontWeight: 500, letterSpacing: ".02em" }}>Montessori Training Institute</p>
+                                <p style={{ margin: 0, color: "rgba(255,255,255,.50)", fontSize: ".76rem", fontWeight: 500, letterSpacing: ".02em" }}>Training Institute</p>
                             </div>
                         </div>
 
@@ -160,7 +160,7 @@ export default function Footer() {
                         <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                             {[
                                 { Icon: FaPhone,           text: "+91 95976 86903"              },
-                                { Icon: FaEnvelope,        text: "skbmontessori@gmail.com"       },
+                                { Icon: FaEnvelope,        text: "skbtraininginstitute@gmail.com"       },
                                 { Icon: FaMapMarkerAlt,    text: "Tamil Nadu, India"             },
                             ].map(({ Icon, text }) => (
                                 <div key={text} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -198,8 +198,8 @@ export default function Footer() {
                         <ul className="list-unstyled m-0" style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
                             {[
                                 "Montessori D.Ed",
-                                "Nursery Teacher Training",
-                                "Primary Teacher Training",
+                                "Practical Skills",
+                                "Professional Training",
                                 "Online Courses",
                                 "Career Guidance",
                             ].map((p) => (
@@ -284,7 +284,7 @@ export default function Footer() {
                     <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
 
                         <p style={{ margin: 0, color: "rgba(255,255,255,.40)", fontSize: ".80rem" }}>
-                            © {new Date().getFullYear()} SKB Montessori Training Institute. All rights reserved. &nbsp;·&nbsp; Website crafted by{" "}
+                            © {new Date().getFullYear()} SKB Training Institute. All rights reserved. &nbsp;·&nbsp; Website Developed by{" "}
                             <a href="#" style={{ color: "#6b9fff", textDecoration: "none", fontWeight: 600 }}>
                                 Seyon Tech Digital Media Solutions
                             </a>

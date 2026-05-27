@@ -23,6 +23,38 @@ export const courses = [
     careers: ["Special Educator", "Inclusive Classroom Teacher", "Child Development Support Staff", "Learning Support Educator", "Educational Therapist", "Special Needs Coordinator", "Behavioral Intervention Specialist"],
     benefits: ["Practical special education training", "Student-centered teaching methods", "Real-life case understanding", "Professional skill development", "Internship and career support", "Flexible learning options", "Affordable education"],
   },
+  {
+    n: "04",
+    title: "Diploma in Learning Disability",
+    desc: "In-depth understanding of various learning disabilities and evidence-based intervention strategies to support children and adults in overcoming academic and developmental challenges.",
+    learn: ["Types of learning disabilities", "Diagnosis and assessment methods", "Remedial teaching techniques", "Multisensory learning approaches", "IEP development and implementation", "Classroom accommodation strategies", "Parent and family counseling basics"],
+    careers: ["Learning Disability Specialist", "Remedial Educator", "Educational Diagnostician", "Resource Room Teacher", "Learning Support Coordinator", "Child Assessment Specialist", "Remediation Therapist"],
+    benefits: ["Hands-on case study training", "Evidence-based intervention methods", "Professional skill development", "Internship and placement support", "Expert faculty guidance", "Flexible learning options", "Affordable fee structure"],
+  },
+  {
+    n: "05",
+    title: "Diploma in Psychology",
+    desc: "Foundational principles of human psychology, mental health, and behavioral science, equipping students with practical knowledge for counseling, education, and social work settings.",
+    learn: ["Fundamentals of human psychology", "Theories of personality", "Cognitive and behavioral approaches", "Mental health awareness", "Counseling communication skills", "Child and adolescent psychology", "Stress and emotional management"],
+    careers: ["Psychological Counselor", "School Counselor", "Mental Health Support Worker", "Child Psychologist Assistant", "HR and Wellness Professional", "Community Support Worker", "Behavioral Support Specialist"],
+    benefits: ["Practical counseling skill training", "Case-based learning approach", "Professional mentoring", "Internship opportunities", "Industry-relevant curriculum", "Flexible learning modes", "Affordable fee structure"],
+  },
+  {
+    n: "06",
+    title: "Diploma in Early Childhood Care",
+    desc: "Comprehensive knowledge of child growth, nutrition, health, and development during the earliest years of life, preparing professionals for nurturing and caregiving roles.",
+    learn: ["Early childhood development milestones", "Child nutrition and health", "Play-based learning strategies", "Safe and stimulating environment design", "Caregiver communication skills", "Emotional bonding and attachment", "Child protection and safety protocols"],
+    careers: ["Early Childhood Caregiver", "Crèche Supervisor", "Daycare Center Staff", "Child Welfare Officer", "Nursery Educator", "Parent Educator", "Community Child Care Worker"],
+    benefits: ["Practical caregiving skill development", "Child-centered learning approach", "Professional teaching guidance", "Internship and placement support", "Holistic curriculum design", "Flexible learning options", "Affordable fee structure"],
+  },
+  {
+    n: "07",
+    title: "Diploma in Autism",
+    desc: "Specialized understanding of Autism Spectrum Disorder (ASD), its characteristics, and structured intervention approaches to support individuals with autism across home, school, and community settings.",
+    learn: ["Understanding Autism Spectrum Disorder", "ABA and structured teaching methods", "Sensory integration techniques", "Social skills development strategies", "Communication support approaches", "Behavior management for autism", "Family and caregiver training methods"],
+    careers: ["Autism Support Specialist", "ABA Therapist", "Special Needs Educator", "Inclusive Education Teacher", "Behavioral Intervention Therapist", "Autism Program Coordinator", "Child Development Support Worker"],
+    benefits: ["Hands-on autism intervention training", "Evidence-based teaching techniques", "Real-life case exposure", "Professional skill development", "Internship and career support", "Flexible learning options", "Affordable fee structure"],
+  },
 ];
 
 export const stats = [

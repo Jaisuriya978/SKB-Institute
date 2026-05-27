@@ -33,19 +33,19 @@ const whyItems = [
   {
     title: 'Student-Friendly Learning',
     description:
-      'Enjoy an interactive and supportive classroom environment fully focused on building your confidence and communication skills.',
+      'Enjoy an interactive and supportive classroom environment fully focused on building your confidence and skills.',
     Icon: UsersIcon,
   },
   {
     title: 'Flexible Timings',
     description:
-      'Choose from weekend and weekday batches designed to fit your schedule without disrupting your personal or work commitments.',
+      'Choose from weekend and weekday batches designed to fit your schedule without disrupting your personal commitments.',
     Icon: ClockIcon,
   },
   {
     title: 'Recognized Programs',
     description:
-      'Enrol in career-oriented diploma programs built around practical teaching methodologies and widely recognised by schools.',
+      'Enrol in career-oriented diploma programs built around practical training methodologies and widely recognised by schools.',
     Icon: BadgeCheckIcon,
   },
   {
@@ -57,7 +57,7 @@ const whyItems = [
   {
     title: 'Modern Teaching Methods',
     description:
-      'Master child-centered and activity-based teaching techniques perfectly suited for engaging and modern classroom environments.',
+      'Master child-centered and activity-based teaching techniques perfectly suited for engaging and modern environments.',
     Icon: SchoolIcon,
   },
 ]

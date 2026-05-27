@@ -48,7 +48,7 @@ export default function About() {
                     className="mb-5"
                     title={
                         <>
-                            SKB Montessori{" "}
+                            SKB{" "}
                             <span className="text-terracotta">
                                 Training Institute
                             </span>
@@ -69,7 +69,7 @@ export default function About() {
                                     fontSize: 'clamp(0.95rem, 1.4vw, 1.05rem)',
                                 }}
                             >
-                                SKB Montessori Training Institute is dedicated
+                                SKB Training Institute is dedicated
                                 to empowering aspiring educators through
                                 professional teacher training programs focused
                                 on practical learning and child-centered education.

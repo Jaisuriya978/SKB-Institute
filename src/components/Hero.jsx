@@ -253,7 +253,7 @@ export default function Hero() {
 
             <div className="d-flex align-items-center gap-3 mb-3 ha ha2">
               <span className="h-accent-bar" />
-              <p className="h-tagline">SKB Montessori Training Institute</p>
+              <p className="h-tagline">SKB Training Institute</p>
             </div>
 
             <h1 className="h-title ha ha3">
@@ -261,7 +261,7 @@ export default function Hero() {
             </h1>
 
             <p className="h-sub mt-3 ha ha4">
-              Expert-led programmes in early-childhood education — designed to
+              Expert-led programmes in early childhood education-designed to
               launch confident, career-ready Montessori teachers.
             </p>
 

@@ -149,7 +149,7 @@ export default function CTA() {
               <span className="cta-gradient-text">rewarding teaching career</span>.
             </h2>
             <p className="mt-4 fs-5" style={{ color: 'rgba(255,255,255,.75)' }}>
-              Become a confident educator with professional training, practical skills, and career guidance from SKB Montessori Training Institute.
+              Become a confident educator with professional training, practical skills, and career guidance from SKB Training Institute.
             </p>
 
            {/* <div className="d-flex flex-wrap gap-2 mt-3">

@@ -234,7 +234,7 @@ export default function Process() {
                 </h4>
 
                 {/* Description */}
-                <p className="small text-muted mt-3 mb-0 lh-lg">
+                <p className="small text-muted mt-1 mb-2 lh-base" style={{ textAlign: "justify", hyphens: "auto" }}>
                   {d}
                 </p>
 

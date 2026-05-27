@@ -58,7 +58,7 @@ export default function Nav() {
                 letterSpacing: ".4px",
               }}
             >
-              Montessori Training Institute
+              Training Institute
             </small>
 
           </div>
