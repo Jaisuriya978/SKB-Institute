@@ -146,7 +146,7 @@ export default function Hero() {
         }
 
         .h-title{
-          font-size:clamp(1.85rem,5.5vw,3.6rem);
+          font-size:clamp(1.8rem,5vw,2.9rem);
           font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin:0;
           background:linear-gradient(118deg,#ffffff 20%,#7eaaff 58%,#c2d6ff 100%);
           -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
@@ -257,7 +257,7 @@ export default function Hero() {
             </div>
 
             <h1 className="h-title ha ha3">
-              Building Skills,<br />Shaping Futures
+              Building Skills Shaping Futures
             </h1>
 
             <p className="h-sub mt-3 ha ha4">
