@@ -8,69 +8,128 @@ import { useRef, useEffect } from 'react'
 export default function Testimonials() {
   const videoRefs = useRef([])
   const trackRef = useRef(null)
+  // Track which videos have already had their src loaded
+  const loadedRef = useRef(new Set())
 
   const testimonials = [
     {
       video: testimonialVideo,
       name: 'Mythili',
       Degree: 'Advanced Diploma in Montessori Education',
-      quote: 'The hands-on training and mentorship helped me transition seamlessly into my professional career.',
     },
     {
       video: testimonialVideo2,
       name: 'Rukmani',
       Degree: 'Advanced Diploma in Montessori Education',
-      quote: 'An incredible learning environment. The real-time practical sessions completely changed my approach.',
     },
     {
       video: testimonialVideo1,
       name: 'Divya',
       Degree: 'Advanced Diploma in Montessori Education',
-      quote: 'The curriculum is highly industry-focused. Placement support guided me through every interview step.',
     },
     {
       video: testimonialVideo3,
       name: 'Aysha',
       Degree: 'Advanced Diploma in Montessori Education',
-      quote: 'Beyond just technical skills, the confidence and communication training I received here was priceless.',
     },
   ]
 
-  // ✅ FIX: Use IntersectionObserver to lazy-load videos only when in viewport
-  // This prevents scroll jank caused by multiple simultaneous video preloads
+  // ─── Helper: reliably load a video by index ───────────────────────────────
+  // The bug: React sets video.src = "" (empty string), so `!video.src` is
+  // always falsy — the load never triggers. We use a Set to track truly
+  // loaded videos instead.
+  const ensureLoaded = (index) => {
+    const video = videoRefs.current[index]
+    if (!video) return
+    if (loadedRef.current.has(index)) return   // already loaded, skip
+
+    const src = video.dataset.src
+    if (!src) return
+
+    loadedRef.current.add(index)
+    video.src = src
+    video.load()
+
+    // ✅ FIX BLACK SCREEN: After metadata is available, seek to 0.01s.
+    // This forces the browser to decode and paint the first frame as a
+    // thumbnail. Without this, some browsers (especially Chrome on certain
+    // codecs) leave the video canvas black until the first play() call.
+    const showFirstFrame = () => {
+      video.currentTime = 0.01
+      video.removeEventListener('loadedmetadata', showFirstFrame)
+    }
+    video.addEventListener('loadedmetadata', showFirstFrame)
+  }
+
+  // ─── IntersectionObserver: pre-load when card scrolls near viewport ──────
+  // rootMargin: '200px' means we start loading 200px before the card is visible,
+  // so by the time the user hovers it's already buffered.
   useEffect(() => {
-    const videos = videoRefs.current.filter(Boolean)
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const video = entry.target
+          const index = parseInt(video.dataset.index, 10)
           if (entry.isIntersecting) {
-            // Load video source only when visible
-            if (video.dataset.src && !video.src) {
-              video.src = video.dataset.src
-              video.load()
-            }
+            ensureLoaded(index)
           } else {
-            // Pause when scrolled out of view
-            if (!video.paused) {
+            // Pause when scrolled out but keep first frame visible
+            if (video && !video.paused) {
               video.pause()
-              video.currentTime = 0
+              video.currentTime = 0.01
             }
           }
         })
       },
-      { rootMargin: '100px', threshold: 0.1 }
+      { rootMargin: '200px', threshold: 0 }
     )
-    videos.forEach((video) => observer.observe(video))
-    return () => observer.disconnect()
+
+    // Small delay to let React finish rendering refs
+    const timer = setTimeout(() => {
+      videoRefs.current.filter(Boolean).forEach((video) => observer.observe(video))
+    }, 100)
+
+    return () => {
+      clearTimeout(timer)
+      observer.disconnect()
+    }
   }, [])
 
+  // ─── Pause all OTHER playing videos ──────────────────────────────────────
   const handlePlay = (index) => {
     videoRefs.current.forEach((video, i) => {
       if (i !== index && video && !video.paused) {
         video.pause()
       }
     })
+  }
+
+  // ─── Hover handlers ───────────────────────────────────────────────────────
+  const handleMouseEnter = (index) => {
+    const video = videoRefs.current[index]
+    if (!video) return
+    handlePlay(index)
+    // Ensure src is loaded (fallback if IntersectionObserver hasn't fired yet)
+    ensureLoaded(index)
+    // If already loaded, play immediately; otherwise play once canplay fires
+    if (loadedRef.current.has(index) && video.readyState >= 2) {
+      video.play().catch(() => {})
+    } else {
+      const onReady = () => {
+        video.play().catch(() => {})
+        video.removeEventListener('canplay', onReady)
+      }
+      video.addEventListener('canplay', onReady)
+    }
+  }
+
+  const handleMouseLeave = (index) => {
+    const video = videoRefs.current[index]
+    if (!video) return
+    video.pause()
+    // Seek to 0.01s not 0 — keeps the first frame painted as thumbnail.
+    // Seeking to exactly 0 can re-trigger the black screen on some browsers.
+    video.currentTime = 0.01
   }
 
   const reviews = [
@@ -81,7 +140,7 @@ export default function Testimonials() {
       program: 'Advanced Diploma',
       rating: 5,
       quote:
-        'As a returning learner, this program has been transformative for my teaching career. It provided me with practical knowledge and lesson planning strategies I can apply directly in my classroom. It kept me motivated and confident. The focus on mentorship and collaborative learning has truly empowered me as a teacher, and I am now proud to hold my Bachelor degree 😊.',
+        'As a returning learner, this program has been transformative for my teaching career. It provided me with practical knowledge and lesson planning strategies I can apply directly in my classroom. It kept me motivated and confident. The focus on mentorship and collaborative learning has truly empowered me as a teacher, and I am now proud to hold my Bachelor degree.',
       highlight: 'The focus on mentorship and collaborative learning has truly empowered me as a teacher.',
     },
     {
@@ -91,7 +150,7 @@ export default function Testimonials() {
       program: 'Diploma in Montessori',
       rating: 5,
       quote:
-        'My educator Mrs Bhuvaneshwari mam is passionate, dedicated, and very approachable. She taught lessons in an easy and understandable manner. The study materials and practical classes are well-organized with detailed instructions that laid everything out clearly for me to follow. Women play a vital role in the empowerment of society. I am encourage interested women to join this course.',
+        'My educator Mrs Bhuvaneshwari mam is passionate, dedicated, and very approachable. She taught lessons in an easy and understandable manner. The study materials and practical classes are well-organized with detailed instructions that laid everything out clearly for me to follow. Women play a vital role in the empowerment of society. I encourage interested women to join this course.',
       highlight: 'Well-organized modules with detailed instructions that laid everything out clearly.',
     },
     {
@@ -126,9 +185,7 @@ export default function Testimonials() {
           }
         />
 
-        {/* ────────────────────────────────────────────
-            VIDEO TESTIMONIAL CAROUSEL
-        ──────────────────────────────────────────── */}
+        {/* ── VIDEO CAROUSEL ── */}
         <div className="testimonial-track-container">
           <div className="testimonial-track" ref={trackRef}>
             {[...testimonials, ...testimonials].map((item, index) => (
@@ -137,36 +194,25 @@ export default function Testimonials() {
 
                 <div
                   className="durable-video-wrapper"
-                  onMouseEnter={() => {
-                    const video = videoRefs.current[index]
-                    handlePlay(index)
-                    if (video) {
-                      // ✅ FIX: Trigger src load on first hover if not yet loaded
-                      if (video.dataset.src && !video.getAttribute('src')) {
-                        video.setAttribute('src', video.dataset.src)
-                        video.load()
-                      }
-                      video.play().catch(() => {})
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    const video = videoRefs.current[index]
-                    if (video) {
-                      video.pause()
-                      video.currentTime = 0.01
-                    }
-                  }}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={() => handleMouseLeave(index)}
                 >
                   {/*
-                    ✅ FIXES APPLIED:
-                    1. Added `muted` — required for autoplay to work cross-browser
-                    2. Changed preload="none" — prevents all 8 videos loading on page mount (was causing scroll jank)
-                    3. Moved src to data-src — lazy loaded via IntersectionObserver or on hover
-                    4. Kept <source> removed to use video.src directly (works better with lazy loading)
+                    KEY FIXES vs deployed version:
+                    1. `muted` is REQUIRED — browsers block play() on unmuted
+                       videos without a direct user gesture. Missing muted = hover does nothing.
+                    2. `preload="none"` — don't fetch anything on mount.
+                    3. No `src` prop — src is set imperatively via ensureLoaded()
+                       so React never overwrites it with "".
+                    4. `data-src` holds the real URL, loaded on demand.
+                    5. `data-index` lets the IntersectionObserver know which
+                       slot this video occupies.
                   */}
                   <video
                     ref={(el) => (videoRefs.current[index] = el)}
                     data-src={item.video}
+                    data-index={index}
+                    unmuted
                     loop
                     playsInline
                     preload="none"
@@ -190,31 +236,11 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* ────────────────────────────────────────────
-            WRITTEN REVIEWS SECTION
-        ──────────────────────────────────────────── */}
+        {/* ── WRITTEN REVIEWS ── */}
         <div className="reviews-section mt-5 pt-1">
-
-          <div className="reviews-header text-center mb-1">
-          {/*
-            <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle mb-3">
-              Written Reviews
-            </span>
-            <h2 className="reviews-title">
-              Words straight from our{' '}
-              <span className="italic text-terracotta">graduates' hearts</span>
-            </h2>
-            <p className="reviews-subtitle text-muted mx-auto">
-              Real stories from learners across India and beyond — sharing how SKB shaped their confidence, career, and calling.
-            </p>
-*/}
-          </div>
-
           <div className="reviews-grid">
             {reviews.map((review, i) => (
               <div key={i} className="review-card">
-
-                {/* Top: Stars + Program badge */}
                 <div className="d-flex align-items-start justify-content-between mb-3">
                   <div className="stars" aria-label={`${review.rating} out of 5 stars`}>
                     {Array.from({ length: review.rating }).map((_, s) => (
@@ -224,29 +250,24 @@ export default function Testimonials() {
                   <span className="program-badge">{review.program}</span>
                 </div>
 
-                {/* Highlighted quote pull */}
+
                 <blockquote className="review-highlight">
                   <span className="quote-mark">"</span>
                   {review.highlight}
                 </blockquote>
 
-                {/* Full review */}
+
                 <p className="review-body">{review.quote}</p>
 
-                {/* Divider */}
+
                 <div className="review-divider" />
 
-                {/* Author */}
+
                 <div className="d-flex align-items-center gap-3 mt-3">
-                  <div className="review-avatar">
-                    {review.initials}
-                  </div>
+                  <div className="review-avatar">{review.initials}</div>
                   <div>
                     <p className="review-name mb-0">{review.name}</p>
-                    <p className="review-location mb-0">
-                      <span className="location-dot" aria-hidden="true"></span>
-                      {review.location}
-                    </p>
+                    <p className="review-location mb-0">📍 {review.location}</p>
                   </div>
                 </div>
 
@@ -254,73 +275,29 @@ export default function Testimonials() {
             ))}
           </div>
 
-          {/* Trust bar */}
-         {/* <div className="trust-bar mt-5">
-            <div className="trust-item">
-              <span className="trust-number">500+</span>
-              <span className="trust-label">Graduates Placed</span>
-            </div>
-            <div className="trust-divider" />
-            <div className="trust-item">
-              <span className="trust-number">4.9★</span>
-              <span className="trust-label">Average Rating</span>
-            </div>
-            <div className="trust-divider" />
-            <div className="trust-item">
-              <span className="trust-number">15+</span>
-              <span className="trust-label">Years of Excellence</span>
-            </div>
-            <div className="trust-divider" />
-            <div className="trust-item">
-              <span className="trust-number">100%</span>
-              <span className="trust-label">Recommend to Others</span>
-            </div>
-          </div> */}
+
         </div>
 
       </div>
 
-      {/* ═══════════════════════════════════════════
-          STYLES
-      ═══════════════════════════════════════════ */}
+
       <style>{`
-
-        /* ── VIDEO CAROUSEL ── */
-
+        /* ── CAROUSEL ── */
         .testimonial-track-container {
           overflow: hidden;
           position: relative;
           padding: 30px 0;
         }
-        .testimonial-track-container::before,
-        .testimonial-track-container::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 80px;
-          z-index: 2;
-          pointer-events: none;
-        }
-        .testimonial-track-container::before {
-          left: 0;
-          background: none;
-        }
-        .testimonial-track-container::after {
-          right: 0;
-          background: none;
-        }
+          
         .testimonial-track {
           display: flex;
           gap: 24px;
           width: max-content;
           animation: scrollTestimonials 28s linear infinite;
         }
-        .testimonial-track:hover {
-          animation-play-state: paused;
-        }
+        .testimonial-track:hover { animation-play-state: paused; }
         @keyframes scrollTestimonials {
-          0% { transform: translateX(0); }
+          0%   { transform: translateX(0); }
           100% { transform: translateX(calc(-50%)); }
         }
         .durable-card {
@@ -352,15 +329,14 @@ export default function Testimonials() {
           height: 420px;
           overflow: hidden;
           position: relative;
+          cursor: pointer;
         }
         .durable-video {
           object-fit: cover;
           object-position: top;
           transition: transform 0.7s ease;
         }
-        .durable-card:hover .durable-video {
-          transform: scale(1.06);
-        }
+        .durable-card:hover .durable-video { transform: scale(1.06); }
         .degree-text { font-size: 11px; line-height: 1.4; }
         .durable-avatar {
           width: 48px; height: 48px;
@@ -372,27 +348,12 @@ export default function Testimonials() {
           flex-shrink: 0;
         }
 
-        /* ── REVIEWS SECTION ── */
-
-        .reviews-title {
-          font-size: clamp(1.6rem, 3vw, 2.2rem);
-          font-weight: 700;
-          line-height: 1.25;
-          color: #1a1a2e;
-          margin-bottom: 0.75rem;
-        }
-        .reviews-subtitle {
-          font-size: 1rem;
-          max-width: 560px;
-          line-height: 1.7;
-        }
-
+        /* ── REVIEWS ── */
         .reviews-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 24px;
         }
-
         .review-card {
           background: #ffffff;
           border-radius: 20px;
@@ -414,154 +375,55 @@ export default function Testimonials() {
           opacity: 0;
           transition: opacity 0.35s ease;
         }
-        .review-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 20px 48px rgba(0,0,0,0.10);
-        }
-        .review-card:hover::before {
-          opacity: 1;
-        }
-
+        .review-card:hover { transform: translateY(-8px); box-shadow: 0 20px 48px rgba(0,0,0,0.10); }
+        .review-card:hover::before { opacity: 1; }
         .stars { display: flex; gap: 3px; }
-        .star {
-          color: #f59e0b;
-          font-size: 16px;
-          line-height: 1;
-        }
-
+        .star { color: #f59e0b; font-size: 16px; line-height: 1; }
         .program-badge {
-          font-size: 10px;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 0.04em;
+          font-size: 10px; font-weight: 600;
+          text-transform: uppercase; letter-spacing: 0.04em;
           color: #3c61c8;
           background: rgba(60,97,200,0.08);
           border: 1px solid rgba(60,97,200,0.15);
           border-radius: 50px;
           padding: 4px 10px;
-          white-space: nowrap;
-          max-width: 175px;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          white-space: nowrap; max-width: 175px;
+          overflow: hidden; text-overflow: ellipsis;
         }
-
         .review-highlight {
-          font-size: 1rem;
-          font-weight: 600;
-          color: #1a1a2e;
-          line-height: 1.5;
+          font-size: 1rem; font-weight: 600;
+          color: #1a1a2e; line-height: 1.5;
           margin: 12px 0 14px;
           padding-left: 14px;
           border-left: 3px solid #c0392b;
           font-style: normal;
-          position: relative;
         }
         .quote-mark {
           font-family: Georgia, serif;
-          font-size: 2rem;
-          color: #c0392b;
-          line-height: 0;
-          vertical-align: -10px;
-          margin-right: 4px;
-          opacity: 0.6;
+          font-size: 2rem; color: #c0392b;
+          line-height: 0; vertical-align: -10px;
+          margin-right: 4px; opacity: 0.6;
         }
-
-        .review-body {
-          font-size: 0.9rem;
-          color: #555;
-          line-height: 1.75;
-          flex: 1;
-          margin-bottom: 0;
-        }
-
-        .review-divider {
-          height: 1px;
-          background: linear-gradient(90deg, rgba(0,0,0,0.06), transparent);
-          margin-top: 5px;
-        }
-
+        .review-body { font-size: 0.9rem; color: #555; line-height: 1.75; flex: 1; margin-bottom: 0; }
+        .review-divider { height: 1px; background: linear-gradient(90deg, rgba(0,0,0,0.06), transparent); margin-top: 16px; }
         .review-avatar {
-          width: 48px; height: 48px;
-          border-radius: 50%;
+          width: 48px; height: 48px; border-radius: 50%;
           background: linear-gradient(135deg, #3c61c8 0%, #c0392b 100%);
           color: white;
           display: flex; align-items: center; justify-content: center;
-          font-weight: 700;
-          font-size: 14px;
-          flex-shrink: 0;
-          letter-spacing: 0.5px;
+          font-weight: 700; font-size: 14px; flex-shrink: 0;
         }
-        .review-name {
-          font-size: 0.95rem;
-          font-weight: 700;
-          color: #1a1a2e;
-        }
-        .review-location {
-          font-size: 0.8rem;
-          color: #888;
-          display: flex;
-          align-items: center;
-          gap: 4px;
-        }
-        .location-dot { font-size: 11px; }
-
-        /* ── TRUST BAR ── */
-
-        .trust-bar {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0;
-          background: linear-gradient(135deg, #1a1a2e 0%, #2d2d5e 100%);
-          border-radius: 20px;
-          padding: 32px 40px;
-          flex-wrap: wrap;
-        }
-        .trust-item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 6px;
-          padding: 0 40px;
-        }
-        .trust-number {
-          font-size: 2rem;
-          font-weight: 800;
-          color: #ffffff;
-          line-height: 1;
-          letter-spacing: -0.5px;
-        }
-        .trust-label {
-          font-size: 0.78rem;
-          font-weight: 500;
-          color: rgba(255,255,255,0.55);
-          text-transform: uppercase;
-          letter-spacing: 0.08em;
-          white-space: nowrap;
-        }
-        .trust-divider {
-          width: 1px;
-          height: 48px;
-          background: rgba(255,255,255,0.12);
-          flex-shrink: 0;
-        }
+        .review-name { font-size: 0.95rem; font-weight: 700; color: #1a1a2e; }
+        .review-location { font-size: 0.8rem; color: #888; }
 
         /* ── RESPONSIVE ── */
-
         @media (max-width: 992px) {
-          .reviews-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-          .trust-item { padding: 0 24px; }
+          .reviews-grid { grid-template-columns: repeat(2, 1fr); }
         }
-
         @media (max-width: 576px) {
           .durable-card { flex: 0 0 290px; }
           .durable-video-wrapper { height: 360px; }
           .reviews-grid { grid-template-columns: 1fr; }
-          .trust-bar { flex-direction: column; gap: 24px; padding: 28px 20px; }
-          .trust-divider { width: 60px; height: 1px; }
-          .trust-item { padding: 0; }
         }
       `}</style>
     </section>
