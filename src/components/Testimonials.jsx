@@ -267,7 +267,7 @@ export default function Testimonials() {
                   <div className="review-avatar">{review.initials}</div>
                   <div>
                     <p className="review-name mb-0">{review.name}</p>
-                    <p className="review-location mb-0">📍 {review.location}</p>
+                    <p className="review-location mb-0"> {review.location}</p>
                   </div>
                 </div>
 
@@ -288,7 +288,7 @@ export default function Testimonials() {
           position: relative;
           padding: 30px 0;
         }
-          
+
         .testimonial-track {
           display: flex;
           gap: 24px;
