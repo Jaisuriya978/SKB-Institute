@@ -153,7 +153,7 @@ export default function Testimonials() {
                     const video = videoRefs.current[index]
                     if (video) {
                       video.pause()
-                      video.currentTime = 0
+                      video.currentTime = 0.01
                     }
                   }}
                 >
