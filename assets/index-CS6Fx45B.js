@@ -538,221 +538,287 @@ Error generating stack: `+e.message+`
           height: 52px;
           object-fit: contain;
         }
-      `}),(0,b.jsxs)(`div`,{className:`container`,children:[(0,b.jsx)(Ee,{eyebrow:(0,b.jsx)(`span`,{className:`badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle`,children:`Your Journey`}),title:`Your learning journey at SKB.`}),(0,b.jsx)(`ol`,{className:`row g-4 list-unstyled mt-5`,children:E.map(([t,n],r)=>(0,b.jsx)(`li`,{className:`col-lg-3 col-md-6`,children:(0,b.jsxs)(`div`,{className:`process-card h-100 p-4 rounded-4 shadow-sm bg-white text-center border`,children:[(0,b.jsx)(`div`,{className:`process-icon mx-auto mb-3 d-flex align-items-center justify-content-center ${e[r].animation}`,children:(0,b.jsx)(`img`,{src:e[r].icon,alt:t,className:`gif-icon`,loading:`lazy`})}),(0,b.jsx)(`div`,{className:`rule my-3 mx-auto`}),(0,b.jsx)(`h4`,{className:`font-serif h5 fw-semibold`,children:t}),(0,b.jsx)(`p`,{className:`small text-muted mt-1 mb-2 lh-base`,style:{textAlign:`justify`,hyphens:`auto`},children:n})]})},t))})]})]})}var St=`/SKB-Institute/assets/VID-20260519-WA0013-CNdYFX8_.mp4`,Ct=`/SKB-Institute/assets/VID-20260519-WA0014-DFNGS8jD.mp4`,wt=`/SKB-Institute/assets/VID-20260519-WA0015-DOdr7H0w.mp4`,Tt=`/SKB-Institute/assets/VID-20260519-WA0016-RGcNB6QH.mp4`;function Et(){let e=(0,_.useRef)([]),t=[{video:St,name:`Mythili`,Degree:`Advanced Diploma in Montessori Education`,quote:`The hands-on training and mentorship helped me transition seamlessly into my professional career.`},{video:Ct,name:`Rukmani`,Degree:`Advanced Diploma in Montessori Education`,quote:`An incredible learning environment. The real-time practical sessions completely changed my approach.`},{video:wt,name:`Divya`,Degree:`Advanced Diploma in Montessori Education`,quote:`The curriculum is highly industry-focused. Placement support guided me through every interview step.`},{video:Tt,name:`Aysha`,Degree:`Advanced Diploma in Montessori Education`,quote:`Beyond just technical skills, the confidence and communication training I received here was priceless.`}],n=t=>{e.current.forEach((e,n)=>{n!==t&&e&&e.pause()})};return(0,b.jsxs)(`section`,{className:`section bg-light py-5 overflow-hidden`,children:[(0,b.jsxs)(`div`,{className:`container`,children:[(0,b.jsx)(Ee,{eyebrow:(0,b.jsx)(`span`,{className:`badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle`,children:`Testimonials`}),title:(0,b.jsxs)(b.Fragment,{children:[`Discover what our`,` `,(0,b.jsx)(`span`,{className:`italic text-terracotta`,children:`graduates say about their SKB training journey`})]})}),(0,b.jsx)(`div`,{className:`testimonial-track-container`,children:(0,b.jsx)(`div`,{className:`testimonial-track`,children:[...t,...t].map((t,r)=>(0,b.jsxs)(`div`,{className:`durable-card`,children:[(0,b.jsx)(`div`,{className:`durable-shimmer`,"aria-hidden":`true`}),(0,b.jsx)(`div`,{className:`durable-video-wrapper`,onMouseEnter:()=>{let t=e.current[r];n(r),t&&t.play()},onMouseLeave:()=>{let t=e.current[r];t&&(t.pause(),t.currentTime=0)},children:(0,b.jsx)(`video`,{ref:t=>e.current[r]=t,loop:!0,playsInline:!0,preload:`metadata`,className:`w-100 h-100 durable-video`,children:(0,b.jsx)(`source`,{src:t.video,type:`video/mp4`})})}),(0,b.jsx)(`div`,{className:`p-3 bg-white d-flex flex-column justify-content-between`,children:(0,b.jsxs)(`div`,{className:`d-flex align-items-center gap-3`,children:[(0,b.jsx)(`div`,{className:`durable-avatar`,children:t.name.charAt(0)}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`h6`,{className:`mb-0 fw-bold text-dark`,children:t.name}),(0,b.jsx)(`small`,{className:`text-muted d-block degree-text`,children:t.Degree})]})]})})]},r))})})]}),(0,b.jsx)(`style`,{children:`
-    .testimonial-track-container {
-      overflow: hidden;
-      position: relative;
-      padding: 30px 0;
-    }
+      `}),(0,b.jsxs)(`div`,{className:`container`,children:[(0,b.jsx)(Ee,{eyebrow:(0,b.jsx)(`span`,{className:`badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle`,children:`Your Journey`}),title:`Your learning journey at SKB.`}),(0,b.jsx)(`ol`,{className:`row g-4 list-unstyled mt-5`,children:E.map(([t,n],r)=>(0,b.jsx)(`li`,{className:`col-lg-3 col-md-6`,children:(0,b.jsxs)(`div`,{className:`process-card h-100 p-4 rounded-4 shadow-sm bg-white text-center border`,children:[(0,b.jsx)(`div`,{className:`process-icon mx-auto mb-3 d-flex align-items-center justify-content-center ${e[r].animation}`,children:(0,b.jsx)(`img`,{src:e[r].icon,alt:t,className:`gif-icon`,loading:`lazy`})}),(0,b.jsx)(`div`,{className:`rule my-3 mx-auto`}),(0,b.jsx)(`h4`,{className:`font-serif h5 fw-semibold`,children:t}),(0,b.jsx)(`p`,{className:`small text-muted mt-1 mb-2 lh-base`,style:{textAlign:`justify`,hyphens:`auto`},children:n})]})},t))})]})]})}var St=`/SKB-Institute/assets/VID-20260519-WA0013-CNdYFX8_.mp4`,Ct=`/SKB-Institute/assets/VID-20260519-WA0014-DFNGS8jD.mp4`,wt=`/SKB-Institute/assets/VID-20260519-WA0015-DOdr7H0w.mp4`,Tt=`/SKB-Institute/assets/VID-20260519-WA0016-RGcNB6QH.mp4`;function Et(){let e=(0,_.useRef)([]),t=(0,_.useRef)(null),n=[{video:St,name:`Mythili`,Degree:`Advanced Diploma in Montessori Education`,quote:`The hands-on training and mentorship helped me transition seamlessly into my professional career.`},{video:Ct,name:`Rukmani`,Degree:`Advanced Diploma in Montessori Education`,quote:`An incredible learning environment. The real-time practical sessions completely changed my approach.`},{video:wt,name:`Divya`,Degree:`Advanced Diploma in Montessori Education`,quote:`The curriculum is highly industry-focused. Placement support guided me through every interview step.`},{video:Tt,name:`Aysha`,Degree:`Advanced Diploma in Montessori Education`,quote:`Beyond just technical skills, the confidence and communication training I received here was priceless.`}];(0,_.useEffect)(()=>{let t=e.current.filter(Boolean),n=new IntersectionObserver(e=>{e.forEach(e=>{let t=e.target;e.isIntersecting?t.dataset.src&&!t.src&&(t.src=t.dataset.src,t.load()):t.paused||(t.pause(),t.currentTime=0)})},{rootMargin:`100px`,threshold:.1});return t.forEach(e=>n.observe(e)),()=>n.disconnect()},[]);let r=t=>{e.current.forEach((e,n)=>{n!==t&&e&&!e.paused&&e.pause()})},i=[{name:`Vanitha Sudhan`,location:`USA`,initials:`VS`,program:`Advanced Diploma`,rating:5,quote:`As a returning learner, this program has been transformative for my teaching career. It provided me with practical knowledge and lesson planning strategies I can apply directly in my classroom. It kept me motivated and confident. The focus on mentorship and collaborative learning has truly empowered me as a teacher, and I am now proud to hold my Bachelor degree 😊.`,highlight:`The focus on mentorship and collaborative learning has truly empowered me as a teacher.`},{name:`Neelaambal`,location:`Chidambaram`,initials:`NL`,program:`Diploma in Montessori`,rating:5,quote:`My educator Mrs Bhuvaneshwari mam is passionate, dedicated, and very approachable. She taught lessons in an easy and understandable manner ❤️. The study materials and practical classes are well-organized with detailed instructions that laid everything out clearly for me to follow 👍. Women play a vital role in the empowerment of society. I am encourage interested women to join this course.`,highlight:`Well-organized modules with detailed instructions that laid everything out clearly.`},{name:`Rajeswari G`,location:`Chennai`,initials:`RG`,program:`Diploma in Child Care`,rating:5,quote:`The course was really interesting and the mentors were incredibly supportive 👍. A speciality of SKB is that we learned to approach even children with special needs. The practical knowledge from the classroom helped us build a happy environment for students. I would highly recommend SKB to many housewives who can turn their fear into power.`,highlight:`We learned to approach even children with special needs — that sets SKB apart.`}];return(0,b.jsxs)(`section`,{className:`section bg-light py-5 overflow-hidden`,children:[(0,b.jsxs)(`div`,{className:`container`,children:[(0,b.jsx)(Ee,{eyebrow:(0,b.jsx)(`span`,{className:`badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle`,children:`Testimonials`}),title:(0,b.jsxs)(b.Fragment,{children:[`Discover what our`,` `,(0,b.jsx)(`span`,{className:`italic text-terracotta`,children:`graduates say about their SKB training journey`})]})}),(0,b.jsx)(`div`,{className:`testimonial-track-container`,children:(0,b.jsx)(`div`,{className:`testimonial-track`,ref:t,children:[...n,...n].map((t,n)=>(0,b.jsxs)(`div`,{className:`durable-card`,children:[(0,b.jsx)(`div`,{className:`durable-shimmer`,"aria-hidden":`true`}),(0,b.jsx)(`div`,{className:`durable-video-wrapper`,onMouseEnter:()=>{let t=e.current[n];r(n),t&&(t.dataset.src&&!t.getAttribute(`src`)&&(t.setAttribute(`src`,t.dataset.src),t.load()),t.play().catch(()=>{}))},onMouseLeave:()=>{let t=e.current[n];t&&(t.pause(),t.currentTime=0)},children:(0,b.jsx)(`video`,{ref:t=>e.current[n]=t,"data-src":t.video,loop:!0,playsInline:!0,preload:`none`,className:`w-100 h-100 durable-video`})}),(0,b.jsx)(`div`,{className:`p-3 bg-white d-flex flex-column justify-content-between`,children:(0,b.jsxs)(`div`,{className:`d-flex align-items-center gap-3`,children:[(0,b.jsx)(`div`,{className:`durable-avatar`,children:t.name.charAt(0)}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`h6`,{className:`mb-0 fw-bold text-dark`,children:t.name}),(0,b.jsx)(`small`,{className:`text-muted d-block degree-text`,children:t.Degree})]})]})})]},n))})}),(0,b.jsxs)(`div`,{className:`reviews-section mt-5 pt-1`,children:[(0,b.jsx)(`div`,{className:`reviews-header text-center mb-1`}),(0,b.jsx)(`div`,{className:`reviews-grid`,children:i.map((e,t)=>(0,b.jsxs)(`div`,{className:`review-card`,children:[(0,b.jsxs)(`div`,{className:`d-flex align-items-start justify-content-between mb-3`,children:[(0,b.jsx)(`div`,{className:`stars`,"aria-label":`${e.rating} out of 5 stars`,children:Array.from({length:e.rating}).map((e,t)=>(0,b.jsx)(`span`,{className:`star`,children:`★`},t))}),(0,b.jsx)(`span`,{className:`program-badge`,children:e.program})]}),(0,b.jsxs)(`blockquote`,{className:`review-highlight`,children:[(0,b.jsx)(`span`,{className:`quote-mark`,children:`"`}),e.highlight]}),(0,b.jsx)(`p`,{className:`review-body`,children:e.quote}),(0,b.jsx)(`div`,{className:`review-divider`}),(0,b.jsxs)(`div`,{className:`d-flex align-items-center gap-3 mt-3`,children:[(0,b.jsx)(`div`,{className:`review-avatar`,children:e.initials}),(0,b.jsxs)(`div`,{children:[(0,b.jsx)(`p`,{className:`review-name mb-0`,children:e.name}),(0,b.jsxs)(`p`,{className:`review-location mb-0`,children:[(0,b.jsx)(`span`,{className:`location-dot`,"aria-hidden":`true`}),e.location]})]})]})]},t))})]})]}),(0,b.jsx)(`style`,{children:`
 
-    .testimonial-track-container::before,
-    .testimonial-track-container::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 80px;
-      z-index: 2;
-      pointer-events: none;
-    }
+        /* ── VIDEO CAROUSEL ── */
 
-    .testimonial-track-container::before {
-      left: 0;
-      background: linear-gradient(
-        to right,
-        none,
-        transparent 100%
-      );
-    }
+        .testimonial-track-container {
+          overflow: hidden;
+          position: relative;
+          padding: 30px 0;
+        }
+        .testimonial-track-container::before,
+        .testimonial-track-container::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 80px;
+          z-index: 2;
+          pointer-events: none;
+        }
+        .testimonial-track-container::before {
+          left: 0;
+          background: none;
+        }
+        .testimonial-track-container::after {
+          right: 0;
+          background: none;
+        }
+        .testimonial-track {
+          display: flex;
+          gap: 24px;
+          width: max-content;
+          animation: scrollTestimonials 28s linear infinite;
+        }
+        .testimonial-track:hover {
+          animation-play-state: paused;
+        }
+        @keyframes scrollTestimonials {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-50%)); }
+        }
+        .durable-card {
+          flex: 0 0 350px;
+          background: rgba(255,255,255,0.8);
+          backdrop-filter: blur(12px);
+          border-radius: 24px;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.4);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+          transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+          position: relative;
+        }
+        .durable-shimmer {
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, rgba(60,97,200,0.7), transparent);
+          z-index: 3;
+          pointer-events: none;
+        }
+        .durable-card:hover {
+          transform: translateY(-12px);
+          border-color: rgba(60,97,200,0.20);
+          box-shadow: 0 24px 50px rgba(0,0,0,0.12);
+        }
+        .durable-video-wrapper {
+          background: #111;
+          height: 420px;
+          overflow: hidden;
+          position: relative;
+        }
+        .durable-video {
+          object-fit: cover;
+          object-position: top;
+          transition: transform 0.7s ease;
+        }
+        .durable-card:hover .durable-video {
+          transform: scale(1.06);
+        }
+        .degree-text { font-size: 11px; line-height: 1.4; }
+        .durable-avatar {
+          width: 48px; height: 48px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #3c61c8 0%, #c0392b 100%);
+          color: white;
+          display: flex; align-items: center; justify-content: center;
+          font-weight: 700; font-size: 14px;
+          flex-shrink: 0;
+        }
 
-    .testimonial-track-container::after {
-      right: 0;
-      background: linear-gradient(
-        to left,
-        none,
-        transparent 100%
-      );
-    }
+        /* ── REVIEWS SECTION ── */
 
-    /* Auto moving row */
-    .testimonial-track {
-      display: flex;
-      gap: 24px;
-      width: max-content;
-      animation: scrollTestimonials 28s linear infinite;
-    }
+        .reviews-title {
+          font-size: clamp(1.6rem, 3vw, 2.2rem);
+          font-weight: 700;
+          line-height: 1.25;
+          color: #1a1a2e;
+          margin-bottom: 0.75rem;
+        }
+        .reviews-subtitle {
+          font-size: 1rem;
+          max-width: 560px;
+          line-height: 1.7;
+        }
 
-    /* Pause when user hovers */
-    .testimonial-track:hover {
-      animation-play-state: paused;
-    }
+        .reviews-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
 
-    @keyframes scrollTestimonials {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(-50%));
-      }
-    }
+        .review-card {
+          background: #ffffff;
+          border-radius: 20px;
+          padding: 28px 26px;
+          border: 1px solid rgba(0,0,0,0.07);
+          box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+          display: flex;
+          flex-direction: column;
+          transition: transform 0.35s ease, box-shadow 0.35s ease;
+          position: relative;
+          overflow: hidden;
+        }
+        .review-card::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 3px;
+          background: linear-gradient(90deg, #3c61c8, #c0392b);
+          opacity: 0;
+          transition: opacity 0.35s ease;
+        }
+        .review-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 48px rgba(0,0,0,0.10);
+        }
+        .review-card:hover::before {
+          opacity: 1;
+        }
 
-    /* Card Style */
-    .durable-card {
-  flex: 0 0 350px;
-  background: rgba(255,255,255,0.8);
+        .stars { display: flex; gap: 3px; }
+        .star {
+          color: #f59e0b;
+          font-size: 16px;
+          line-height: 1;
+        }
 
-  backdrop-filter: blur(12px);
+        .program-badge {
+          font-size: 10px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          color: #3c61c8;
+          background: rgba(60,97,200,0.08);
+          border: 1px solid rgba(60,97,200,0.15);
+          border-radius: 50px;
+          padding: 4px 10px;
+          white-space: nowrap;
+          max-width: 175px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
 
-  border-radius: 24px;
-  overflow: hidden;
+        .review-highlight {
+          font-size: 1rem;
+          font-weight: 600;
+          color: #1a1a2e;
+          line-height: 1.5;
+          margin: 12px 0 14px;
+          padding-left: 14px;
+          border-left: 3px solid #c0392b;
+          font-style: normal;
+          position: relative;
+        }
+        .quote-mark {
+          font-family: Georgia, serif;
+          font-size: 2rem;
+          color: #c0392b;
+          line-height: 0;
+          vertical-align: -10px;
+          margin-right: 4px;
+          opacity: 0.6;
+        }
 
-  border: 1px solid rgba(255,255,255,0.4);
+        .review-body {
+          font-size: 0.9rem;
+          color: #555;
+          line-height: 1.75;
+          flex: 1;
+          margin-bottom: 0;
+        }
 
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.06);
+        .review-divider {
+          height: 1px;
+          background: linear-gradient(90deg, rgba(0,0,0,0.06), transparent);
+          margin-top: 5px;
+        }
 
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease,
-    border-color 0.4s ease;
+        .review-avatar {
+          width: 48px; height: 48px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #3c61c8 0%, #c0392b 100%);
+          color: white;
+          display: flex; align-items: center; justify-content: center;
+          font-weight: 700;
+          font-size: 14px;
+          flex-shrink: 0;
+          letter-spacing: 0.5px;
+        }
+        .review-name {
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: #1a1a2e;
+        }
+        .review-location {
+          font-size: 0.8rem;
+          color: #888;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        .location-dot { font-size: 11px; }
 
-  position: relative;
-}
+        /* ── TRUST BAR ── */
 
-.durable-shimmer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(60,97,200,0.7), transparent);
-  z-index: 3;
-  pointer-events: none;
-}
+        .trust-bar {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0;
+          background: linear-gradient(135deg, #1a1a2e 0%, #2d2d5e 100%);
+          border-radius: 20px;
+          padding: 32px 40px;
+          flex-wrap: wrap;
+        }
+        .trust-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+          padding: 0 40px;
+        }
+        .trust-number {
+          font-size: 2rem;
+          font-weight: 800;
+          color: #ffffff;
+          line-height: 1;
+          letter-spacing: -0.5px;
+        }
+        .trust-label {
+          font-size: 0.78rem;
+          font-weight: 500;
+          color: rgba(255,255,255,0.55);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          white-space: nowrap;
+        }
+        .trust-divider {
+          width: 1px;
+          height: 48px;
+          background: rgba(255,255,255,0.12);
+          flex-shrink: 0;
+        }
 
-.durable-card:hover {
-  transform: translateY(-12px);
-  border-color: rgba(60,97,200,0.20);
+        /* ── RESPONSIVE ── */
 
-  box-shadow:
-    0 24px 50px rgba(0,0,0,0.12);
-}
+        @media (max-width: 992px) {
+          .reviews-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .trust-item { padding: 0 24px; }
+        }
 
-.durable-video-wrapper {
-  background: #000;
-  height: 420px;
-  overflow: hidden;
-  position: relative;
-}
-
-.durable-video {
-  object-fit: cover;
-  object-position: top;
-
-  transition: transform 0.7s ease;
-}
-
-.durable-card:hover .durable-video {
-  transform: scale(1.06);
-}
-
-/* Overlay */
-
-.video-overlay {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,0.45),
-      rgba(0,0,0,0.05)
-    );
-
-  transition: opacity 0.4s ease;
-}
-
-.durable-card:hover .video-overlay {
-  opacity: 0;
-}
-
-/* Play Button */
-
-.play-button {
-  width: 78px;
-  height: 78px;
-
-  border-radius: 50%;
-
-  background: rgba(255,255,255,0.18);
-
-  backdrop-filter: blur(12px);
-
-  border: 1px solid rgba(255,255,255,0.35);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: white;
-  font-size: 34px;
-
-  transition: transform 0.4s ease;
-}
-
-.durable-card:hover .play-button {
-  transform: scale(1.1);
-}
-
-/* Content */
-
-.card-content-height {
-  min-height: 190px;
-}
-
-.degree-text {
-  font-size: 11px;
-  line-height: 1.4;
-}
-
-.durable-avatar {
-  width: 48px;
-  height: 48px;
-
-  border-radius: 50%;
-
-  background: linear-gradient(135deg, #3c61c8, #3c61c8);
-
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-weight: 700;
-  font-size: 16px;
-
-  flex-shrink: 0;
-}
-
-/* Mobile */
-
-@media (max-width: 576px) {
-
-  .durable-card {
-    flex: 0 0 290px;
-  }
-
-  .durable-video-wrapper {
-    height: 360px;
-  }
-
-}
-  `})]})}var Dt=`/SKB-Institute/assets/Image7-Bhcf09q8.JPG`,Ot=`/SKB-Institute/assets/Image10-w4KgBq33.JPG`,kt=`/SKB-Institute/assets/Image5-DsO2azKS.JPG`,At=`/SKB-Institute/assets/Image4-ORmzQzoQ.jpg`,z=`/SKB-Institute/assets/Image3-DjWLaRT-.JPG`,jt=`/SKB-Institute/assets/Image1-DUapwxpm.jpg`,Mt=`/SKB-Institute/assets/Image9-CYz_V8sl.JPG`,Nt=`/SKB-Institute/assets/Image11-DrlxgR3p.JPG`,Pt=`/SKB-Institute/assets/Image12-D0eIO4pR.JPG`,Ft=`/SKB-Institute/assets/Image13-DiygZbRA.JPG`,It=`/SKB-Institute/assets/Image14-B0-ljMV1.JPG`,Lt=`/SKB-Institute/assets/Image16-C3xUi4JI.JPG`,Rt=`/SKB-Institute/assets/Image17-DWi0a6rl.JPG`,zt=`/SKB-Institute/assets/Image18-k6-Z7WJB.JPG`,Bt=`/SKB-Institute/assets/Image19-BX_B4n8o.JPG`,Vt=`/SKB-Institute/assets/Image20-DpM4hmea.JPG`,Ht=`/SKB-Institute/assets/Image202-2qXTwxBj.jpg`,Ut=`/SKB-Institute/assets/Image203-dR8WxfST.jpg`;function Wt(){let e=(0,_.useRef)(null),t=[{src:kt,alt:`Lamp lighting ceremony`},{src:Pt,alt:`Convocation group photo`},{src:Rt,alt:`SKB event`},{src:Lt,alt:`Graduation speech`},{src:Ft,alt:`Convocation group photo`},{src:zt,alt:`Prize ceremony`},{src:Dt,alt:`Convocation day`},{src:Ot,alt:`Convocation celebration`},{src:Bt,alt:`Convocation celebration`},{src:Vt,alt:`Convocation celebration`},{src:z,alt:`Convocation celebration`},{src:jt,alt:`Graduation speech`},{src:Mt,alt:`Convocation group photo`},{src:It,alt:`Convocation group photo`},{src:Nt,alt:`Prize ceremony`},{src:Ht,alt:`Lamp lighting ceremony`},{src:At,alt:`SKB students`},{src:Ut,alt:`SKB group photo`}],n=[...t,...t];return(0,_.useEffect)(()=>{let t=e.current;if(!t)return;let n,r=()=>{t.scrollLeft+=.7,t.scrollLeft>=t.scrollWidth/2&&(t.scrollLeft-=t.scrollWidth/2),n=requestAnimationFrame(r)};return n=requestAnimationFrame(r),()=>cancelAnimationFrame(n)},[]),(0,b.jsx)(`section`,{className:`section bg-light overflow-hidden py-2`,children:(0,b.jsxs)(`div`,{className:`container`,children:[(0,b.jsx)(`div`,{className:`mb-4`,children:(0,b.jsx)(Ee,{eyebrow:(0,b.jsx)(`span`,{className:`badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle`,children:`SKB Moments`}),title:`Moments of achievements`,intro:`Convocation and graduation moments that reflect the SKB experience.`})}),(0,b.jsx)(`div`,{ref:e,className:`d-flex gap-4`,style:{overflowX:`hidden`,scrollBehavior:`auto`,whiteSpace:`nowrap`},children:n.map((e,t)=>(0,b.jsx)(`div`,{className:`flex-shrink-0`,style:{width:`520px`,transform:`translateZ(0)`},children:(0,b.jsx)(`div`,{className:`overflow-hidden rounded-4 shadow-sm`,children:(0,b.jsx)(`img`,{src:e.src,alt:e.alt,loading:`lazy`,draggable:`false`,className:`w-100`,style:{height:`300px`,objectFit:`cover`,objectPosition:`center`,borderRadius:`20px`,userSelect:`none`,pointerEvents:`none`}})})},t))})]})})}function Gt(){let[e,t]=(0,_.useState)(0);return(0,b.jsxs)(`section`,{className:`py-1 bg-light`,id:`faq`,children:[(0,b.jsxs)(`div`,{className:`container`,children:[(0,b.jsx)(Ee,{eyebrow:(0,b.jsx)(`span`,{className:`badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle`,children:`FAQ`}),title:`Frequently asked questions.`}),(0,b.jsx)(`div`,{className:`faq-list mx-auto`,style:{maxWidth:1300},children:ee.map(([n,r],i)=>(0,b.jsxs)(`div`,{className:`divider-line faq-item ${e===i?`faq-item-active`:``}`,children:[(0,b.jsxs)(`button`,{className:`faq-btn`,type:`button`,"aria-expanded":e===i,onClick:()=>t(e===i?-1:i),children:[(0,b.jsx)(`span`,{className:`faq-question`,children:n}),(0,b.jsx)(`span`,{className:`faq-plus ${e===i?`open`:``}`,"aria-hidden":`true`,children:`+`})]}),(0,b.jsx)(`div`,{className:`faq-answer ${e===i?`open`:``}`,children:(0,b.jsx)(`div`,{className:`faq-answer-inner`,children:(0,b.jsx)(`p`,{className:`faq-answer-text text-muted-soft`,children:r})})})]},i))})]}),(0,b.jsx)(`style`,{children:`
+        @media (max-width: 576px) {
+          .durable-card { flex: 0 0 290px; }
+          .durable-video-wrapper { height: 360px; }
+          .reviews-grid { grid-template-columns: 1fr; }
+          .trust-bar { flex-direction: column; gap: 24px; padding: 28px 20px; }
+          .trust-divider { width: 60px; height: 1px; }
+          .trust-item { padding: 0; }
+        }
+      `})]})}var Dt=`/SKB-Institute/assets/Image7-Bhcf09q8.JPG`,Ot=`/SKB-Institute/assets/Image10-w4KgBq33.JPG`,kt=`/SKB-Institute/assets/Image5-DsO2azKS.JPG`,At=`/SKB-Institute/assets/Image4-ORmzQzoQ.jpg`,z=`/SKB-Institute/assets/Image3-DjWLaRT-.JPG`,jt=`/SKB-Institute/assets/Image1-DUapwxpm.jpg`,Mt=`/SKB-Institute/assets/Image9-CYz_V8sl.JPG`,Nt=`/SKB-Institute/assets/Image11-DrlxgR3p.JPG`,Pt=`/SKB-Institute/assets/Image12-D0eIO4pR.JPG`,Ft=`/SKB-Institute/assets/Image13-DiygZbRA.JPG`,It=`/SKB-Institute/assets/Image14-B0-ljMV1.JPG`,Lt=`/SKB-Institute/assets/Image16-C3xUi4JI.JPG`,Rt=`/SKB-Institute/assets/Image17-DWi0a6rl.JPG`,zt=`/SKB-Institute/assets/Image18-k6-Z7WJB.JPG`,Bt=`/SKB-Institute/assets/Image19-BX_B4n8o.JPG`,Vt=`/SKB-Institute/assets/Image20-DpM4hmea.JPG`,Ht=`/SKB-Institute/assets/Image202-2qXTwxBj.jpg`,Ut=`/SKB-Institute/assets/Image203-dR8WxfST.jpg`;function Wt(){let e=(0,_.useRef)(null),t=[{src:kt,alt:`Lamp lighting ceremony`},{src:Pt,alt:`Convocation group photo`},{src:Rt,alt:`SKB event`},{src:Lt,alt:`Graduation speech`},{src:Ft,alt:`Convocation group photo`},{src:zt,alt:`Prize ceremony`},{src:Dt,alt:`Convocation day`},{src:Ot,alt:`Convocation celebration`},{src:Bt,alt:`Convocation celebration`},{src:Vt,alt:`Convocation celebration`},{src:z,alt:`Convocation celebration`},{src:jt,alt:`Graduation speech`},{src:Mt,alt:`Convocation group photo`},{src:It,alt:`Convocation group photo`},{src:Nt,alt:`Prize ceremony`},{src:Ht,alt:`Lamp lighting ceremony`},{src:At,alt:`SKB students`},{src:Ut,alt:`SKB group photo`}],n=[...t,...t];return(0,_.useEffect)(()=>{let t=e.current;if(!t)return;let n,r=()=>{t.scrollLeft+=.7,t.scrollLeft>=t.scrollWidth/2&&(t.scrollLeft-=t.scrollWidth/2),n=requestAnimationFrame(r)};return n=requestAnimationFrame(r),()=>cancelAnimationFrame(n)},[]),(0,b.jsx)(`section`,{className:`section bg-light overflow-hidden py-2`,children:(0,b.jsxs)(`div`,{className:`container`,children:[(0,b.jsx)(`div`,{className:`mb-4`,children:(0,b.jsx)(Ee,{eyebrow:(0,b.jsx)(`span`,{className:`badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle`,children:`SKB Moments`}),title:`Moments of achievements`,intro:`Convocation and graduation moments that reflect the SKB experience.`})}),(0,b.jsx)(`div`,{ref:e,className:`d-flex gap-4`,style:{overflowX:`hidden`,scrollBehavior:`auto`,whiteSpace:`nowrap`},children:n.map((e,t)=>(0,b.jsx)(`div`,{className:`flex-shrink-0`,style:{width:`520px`,transform:`translateZ(0)`},children:(0,b.jsx)(`div`,{className:`overflow-hidden rounded-4 shadow-sm`,children:(0,b.jsx)(`img`,{src:e.src,alt:e.alt,loading:`lazy`,draggable:`false`,className:`w-100`,style:{height:`300px`,objectFit:`cover`,objectPosition:`center`,borderRadius:`20px`,userSelect:`none`,pointerEvents:`none`}})})},t))})]})})}function Gt(){let[e,t]=(0,_.useState)(0);return(0,b.jsxs)(`section`,{className:`py-1 bg-light`,id:`faq`,children:[(0,b.jsxs)(`div`,{className:`container`,children:[(0,b.jsx)(Ee,{eyebrow:(0,b.jsx)(`span`,{className:`badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle`,children:`FAQ`}),title:`Frequently asked questions.`}),(0,b.jsx)(`div`,{className:`faq-list mx-auto`,style:{maxWidth:1300},children:ee.map(([n,r],i)=>(0,b.jsxs)(`div`,{className:`divider-line faq-item ${e===i?`faq-item-active`:``}`,children:[(0,b.jsxs)(`button`,{className:`faq-btn`,type:`button`,"aria-expanded":e===i,onClick:()=>t(e===i?-1:i),children:[(0,b.jsx)(`span`,{className:`faq-question`,children:n}),(0,b.jsx)(`span`,{className:`faq-plus ${e===i?`open`:``}`,"aria-hidden":`true`,children:`+`})]}),(0,b.jsx)(`div`,{className:`faq-answer ${e===i?`open`:``}`,children:(0,b.jsx)(`div`,{className:`faq-answer-inner`,children:(0,b.jsx)(`p`,{className:`faq-answer-text text-muted-soft`,children:r})})})]},i))})]}),(0,b.jsx)(`style`,{children:`
         .faq-list {
           background: #fff;
           border: 1px solid rgba(60, 97, 200, 0.1);
