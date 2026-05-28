@@ -91,7 +91,7 @@ export default function Testimonials() {
       program: 'Diploma in Montessori',
       rating: 5,
       quote:
-        'My educator Mrs Bhuvaneshwari mam is passionate, dedicated, and very approachable. She taught lessons in an easy and understandable manner ❤️. The study materials and practical classes are well-organized with detailed instructions that laid everything out clearly for me to follow 👍. Women play a vital role in the empowerment of society. I am encourage interested women to join this course.',
+        'My educator Mrs Bhuvaneshwari mam is passionate, dedicated, and very approachable. She taught lessons in an easy and understandable manner. The study materials and practical classes are well-organized with detailed instructions that laid everything out clearly for me to follow. Women play a vital role in the empowerment of society. I am encourage interested women to join this course.',
       highlight: 'Well-organized modules with detailed instructions that laid everything out clearly.',
     },
     {
@@ -101,7 +101,7 @@ export default function Testimonials() {
       program: 'Diploma in Child Care',
       rating: 5,
       quote:
-        'The course was really interesting and the mentors were incredibly supportive 👍. A speciality of SKB is that we learned to approach even children with special needs. The practical knowledge from the classroom helped us build a happy environment for students. I would highly recommend SKB to many housewives who can turn their fear into power.',
+        'The course was really interesting and the mentors were incredibly supportive. A speciality of SKB is that we learned to approach even children with special needs. The practical knowledge from the classroom helped us build a happy environment for students. I would highly recommend SKB to many housewives who can turn their fear into power.',
       highlight: 'We learned to approach even children with special needs — that sets SKB apart.',
     },
   ]
