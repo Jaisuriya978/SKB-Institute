@@ -7,7 +7,6 @@ import Features from './components/Features'
 import Process from './components/Process'
 import Testimonials from './components/Testimonials'
 import Gallery from './components/Gallery'
-import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Contact from './components/Contact'
 import Newsletter from './components/Newsletter'
@@ -27,8 +26,7 @@ export default function App() {
       <Process />
       <Gallery />
       <Testimonials />
-
-      <FAQ />
+      
       <CTA />
       <Contact />
       <Newsletter />

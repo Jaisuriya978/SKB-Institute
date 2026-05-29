@@ -113,10 +113,10 @@ export default function Testimonials() {
     ensureLoaded(index)
     // If already loaded, play immediately; otherwise play once canplay fires
     if (loadedRef.current.has(index) && video.readyState >= 2) {
-      video.play().catch(() => {})
+      video.play().catch(() => { })
     } else {
       const onReady = () => {
-        video.play().catch(() => {})
+        video.play().catch(() => { })
         video.removeEventListener('canplay', onReady)
       }
       video.addEventListener('canplay', onReady)
@@ -140,8 +140,8 @@ export default function Testimonials() {
       program: 'Advanced Diploma',
       rating: 5,
       quote:
-        'As a returning learner, this program has been transformative for my teaching career. It provided me with practical knowledge and lesson planning strategies I can apply directly in my classroom. It kept me motivated and confident. The focus on mentorship and collaborative learning has truly empowered me as a teacher, and I am now proud to hold my Bachelor degree.',
-      highlight: 'The focus on mentorship and collaborative learning has truly empowered me as a teacher.',
+        'As a returning learner, this program has been transformative for my teaching career. It provided me with practical knowledge and lesson planning strategies I can apply directly in my classroom — keeping me motivated and confident. The focus on mentorship and collaborative learning has truly empowered me as a teacher, and I am now proud to hold my Bachelor degree. The personalized attention and encouraging atmosphere helped me find my passion for learning. It is more than academics; it fosters holistic growth.',
+      highlight: 'More than just academics — it fosters holistic growth and empowers you as a teacher.',
     },
     {
       name: 'Neelaambal',
@@ -150,18 +150,38 @@ export default function Testimonials() {
       program: 'Diploma in Montessori',
       rating: 5,
       quote:
-        'My educator Mrs Bhuvaneshwari mam is passionate, dedicated, and very approachable. She taught lessons in an easy and understandable manner. The study materials and practical classes are well-organized with detailed instructions that laid everything out clearly for me to follow. Women play a vital role in the empowerment of society. I encourage interested women to join this course.',
-      highlight: 'Well-organized modules with detailed instructions that laid everything out clearly.',
+        'My educator Mrs Bhuvaneshwari mam is passionate, dedicated, and very approachable. She taught lessons in an easy and understandable manner. The study materials and practical classes are well-organized with detailed instructions that laid everything clearly for me to follow. Women play a vital role in the empowerment of society and nation — interested women should join this course to grow up the toddlers for their better future, because here is where the roots are formed.',
+      highlight: 'Well-organized modules with detailed instructions — here is where the roots are formed.',
     },
     {
       name: 'Rajeswari G',
       location: 'Chennai',
       initials: 'RG',
-      program: 'Diploma in Child Care',
+      program: 'Adv. Diploma in Montessori',
       rating: 5,
       quote:
-        'The course was really interesting and the mentors were incredibly supportive. A speciality of SKB is that we learned to approach even children with special needs. The practical knowledge from the classroom helped us build a happy environment for students. I would highly recommend SKB to many housewives who can turn their fear into power.',
+        'The course was really interesting and the mentors were incredibly supportive and helpful. A speciality of SKB is that we learned to approach even children with special needs. The practical knowledge from the classroom helped us build a happy environment for our students. I would highly recommend SKB Montessori Training Institute to many housewives who can make their fear into power. My heartfelt thanks to my SKB family.',
       highlight: 'We learned to approach even children with special needs — that sets SKB apart.',
+    },
+    {
+      name: 'S. Gayathri',
+      location: 'Tamil Nadu',
+      initials: 'SG',
+      program: 'Montessori Course',
+      rating: 5,
+      quote:
+        'I am happy to have completed my Montessori course at this institute. The classes were informative, practical, and easy to understand. I gained confidence in handling children and learned many teaching methods. Special thanks to Bhuvana Mam for her excellent teaching — she explained lessons in a very easy and understandable way, and is always kind and approachable. I attended through online classes and it was very easy to manage the timings. Thank you to management for their guidance and support.',
+      highlight: 'I gained confidence in handling children and learned many valuable teaching methods.',
+    },
+    {
+      name: 'V. Radha',
+      location: 'Tamil Nadu',
+      initials: 'VR',
+      program: 'SKB Training',
+      rating: 5,
+      quote:
+        'I am happy to share my experience with SKB Training Institute. The training was very helpful, and the trainers taught everything clearly and patiently. I gained useful knowledge and confidence through the course. Thank you for all the support.',
+      highlight: 'The trainers taught everything clearly and patiently — I gained real confidence.',
     },
   ]
 
@@ -236,50 +256,63 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* ── WRITTEN REVIEWS ── */}
-        <div className="reviews-section mt-5 pt-1">
-          <div className="reviews-grid">
-            {reviews.map((review, i) => (
-              <div key={i} className="review-card">
-                <div className="d-flex align-items-start justify-content-between mb-3">
-                  <div className="stars" aria-label={`${review.rating} out of 5 stars`}>
-                    {Array.from({ length: review.rating }).map((_, s) => (
-                      <span key={s} className="star">★</span>
-                    ))}
-                  </div>
-                  <span className="program-badge">{review.program}</span>
-                </div>
+        {/* ── WRITTEN REVIEWS CAROUSEL ── */}
+        <div className="reviews-section mt-5 pt-2">
 
-
-                <blockquote className="review-highlight">
-                  <span className="quote-mark">"</span>
-                  {review.highlight}
-                </blockquote>
-
-
-                <p className="review-body">{review.quote}</p>
-
-
-                <div className="review-divider" />
-
-
-                <div className="d-flex align-items-center gap-3 mt-3">
-                  <div className="review-avatar">{review.initials}</div>
-                  <div>
-                    <p className="review-name mb-0">{review.name}</p>
-                    <p className="review-location mb-0">{review.location}</p>
-                  </div>
-                </div>
-
-              </div>
-            ))}
+          <div className="text-center mb-4">
+            <span className="badge rounded-pill px-4 py-2 bg-light-subtle text-terracotta fw-semibold border border-primary-subtle">
+              Written Reviews
+            </span>
+            <h3 className="reviews-section-title mt-3">
+              Words straight from our{' '}
+              <span className="italic text-terracotta">graduates' hearts</span>
+            </h3>
           </div>
 
+          <div className="review-track-container">
+            <div className="review-track">
+              {[...reviews, ...reviews].map((review, i) => (
+                <div key={i} className="review-card">
 
+                  {/* Top accent bar on hover */}
+                  <div className="review-card-accent" aria-hidden="true" />
+
+                  {/* Stars + badge */}
+                  <div className="d-flex align-items-start justify-content-between mb-3">
+                    <div className="stars" aria-label={`${review.rating} out of 5 stars`}>
+                      {Array.from({ length: review.rating }).map((_, s) => (
+                        <span key={s} className="star">★</span>
+                      ))}
+                    </div>
+                    <span className="program-badge">{review.program}</span>
+                  </div>
+
+                  {/* Highlight pull-quote */}
+                  <blockquote className="review-highlight">
+                    <span className="quote-mark">"</span>
+                    {review.highlight}
+                  </blockquote>
+
+                  {/* Full review */}
+                  <p className="review-body">{review.quote}</p>
+
+                  {/* Author */}
+                  <div className="review-divider" />
+                  <div className="d-flex align-items-center gap-3 mt-3">
+                    <div className="review-avatar">{review.initials}</div>
+                    <div>
+                      <p className="review-name mb-0">{review.name}</p>
+                      <p className="review-location mb-0">{review.location}</p>
+                    </div>
+                  </div>
+
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
       </div>
-
 
       <style>{`
         /* ── CAROUSEL ── */
@@ -288,7 +321,6 @@ export default function Testimonials() {
           position: relative;
           padding: 30px 0;
         }
-
         .testimonial-track {
           display: flex;
           gap: 24px;
@@ -348,16 +380,55 @@ export default function Testimonials() {
           flex-shrink: 0;
         }
 
-        /* ── REVIEWS ── */
-        .reviews-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 24px;
+        /* ── REVIEWS CAROUSEL ── */
+        .reviews-section-title {
+          font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+          font-weight: 700;
+          color: #1a1a2e;
+          line-height: 1.3;
         }
+
+        .review-track-container {
+          overflow: hidden;
+          position: relative;
+          padding: 20px 0 30px;
+        }
+        .review-track-container::before,
+        .review-track-container::after {
+          content: '';
+          position: absolute;
+          top: 0; bottom: 0;
+          width: 100px;
+          z-index: 2;
+          pointer-events: none;
+        }
+        .review-track-container::before {
+          left: 0;
+          background: none;
+        }
+        .review-track-container::after {
+          right: 0;
+          background: none;
+        }
+
+        .review-track {
+          display: flex;
+          gap: 24px;
+          width: max-content;
+          animation: scrollReviews 40s linear infinite;
+        }
+        .review-track:hover { animation-play-state: paused; }
+
+        @keyframes scrollReviews {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(calc(-50%)); }
+        }
+
         .review-card {
+          flex: 0 0 360px;
           background: #ffffff;
           border-radius: 20px;
-          padding: 28px 26px;
+          padding: 26px 24px 22px;
           border: 1px solid rgba(0,0,0,0.07);
           box-shadow: 0 4px 20px rgba(0,0,0,0.05);
           display: flex;
@@ -366,8 +437,7 @@ export default function Testimonials() {
           position: relative;
           overflow: hidden;
         }
-        .review-card::before {
-          content: '';
+        .review-card-accent {
           position: absolute;
           top: 0; left: 0; right: 0;
           height: 3px;
@@ -375,10 +445,15 @@ export default function Testimonials() {
           opacity: 0;
           transition: opacity 0.35s ease;
         }
-        .review-card:hover { transform: translateY(-8px); box-shadow: 0 20px 48px rgba(0,0,0,0.10); }
-        .review-card:hover::before { opacity: 1; }
+        .review-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 48px rgba(0,0,0,0.10);
+        }
+        .review-card:hover .review-card-accent { opacity: 1; }
+
         .stars { display: flex; gap: 3px; }
-        .star { color: #f59e0b; font-size: 16px; line-height: 1; }
+        .star { color: #f59e0b; font-size: 15px; line-height: 1; }
+
         .program-badge {
           font-size: 10px; font-weight: 600;
           text-transform: uppercase; letter-spacing: 0.04em;
@@ -387,43 +462,66 @@ export default function Testimonials() {
           border: 1px solid rgba(60,97,200,0.15);
           border-radius: 50px;
           padding: 4px 10px;
-          white-space: nowrap; max-width: 175px;
+          white-space: nowrap; max-width: 160px;
           overflow: hidden; text-overflow: ellipsis;
         }
+
         .review-highlight {
-          font-size: 1rem; font-weight: 600;
+          font-size: 0.95rem; font-weight: 600;
           color: #1a1a2e; line-height: 1.5;
-          margin: 12px 0 14px;
-          padding-left: 14px;
+          margin: 10px 0 12px;
+          padding-left: 13px;
           border-left: 3px solid #c0392b;
           font-style: normal;
         }
         .quote-mark {
           font-family: Georgia, serif;
-          font-size: 2rem; color: #c0392b;
-          line-height: 0; vertical-align: -10px;
-          margin-right: 4px; opacity: 0.6;
+          font-size: 1.8rem; color: #c0392b;
+          line-height: 0; vertical-align: -9px;
+          margin-right: 3px; opacity: 0.55;
         }
-        .review-body { font-size: 0.9rem; color: #555; line-height: 1.75; flex: 1; margin-bottom: 0; }
-        .review-divider { height: 1px; background: linear-gradient(90deg, rgba(0,0,0,0.06), transparent); margin-top: 16px; }
+
+        .review-body {
+          font-size: 0.855rem; color: #555;
+          line-height: 1.75; flex: 1; margin-bottom: 0;
+          /* Clamp to ~5 lines to keep all cards same height */
+          display: -webkit-box;
+          -webkit-line-clamp: 6;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .review-card:hover .review-body {
+          -webkit-line-clamp: unset;
+          overflow: visible;
+        }
+
+        .review-divider {
+          height: 1px;
+          background: linear-gradient(90deg, rgba(0,0,0,0.07), transparent);
+          margin-top: 14px;
+          flex-shrink: 0;
+        }
         .review-avatar {
-          width: 48px; height: 48px; border-radius: 50%;
+          width: 44px; height: 44px; border-radius: 50%;
           background: linear-gradient(135deg, #3c61c8 0%, #c0392b 100%);
           color: white;
           display: flex; align-items: center; justify-content: center;
-          font-weight: 700; font-size: 14px; flex-shrink: 0;
+          font-weight: 700; font-size: 13px; flex-shrink: 0;
+          letter-spacing: 0.5px;
         }
-        .review-name { font-size: 0.95rem; font-weight: 700; color: #1a1a2e; }
-        .review-location { font-size: 0.8rem; color: #888; }
+        .review-name { font-size: 0.9rem; font-weight: 700; color: #1a1a2e; }
+        .review-location { font-size: 0.78rem; color: #999; }
 
         /* ── RESPONSIVE ── */
-        @media (max-width: 992px) {
-          .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+        @media (max-width: 768px) {
+          .review-card { flex: 0 0 300px; }
         }
         @media (max-width: 576px) {
           .durable-card { flex: 0 0 290px; }
           .durable-video-wrapper { height: 360px; }
-          .reviews-grid { grid-template-columns: 1fr; }
+          .review-card { flex: 0 0 280px; }
+          .review-track-container::before,
+          .review-track-container::after { width: 40px; }
         }
       `}</style>
     </section>
