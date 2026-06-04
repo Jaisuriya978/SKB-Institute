@@ -183,6 +183,17 @@ export default function Testimonials() {
         'I am happy to share my experience with SKB Training Institute. The training was very helpful, and the trainers taught everything clearly and patiently. I gained useful knowledge and confidence through the course. Thank you for all the support.',
       highlight: 'The trainers taught everything clearly and patiently — I gained real confidence.',
     },
+    {
+      name: 'Divya Sampath Kumar',
+      location: 'Vallakottai, Kanchipuram District',
+      initials: 'DS',
+      program: 'Early Childhood Education & Child Care',
+      rating: 5,
+      quote:
+        'I would like to express my heartfelt gratitude to the teachers and management of SKB Training Institute. The trainers explained every concept clearly and patiently, and their continuous support helped me gain confidence and develop my skills. The training was a turning point in my professional journey, providing valuable knowledge in early childhood education, child care, and school management. Most importantly, it gave me the practical skills and confidence needed to start my own play school. Today, I am successfully running my own play school, and I sincerely believe that the guidance and encouragement from SKB played a significant role in helping me achieve this goal.',
+      highlight:
+        'The training was a turning point in my journey and gave me the confidence to successfully start my own play school.',
+    }
   ]
 
   return (
