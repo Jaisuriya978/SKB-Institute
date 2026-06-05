@@ -193,6 +193,17 @@ export default function Testimonials() {
         'I would like to express my heartfelt gratitude to the teachers and management of SKB Training Institute. The trainers explained every concept clearly and patiently, and their continuous support helped me gain confidence and develop my skills. The training was a turning point in my professional journey, providing valuable knowledge in early childhood education, child care, and school management. Most importantly, it gave me the practical skills and confidence needed to start my own play school. Today, I am successfully running my own play school, and I sincerely believe that the guidance and encouragement from SKB played a significant role in helping me achieve this goal.',
       highlight:
         'The training was a turning point in my journey and gave me the confidence to successfully start my own play school.',
+    },
+    {
+      name: 'S. M. Suriya',
+      location: 'Theresapuram',
+      initials: 'SS',
+      program: 'Teacher Training & Internship Program',
+      rating: 5,
+      quote:
+        'I would like to share my experience with SKB Training Institute. The training sessions were highly informative, practical, and helped me improve both my communication and teaching skills. The trainers were supportive, motivating, and provided guidance throughout the course. The internship program was especially valuable as it gave me real classroom experience and increased my confidence in handling students and conducting classroom activities. The practical exposure I gained during the internship played a significant role in helping me secure a placement at Montfort Senior Secondary School, Theresapuram, after completing my internship. The experience and skills I developed through the program strengthened my profile and prepared me well for the interview process. I am truly grateful to SKB Training Institute for the knowledge, guidance, and continuous support provided throughout my learning journey.',
+      highlight:
+        'The internship gave me real classroom experience and helped me secure placement at Montfort Senior Secondary School.',
     }
   ]
 
